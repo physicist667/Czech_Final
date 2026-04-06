@@ -90,3 +90,29 @@ Stage Summary:
 - Все типы упражнений обновлены для покрытия новых категорий
 - Достижения обновлены для новых целей
 - Файлы: vocabulary.ts, exercises.ts, exercises-section.tsx, czech-store.ts
+
+---
+Task ID: 2
+Agent: Super Z + subagent
+Task: Добавить 200 новых слов (10 категорий) и обновить упражнения
+
+Work Log:
+- Добавлены 10 новых категорий по 20 слов в vocabulary.ts:
+  1. Работа и профессии (professions) - Lékař, Učitel, Programátor и др.
+  2. Спорт и хобби (sports) - Fotbal, Hokej, Tenis и др.
+  3. Чувства и эмоции (emotions) - Štěstí, Láska, Strach и др.
+  4. Школа и образование (school) - Učebnice, Zkouška, Student и др.
+  5. Путешествия (travel) - Pas, Kufr, Hrad и др.
+  6. Фрукты и овощи (fruits) - Hruška, Jahoda, Meloun и др.
+  7. Предлоги и местоимения (prepositions) - V, Na, Do, Já и др.
+  8. Наречия и частые фразы (adverbs) - Dnes, Zítra, Velmi и др.
+  9. Мебель и интерьер (furniture) - Skříň, Gauč, Trouba и др.
+  10. Технологии (tech) - Telefon, Počítač, Internet и др.
+- exercises.ts обновлён: +25 MC, +10 FB, +5 Matching, +20 TF, +10 SB
+- czech-store.ts: getTotalWords → 500, новое достижение "Легенда" (500 слов), 24 категории
+
+Stage Summary:
+- Словарь расширен с 300 до 500 слов (24 категории)
+- Все типы упражнений обновлены для новых категорий
+- Общее число слов: 500
+- Сборка прошла успешно

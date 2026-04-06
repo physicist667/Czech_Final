@@ -133,6 +133,40 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   { id: 'mc72', czech: 'Dělat', correctAnswer: 'Делать', options: ['Смотреть', 'Делать', 'Думать', 'Ждать'], category: 'verbs' },
   { id: 'mc73', czech: 'Běžet', correctAnswer: 'Бежать', options: ['Идти', 'Бежать', 'Прыгать', 'Летать'], category: 'verbs' },
   { id: 'mc74', czech: 'Vidět', correctAnswer: 'Видеть', options: ['Слышать', 'Чувствовать', 'Видеть', 'Знать'], category: 'verbs' },
+  // Professions
+  { id: 'mc75', czech: 'Lékař', correctAnswer: 'Врач', options: ['Медсестра', 'Врач', 'Аптекарь', 'Фармацевт'], category: 'professions' },
+  { id: 'mc76', czech: 'Učitel', correctAnswer: 'Учитель', options: ['Студент', 'Профессор', 'Учитель', 'Директор'], category: 'professions' },
+  { id: 'mc77', czech: 'Programátor', correctAnswer: 'Программист', options: ['Дизайнер', 'Программист', 'Инженер', 'Аналитик'], category: 'professions' },
+  // Sports
+  { id: 'mc78', czech: 'Fotbal', correctAnswer: 'Футбол', options: ['Баскетбол', 'Футбол', 'Волейбол', 'Регби'], category: 'sports' },
+  { id: 'mc79', czech: 'Hokej', correctAnswer: 'Хоккей', options: ['Шахматы', 'Хоккей', 'Теннис', 'Гольф'], category: 'sports' },
+  { id: 'mc80', czech: 'Tenis', correctAnswer: 'Теннис', options: ['Бадминтон', 'Теннис', 'Сквош', 'Пинг-понг'], category: 'sports' },
+  // Emotions
+  { id: 'mc81', czech: 'Štěstí', correctAnswer: 'Счастье', options: ['Грусть', 'Радость', 'Счастье', 'Тревога'], category: 'emotions' },
+  { id: 'mc82', czech: 'Láska', correctAnswer: 'Любовь', options: ['Ненависть', 'Любовь', 'Дружба', 'Уважение'], category: 'emotions' },
+  { id: 'mc83', czech: 'Strach', correctAnswer: 'Страх', options: ['Храбрость', 'Страх', 'Удивление', 'Спокойствие'], category: 'emotions' },
+  // School
+  { id: 'mc84', czech: 'Učebnice', correctAnswer: 'Учебник', options: ['Тетрадь', 'Ручка', 'Учебник', 'Дневник'], category: 'school' },
+  { id: 'mc85', czech: 'Zkouška', correctAnswer: 'Экзамен', options: ['Урок', 'Контрольная', 'Экзамен', 'Семестр'], category: 'school' },
+  { id: 'mc86', czech: 'Třída', correctAnswer: 'Класс', options: ['Коридор', 'Класс', 'Кабинет', 'Зал'], category: 'school' },
+  // Travel
+  { id: 'mc87', czech: 'Kufr', correctAnswer: 'Чемодан', options: ['Сумка', 'Чемодан', 'Рюкзак', 'Портфель'], category: 'travel' },
+  { id: 'mc88', czech: 'Hrad', correctAnswer: 'Замок', options: ['Дворец', 'Музей', 'Замок', 'Церковь'], category: 'travel' },
+  { id: 'mc89', czech: 'Letenka', correctAnswer: 'Авиабилет', options: ['Паспорт', 'Виза', 'Авиабилет', 'Бронь'], category: 'travel' },
+  // Fruits
+  { id: 'mc90', czech: 'Hruška', correctAnswer: 'Груша', options: ['Яблоко', 'Груша', 'Слива', 'Персик'], category: 'fruits' },
+  { id: 'mc91', czech: 'Jahoda', correctAnswer: 'Клубника', options: ['Малина', 'Клубника', 'Черника', 'Смородина'], category: 'fruits' },
+  { id: 'mc92', czech: 'Meloun', correctAnswer: 'Арбуз', options: ['Дыня', 'Арбуз', 'Тыква', 'Огурец'], category: 'fruits' },
+  // Adverbs
+  { id: 'mc93', czech: 'Dnes', correctAnswer: 'Сегодня', options: ['Вчера', 'Завтра', 'Сегодня', 'Позавчера'], category: 'adverbs' },
+  { id: 'mc94', czech: 'Zítra', correctAnswer: 'Завтра', options: ['Сегодня', 'Завтра', 'Послезавтра', 'Вчера'], category: 'adverbs' },
+  { id: 'mc95', czech: 'Velmi', correctAnswer: 'Очень', options: ['Мало', 'Много', 'Очень', 'Едва'], category: 'adverbs' },
+  // Furniture
+  { id: 'mc96', czech: 'Skříň', correctAnswer: 'Шкаф', options: ['Комод', 'Шкаф', 'Полка', 'Стеллаж'], category: 'furniture' },
+  { id: 'mc97', czech: 'Gauč', correctAnswer: 'Диван', options: ['Кровать', 'Кресло', 'Диван', 'Тахта'], category: 'furniture' },
+  { id: 'mc98', czech: 'Trouba', correctAnswer: 'Духовка', options: ['Плита', 'Микроволновка', 'Духовка', 'Гриль'], category: 'furniture' },
+  // Tech
+  { id: 'mc99', czech: 'Telefon', correctAnswer: 'Телефон', options: ['Планшет', 'Телефон', 'Ноутбук', 'Часы'], category: 'tech' },
 ];
 
 export const fillBlankQuestions: FillBlankQuestion[] = [
@@ -183,6 +217,26 @@ export const fillBlankQuestions: FillBlankQuestion[] = [
   // Verbs
   { id: 'fb36', sentence: 'Učím se česky každý den.', sentenceWithBlank: 'Učím se ____ každý den.', correctAnswer: 'česky', options: ['česky', 'anglicky', 'francouzsky', 'německy'], category: 'verbs', hint: 'Язык Чехии' },
   { id: 'fb37', sentence: 'Pracuji v bankě.', sentenceWithBlank: '____ v bankě.', correctAnswer: 'Pracuji', options: ['Studuji', 'Pracuji', 'Bydlím', 'Odpočívám'], category: 'verbs', hint: 'Трудовая деятельность' },
+  // Professions
+  { id: 'fb38', sentence: 'Můj otec je lékař.', sentenceWithBlank: 'Můj otec je ____.', correctAnswer: 'lékař', options: ['lékař', 'učitel', 'inženýr', 'programátor'], category: 'professions', hint: 'Медицинская профессия' },
+  // Emotions
+  { id: 'fb39', sentence: 'Cítím velké štěstí.', sentenceWithBlank: 'Cítím velké ____.', correctAnswer: 'štěstí', options: ['štěstí', 'strach', 'smutek', 'zlost'], category: 'emotions', hint: 'Позитивное чувство' },
+  // Sports
+  { id: 'fb40', sentence: 'Hráli jsme fotbal v parku.', sentenceWithBlank: 'Hráli jsme ____ v parku.', correctAnswer: 'fotbal', options: ['hokej', 'fotbal', 'tenis', 'basketbal'], category: 'sports', hint: 'Популярный командный спорт' },
+  // School
+  { id: 'fb41', sentence: 'Mám zítra zkoušku z matematiky.', sentenceWithBlank: 'Mám zítra ____ z matematiky.', correctAnswer: 'zkoušku', options: ['hodinu', 'přestávku', 'zkoušku', 'výuku'], category: 'school', hint: 'Проверка знаний' },
+  // Travel
+  { id: 'fb42', sentence: 'Navštívili jsme krásný hrad.', sentenceWithBlank: 'Navštívili jsme krásný ____.', correctAnswer: 'hrad', options: ['hrad', 'muzeum', 'kostel', 'park'], category: 'travel', hint: 'Средневековое сооружение' },
+  // Fruits
+  { id: 'fb43', sentence: 'Na trhu koupím čerstvé jahody.', sentenceWithBlank: 'Na trhu koupím čerstvé ____.', correctAnswer: 'jahody', options: ['jablka', 'jahody', 'hrušky', 'švestky'], category: 'fruits', hint: 'Красные садовые ягоды' },
+  // Adverbs
+  { id: 'fb44', sentence: 'Dnes je krásné počasí.', sentenceWithBlank: '____ je krásné počasí.', correctAnswer: 'Dnes', options: ['Zítra', 'Včera', 'Dnes', 'Vždy'], category: 'adverbs', hint: 'Этот день' },
+  // Furniture
+  { id: 'fb45', sentence: 'Nový gauč stojí v obýváku.', sentenceWithBlank: 'Nový ____ stojí v obýváku.', correctAnswer: 'gauč', options: ['stůl', 'gauč', 'skříň', 'židle'], category: 'furniture', hint: 'Мягкая мебель для сидения' },
+  // Tech
+  { id: 'fb46', sentence: 'Počítač je na stole.', sentenceWithBlank: '____ je na stole.', correctAnswer: 'Počítač', options: ['Telefon', 'Počítač', 'Televize', 'Rádio'], category: 'tech', hint: 'Электронное устройство для работы' },
+  // Prepositions
+  { id: 'fb47', sentence: 'Jsem doma.', sentenceWithBlank: 'Jsem ____ doma.', correctAnswer: 'už', options: ['už', 'ještě', 'ne', 'také'], category: 'adverbs', hint: 'Уже, в значении завершения' },
 ];
 
 export const matchingSets: MatchingSet[] = [
@@ -346,6 +400,86 @@ export const matchingSets: MatchingSet[] = [
       { czech: 'Dělat', russian: 'Делать' },
     ],
   },
+  {
+    id: 'ms11',
+    title: 'Профессии',
+    pairs: [
+      { czech: 'Lékař', russian: 'Врач' },
+      { czech: 'Učitel', russian: 'Учитель' },
+      { czech: 'Programátor', russian: 'Программист' },
+      { czech: 'Inženýr', russian: 'Инженер' },
+      { czech: 'Sestra', russian: 'Медсестра' },
+      { czech: 'Policista', russian: 'Полицейский' },
+      { czech: 'Kuchař', russian: 'Повар' },
+      { czech: 'Advokát', russian: 'Адвокат' },
+      { czech: 'Dentista', russian: 'Стоматолог' },
+      { czech: 'Architekt', russian: 'Архитектор' },
+    ],
+  },
+  {
+    id: 'ms12',
+    title: 'Спорт и хобби',
+    pairs: [
+      { czech: 'Fotbal', russian: 'Футбол' },
+      { czech: 'Hokej', russian: 'Хоккей' },
+      { czech: 'Tenis', russian: 'Теннис' },
+      { czech: 'Plavání', russian: 'Плавание' },
+      { czech: 'Basketbal', russian: 'Баскетбол' },
+      { czech: 'Hudba', russian: 'Музыка' },
+      { czech: 'Kreslení', russian: 'Рисование' },
+      { czech: 'Cvičení', russian: 'Тренировка' },
+      { czech: 'Cyklistika', russian: 'Велоспорт' },
+      { czech: 'Šachy', russian: 'Шахматы' },
+    ],
+  },
+  {
+    id: 'ms13',
+    title: 'Чувства и эмоции',
+    pairs: [
+      { czech: 'Štěstí', russian: 'Счастье' },
+      { czech: 'Láska', russian: 'Любовь' },
+      { czech: 'Strach', russian: 'Страх' },
+      { czech: 'Smutek', russian: 'Грусть' },
+      { czech: 'Zlost', russian: 'Гнев' },
+      { czech: 'Překvapení', russian: 'Удивление' },
+      { czech: 'Radost', russian: 'Радость' },
+      { czech: 'Nuda', russian: 'Скука' },
+      { czech: 'Úleva', russian: 'Облегчение' },
+      { czech: 'Naděje', russian: 'Надежда' },
+    ],
+  },
+  {
+    id: 'ms14',
+    title: 'Фрукты и овощи',
+    pairs: [
+      { czech: 'Hruška', russian: 'Груша' },
+      { czech: 'Jahoda', russian: 'Клубника' },
+      { czech: 'Meloun', russian: 'Арбуз' },
+      { czech: 'Broskev', russian: 'Персик' },
+      { czech: 'Švestka', russian: 'Слива' },
+      { czech: 'Malina', russian: 'Малина' },
+      { czech: 'Banán', russian: 'Банан' },
+      { czech: 'Okurka', russian: 'Огурец' },
+      { czech: 'Rajče', russian: 'Помидор' },
+      { czech: 'Mrkev', russian: 'Морковь' },
+    ],
+  },
+  {
+    id: 'ms15',
+    title: 'Технологии',
+    pairs: [
+      { czech: 'Telefon', russian: 'Телефон' },
+      { czech: 'Počítač', russian: 'Компьютер' },
+      { czech: 'Internet', russian: 'Интернет' },
+      { czech: 'Televize', russian: 'Телевизор' },
+      { czech: 'Tablet', russian: 'Планшет' },
+      { czech: 'Kamera', russian: 'Камера' },
+      { czech: 'Tiskárna', russian: 'Принтер' },
+      { czech: 'Nabíječka', russian: 'Зарядка' },
+      { czech: 'Sluchátka', russian: 'Наушники' },
+      { czech: 'Klávesnice', russian: 'Клавиатура' },
+    ],
+  },
 ];
 
 export const sentenceBuildingExercises: SentenceBuildingExercise[] = [
@@ -383,6 +517,24 @@ export const sentenceBuildingExercises: SentenceBuildingExercise[] = [
   { id: 'sb26', correctSentence: 'Musím jít domů.', translation: 'Мне нужно идти домой.', words: ['Musím', 'jít', 'domů', '.'], category: 'verbs' },
   { id: 'sb27', correctSentence: 'Učím se česky.', translation: 'Я учу чешский.', words: ['Učím', 'se', 'česky', '.'], category: 'verbs' },
   { id: 'sb28', correctSentence: 'Vidím velký dům.', translation: 'Я вижу большой дом.', words: ['Vidím', 'velký', 'dům', '.'], category: 'verbs' },
+  // Professions
+  { id: 'sb29', correctSentence: 'Moje matka je lékařka.', translation: 'Моя мама врач.', words: ['Moje', 'matka', 'je', 'lékařka', '.'], category: 'professions' },
+  { id: 'sb30', correctSentence: 'Pracuji jako programátor.', translation: 'Я работаю программистом.', words: ['Pracuji', 'jako', 'programátor', '.'], category: 'professions' },
+  // Emotions
+  { id: 'sb31', correctSentence: 'Jsem velmi šťastný.', translation: 'Я очень счастлив.', words: ['Jsem', 'velmi', 'šťastný', '.'], category: 'emotions' },
+  { id: 'sb32', correctSentence: 'Cítím strach z tmy.', translation: 'Я боюсь темноты.', words: ['Cítím', 'strach', 'z', 'tmy', '.'], category: 'emotions' },
+  // Sports
+  { id: 'sb33', correctSentence: 'Hraji fotbal každou sobotu.', translation: 'Я играю в футбол каждую субботу.', words: ['Hraji', 'fotbal', 'každou', 'sobotu', '.'], category: 'sports' },
+  // School
+  { id: 'sb34', correctSentence: 'Mám zkoušku z češtiny.', translation: 'У меня экзамен по чешскому.', words: ['Mám', 'zkoušku', 'z', 'češtiny', '.'], category: 'school' },
+  // Travel
+  { id: 'sb35', correctSentence: 'Letíme do Prahy.', translation: 'Мы летим в Прагу.', words: ['Letíme', 'do', 'Prahy', '.'], category: 'travel' },
+  // Fruits
+  { id: 'sb36', correctSentence: 'Jahody jsou velmi sladké.', translation: 'Клубника очень сладкая.', words: ['Jahody', 'jsou', 'velmi', 'sladké', '.'], category: 'fruits' },
+  // Tech
+  { id: 'sb37', correctSentence: 'Můj telefon je nový.', translation: 'Мой телефон новый.', words: ['Můj', 'telefon', 'je', 'nový', '.'], category: 'tech' },
+  // Furniture
+  { id: 'sb38', correctSentence: 'Koupili jsme nový gauč.', translation: 'Мы купили новый диван.', words: ['Koupili', 'jsme', 'nový', 'gauč', '.'], category: 'furniture' },
 ];
 
 export const trueFalseQuestions: TrueFalseQuestion[] = [
@@ -456,4 +608,32 @@ export const trueFalseQuestions: TrueFalseQuestion[] = [
   { id: 'tf55', czech: 'Číst', russian: 'Писать', isCorrect: false, correctRussian: 'Читать', category: 'verbs' },
   { id: 'tf56', czech: 'Běžet', russian: 'Бежать', isCorrect: true, correctRussian: 'Бежать', category: 'verbs' },
   { id: 'tf57', czech: 'Vidět', russian: 'Слышать', isCorrect: false, correctRussian: 'Видеть', category: 'verbs' },
+  // Professions
+  { id: 'tf58', czech: 'Lékař', russian: 'Врач', isCorrect: true, correctRussian: 'Врач', category: 'professions' },
+  { id: 'tf59', czech: 'Učitel', russian: 'Врач', isCorrect: false, correctRussian: 'Учитель', category: 'professions' },
+  // Sports
+  { id: 'tf60', czech: 'Fotbal', russian: 'Футбол', isCorrect: true, correctRussian: 'Футбол', category: 'sports' },
+  { id: 'tf61', czech: 'Hokej', russian: 'Теннис', isCorrect: false, correctRussian: 'Хоккей', category: 'sports' },
+  // Emotions
+  { id: 'tf62', czech: 'Štěstí', russian: 'Счастье', isCorrect: true, correctRussian: 'Счастье', category: 'emotions' },
+  { id: 'tf63', czech: 'Strach', russian: 'Радость', isCorrect: false, correctRussian: 'Страх', category: 'emotions' },
+  { id: 'tf64', czech: 'Láska', russian: 'Любовь', isCorrect: true, correctRussian: 'Любовь', category: 'emotions' },
+  // School
+  { id: 'tf65', czech: 'Učebnice', russian: 'Учебник', isCorrect: true, correctRussian: 'Учебник', category: 'school' },
+  { id: 'tf66', czech: 'Zkouška', russian: 'Урок', isCorrect: false, correctRussian: 'Экзамен', category: 'school' },
+  // Travel
+  { id: 'tf67', czech: 'Kufr', russian: 'Чемодан', isCorrect: true, correctRussian: 'Чемодан', category: 'travel' },
+  { id: 'tf68', czech: 'Hrad', russian: 'Дворец', isCorrect: false, correctRussian: 'Замок', category: 'travel' },
+  { id: 'tf69', czech: 'Letenka', russian: 'Авиабилет', isCorrect: true, correctRussian: 'Авиабилет', category: 'travel' },
+  // Fruits
+  { id: 'tf70', czech: 'Hruška', russian: 'Груша', isCorrect: true, correctRussian: 'Груша', category: 'fruits' },
+  { id: 'tf71', czech: 'Jahoda', russian: 'Малина', isCorrect: false, correctRussian: 'Клубника', category: 'fruits' },
+  { id: 'tf72', czech: 'Meloun', russian: 'Арбуз', isCorrect: true, correctRussian: 'Арбуз', category: 'fruits' },
+  // Adverbs
+  { id: 'tf73', czech: 'Dnes', russian: 'Сегодня', isCorrect: true, correctRussian: 'Сегодня', category: 'adverbs' },
+  { id: 'tf74', czech: 'Zítra', russian: 'Вчера', isCorrect: false, correctRussian: 'Завтра', category: 'adverbs' },
+  // Furniture
+  { id: 'tf75', czech: 'Skříň', russian: 'Шкаф', isCorrect: true, correctRussian: 'Шкаф', category: 'furniture' },
+  { id: 'tf76', czech: 'Gauč', russian: 'Кровать', isCorrect: false, correctRussian: 'Диван', category: 'furniture' },
+  { id: 'tf77', czech: 'Trouba', russian: 'Духовка', isCorrect: true, correctRussian: 'Духовка', category: 'furniture' },
 ];

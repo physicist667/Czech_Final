@@ -67,6 +67,7 @@ const defaultAchievements: Achievement[] = [
   { id: 'hundred-words', title: 'Сто слов', description: 'Выучите 100 слов', icon: '🏆', unlocked: false },
   { id: 'two-hundred-words', title: 'Полпути!', description: 'Выучите 200 слов', icon: '🎓', unlocked: false },
   { id: 'all-words', title: 'Мастер слов', description: 'Выучите все 300 слов', icon: '👑', unlocked: false },
+  { id: 'five-hundred-words', title: 'Легенда', description: 'Выучите все 500 слов', icon: '🌟', unlocked: false },
   { id: 'alphabet-master', title: 'Мастер алфавита', description: 'Выучите все буквы алфавита', icon: '🅰️', unlocked: false },
   { id: 'first-lesson', title: 'Студент', description: 'Завершите первый урок грамматики', icon: '✏️', unlocked: false },
   { id: 'grammar-genius', title: 'Грамматический гений', description: 'Завершите все уроки грамматики', icon: '🧠', unlocked: false },
@@ -162,8 +163,8 @@ export const useCzechStore = create<CzechStore>()(
         return learnedWordIds.filter((id) => id.startsWith(categoryId[0] === 'g' && categoryId !== 'grammar' ? 'g' : categoryId[0]));
       },
       getTotalWords: () => {
-        // 300 words across 14 categories
-        return 300;
+        // 500 words across 24 categories
+        return 500;
       },
       getQuizAccuracy: () => {
         const { quizScores } = get();
@@ -200,6 +201,10 @@ export const useCzechStore = create<CzechStore>()(
         const aw = achievements.find((a) => a.id === 'all-words');
         if (aw && state.learnedWordIds.length >= 300) aw.unlocked = true;
 
+        // Check five-hundred-words
+        const aw500 = achievements.find((a) => a.id === 'five-hundred-words');
+        if (aw500 && state.learnedWordIds.length >= 500) aw500.unlocked = true;
+
         // Check alphabet-master
         const am = achievements.find((a) => a.id === 'alphabet-master');
         if (am && state.masteredLetterIds.length >= 42) am.unlocked = true;
@@ -227,9 +232,9 @@ export const useCzechStore = create<CzechStore>()(
         // Check all-categories
         const ac = achievements.find((a) => a.id === 'all-categories');
         if (ac) {
-          const prefixes = ['g', 'f', 'fm', 'n', 'c', 't', 'ct', 'tm', 'bd', 'an', 'nt', 'cl', 'hm', 'vb'];
+          const prefixes = ['g', 'f', 'fm', 'n', 'c', 't', 'ct', 'tm', 'bd', 'an', 'nt', 'cl', 'hm', 'vb', 'pr', 'sp', 'em', 'sc', 'tr', 'fr', 'pp', 'ad', 'fn', 'tc'];
           const covered = prefixes.filter((p) => state.learnedWordIds.some((id) => id.startsWith(p)));
-          if (covered.length >= 14) ac.unlocked = true;
+          if (covered.length >= 24) ac.unlocked = true;
         }
 
         return achievements;
