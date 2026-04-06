@@ -72,6 +72,7 @@ export function VerbConjugationTable({ verb }: VerbConjugationTableProps) {
                 </TableCell>
                 {tenseLabels.map((tense) => {
                   const value = verb.conjugations[tense.key][idx];
+                  const pron = verb.pronunciations[tense.key][idx];
                   const isNa = verb.isPerfective && tense.key === 'present';
                   return (
                     <TableCell
@@ -85,7 +86,16 @@ export function VerbConjugationTable({ verb }: VerbConjugationTableProps) {
                       {isNa ? (
                         <span className="text-muted-foreground/40">—</span>
                       ) : (
-                        value
+                        <div className="flex flex-col items-center gap-0.5">
+                          <span className="font-medium text-emerald-700 dark:text-emerald-400">
+                            {value}
+                          </span>
+                          {pron && (
+                            <span className="text-[10px] text-amber-600 dark:text-amber-400 italic leading-tight">
+                              [{pron}]
+                            </span>
+                          )}
+                        </div>
                       )}
                     </TableCell>
                   );
