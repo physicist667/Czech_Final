@@ -262,6 +262,173 @@ export const verbConjugations: VerbConjugation[] = [
       future: ['буду глэдат', 'будэш глэдат', 'будэ глэдат', 'будэмэ глэдат', 'будэтэ глэдат', 'будоу глэдат'],
     },
   },
+  {
+    verbId: 'vb16',
+    czech: 'Bydlet',
+    russian: 'Жить / Проживать',
+    isPerfective: false,
+    conjugations: {
+      present: ['bydlím', 'bydlíš', 'bydlí', 'bydlíme', 'bydlíte', 'bydlí'],
+      past: ['bydlel jsem', 'bydlel jsi', 'bydlel', 'bydleli jsme', 'bydleli jste', 'bydleli'],
+      future: ['budu bydlet', 'budeš bydlet', 'bude bydlet', 'budeme bydlet', 'budete bydlet', 'budou bydlet'],
+    },
+    pronunciations: {
+      present: ['бидлим', 'бидлиш', 'бидли', 'бидлимэ', 'бидлитэ', 'бидли'],
+      past: ['бидлэл йэм', 'бидлэл йси', 'бидлэл', 'бидлэли йсмэ', 'бидлэли йстэ', 'бидлэли'],
+      future: ['буду бидлэт', 'будэш бидлэт', 'будэ бидлэт', 'будэмэ бидлэт', 'будэтэ бидлэт', 'будоу бидлэт'],
+    },
+  },
+  {
+    verbId: 'vb17',
+    czech: 'Chtít',
+    russian: 'Хотеть',
+    isPerfective: false,
+    conjugations: {
+      present: ['chci', 'chceš', 'chce', 'chceme', 'chcete', 'chtějí'],
+      past: ['chtěl jsem', 'chtěl jsi', 'chtěl', 'chtěli jsme', 'chtěli jste', 'chtěli'],
+      future: ['budu chtít', 'budeš chtít', 'bude chtít', 'budeme chtít', 'budete chtít', 'budou chtít'],
+    },
+    pronunciations: {
+      present: ['хти', 'хтэш', 'хтэ', 'хтэмэ', 'хтэтэ', 'хтьэйи'],
+      past: ['хтэл йэм', 'хтэл йси', 'хтэл', 'хтьэли йсмэ', 'хтьэли йстэ', 'хтьэли'],
+      future: ['буду хтит', 'будэш хтит', 'будэ хтит', 'будэмэ хтит', 'будэтэ хтит', 'будоу хтит'],
+    },
+    notes: 'Неправильный глагол. Настоящее: chci, chceš, chce, chtějí. Прошедшее: chtěl, chtěli.',
+  },
+  {
+    verbId: 'vb18',
+    czech: 'Mít',
+    russian: 'Иметь',
+    isPerfective: false,
+    conjugations: {
+      present: ['mám', 'máš', 'má', 'máme', 'máte', 'mají'],
+      past: ['měl jsem', 'měl jsi', 'měl', 'měli jsme', 'měli jste', 'měli'],
+      future: ['budu mít', 'budeš mít', 'bude mít', 'budeme mít', 'budete mít', 'budou mít'],
+    },
+    pronunciations: {
+      present: ['мам', 'маш', 'ма', 'мамэ', 'матэ', 'майи'],
+      past: ['мэл йэм', 'мэл йси', 'мэл', 'мэли йсмэ', 'мэли йстэ', 'мэли'],
+      future: ['буду мит', 'будэш мит', 'будэ мит', 'будэмэ мит', 'будэтэ мит', 'будоу мит'],
+    },
+    notes: 'Неправильный глагол. Краткая форма в настоящем: mám, máš, má. 3-е лицо мн.ч.: mají.',
+  },
+  {
+    verbId: 'vb19',
+    czech: 'Moct',
+    russian: 'Мочь',
+    isPerfective: false,
+    conjugations: {
+      present: ['mohu', 'můžeš', 'může', 'můžeme', 'můžete', 'mohou'],
+      past: ['mohl jsem', 'mohl jsi', 'mohl', 'mohli jsme', 'mohli jste', 'mohli'],
+      future: ['budu moci', 'budeš moci', 'bude moci', 'budeme moci', 'budete moci', 'budou moci'],
+    },
+    pronunciations: {
+      present: ['могу', 'можэш', 'можэ', 'мувжэмэ', 'мувжэтэ', 'могоу'],
+      past: ['мохл йэм', 'мохл йси', 'мохл', 'мохли йсмэ', 'мохли йстэ', 'мохли'],
+      future: ['буду моци', 'будэш моци', 'будэ моци', 'будэмэ моци', 'будэтэ моци', 'будоу моци'],
+    },
+    notes: 'Неправильный глагол. ů в формách můžeme, můžete произносится как «ув».',
+  },
+  {
+    verbId: 'vb20',
+    czech: 'Stát',
+    russian: 'Стоять / Стоить',
+    isPerfective: false,
+    conjugations: {
+      present: ['stojím', 'stojíš', 'stojí', 'stojíme', 'stojíte', 'stojí'],
+      past: ['stál jsem', 'stál jsi', 'stál', 'stáli jsme', 'stáli jste', 'stáli'],
+      future: ['budu stát', 'budeš stát', 'bude stát', 'budeme stát', 'budete stát', 'budou stát'],
+    },
+    pronunciations: {
+      present: ['стойим', 'стойиш', 'стойи', 'стоимэ', 'стоитэ', 'стойи'],
+      past: ['стал йэм', 'стал йси', 'стал', 'стали йсмэ', 'стали йстэ', 'стали'],
+      future: ['буду стат', 'будэш стат', 'будэ стат', 'будэмэ стат', 'будэтэ стат', 'будоу стат'],
+    },
+    notes: 'Двойное значение: «стоять» (физически) и «стоить» (о цене).',
+  },
+  {
+    verbId: 'vb21',
+    czech: 'Dávat',
+    russian: 'Давать',
+    isPerfective: false,
+    conjugations: {
+      present: ['dávám', 'dáváš', 'dává', 'dáváme', 'dáváte', 'dávají'],
+      past: ['dával jsem', 'dával jsi', 'dával', 'dávali jsme', 'dávali jste', 'dávali'],
+      future: ['budu dávat', 'budeš dávat', 'bude dávat', 'budeme dávat', 'budete dávat', 'budou dávat'],
+    },
+    pronunciations: {
+      present: ['давам', 'даваш', 'дава', 'давамэ', 'даватэ', 'давайи'],
+      past: ['давал йэм', 'давал йси', 'давал', 'давали йсмэ', 'давали йстэ', 'давали'],
+      future: ['буду дават', 'будэш дават', 'будэ дават', 'будэмэ дават', 'будэтэ дават', 'будоу дават'],
+    },
+  },
+  {
+    verbId: 'vb22',
+    czech: 'Znát',
+    russian: 'Знать',
+    isPerfective: false,
+    conjugations: {
+      present: ['znám', 'znáš', 'zná', 'známe', 'znáte', 'znají'],
+      past: ['znal jsem', 'znal jsi', 'znal', 'znali jsme', 'znali jste', 'znali'],
+      future: ['budu znát', 'budeš znát', 'bude znát', 'budeme znát', 'budete znát', 'budou znát'],
+    },
+    pronunciations: {
+      present: ['знам', 'знаш', 'зна', 'знамэ', 'знатэ', 'знайи'],
+      past: ['знал йэм', 'знал йси', 'знал', 'знали йсмэ', 'знали йстэ', 'знали'],
+      future: ['буду знат', 'будэш знат', 'будэ знат', 'будэмэ знат', 'будэтэ знат', 'будоу знат'],
+    },
+    notes: 'Неправильный глагол. Корень zná- в настоящем, znal- в прошедшем.',
+  },
+  {
+    verbId: 'vb23',
+    czech: 'Rozumět',
+    russian: 'Понимать',
+    isPerfective: false,
+    conjugations: {
+      present: ['rozumím', 'rozumíš', 'rozumí', 'rozumíme', 'rozumíte', 'rozumí'],
+      past: ['rozuměl jsem', 'rozuměl jsi', 'rozuměl', 'rozuměli jsme', 'rozuměli jste', 'rozuměli'],
+      future: ['budu rozumět', 'budeš rozumět', 'bude rozumět', 'budeme rozumět', 'budete rozumět', 'budou rozumět'],
+    },
+    pronunciations: {
+      present: ['розумим', 'розумиш', 'розуми', 'розумимэ', 'розумитэ', 'розуми'],
+      past: ['розумэл йэм', 'розумэл йси', 'розумэл', 'розумэли йсмэ', 'розумэли йстэ', 'розумэли'],
+      future: ['буду розумэт', 'будэш розумэт', 'будэ розумэт', 'будэмэ розумэт', 'будэтэ розумэт', 'будоу розумэт'],
+    },
+  },
+  {
+    verbId: 'vb24',
+    czech: 'Najít',
+    russian: 'Найти',
+    isPerfective: true,
+    conjugations: {
+      present: ['—', '—', '—', '—', '—', '—'],
+      past: ['našel jsem', 'našel jsi', 'našel', 'našli jsme', 'našli jste', 'našli'],
+      future: ['najdu', 'najdeš', 'najde', 'najdeme', 'najdete', 'najdou'],
+    },
+    pronunciations: {
+      present: ['', '', '', '', '', ''],
+      past: ['нашэл йэм', 'нашэл йси', 'нашэл', 'нашли йсмэ', 'нашли йстэ', 'нашли'],
+      future: ['найду', 'найдэш', 'найдэ', 'найдэмэ', 'найдэтэ', 'найдоу'],
+    },
+    notes: 'Совершенный вид. Глаголы совершенного вида не имеют настоящего времени. Будущее совпадает с формой настоящего несовершенного вида.',
+  },
+  {
+    verbId: 'vb25',
+    czech: 'Otevřít',
+    russian: 'Открыть',
+    isPerfective: true,
+    conjugations: {
+      present: ['—', '—', '—', '—', '—', '—'],
+      past: ['otevřel jsem', 'otevřel jsi', 'otevřel', 'otevřeli jsme', 'otevřeli jste', 'otevřeli'],
+      future: ['otevřu', 'otevřeš', 'otevře', 'otevřeme', 'otevřete', 'otevřou'],
+    },
+    pronunciations: {
+      present: ['', '', '', '', '', ''],
+      past: ['отэвржэл йэм', 'отэвржэл йси', 'отэвржэл', 'отэвржэли йсмэ', 'отэвржэли йстэ', 'отэвржэли'],
+      future: ['отэвржу', 'отэвржэш', 'отэвржэ', 'отэвржэмэ', 'отэвржэтэ', 'отэвржоу'],
+    },
+    notes: 'Совершенный вид. Глаголы совершенного вида не имеют настоящего времени. Несовершенный пара: otevírat.',
+  },
 ];
 
 export const personLabels = [
