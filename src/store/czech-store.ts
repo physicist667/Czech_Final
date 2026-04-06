@@ -5,7 +5,7 @@ export type TabId = 'dashboard' | 'alphabet' | 'vocabulary' | 'grammar' | 'exerc
 
 export interface QuizScore {
   id: string;
-  type: 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building';
+  type: 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building' | 'flashcards' | 'reverse-quiz' | 'true-false' | 'word-scramble' | 'typing-practice';
   score: number;
   total: number;
   date: string;

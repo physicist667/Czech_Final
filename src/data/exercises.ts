@@ -35,6 +35,15 @@ export interface SentenceBuildingExercise {
   category: string;
 }
 
+export interface TrueFalseQuestion {
+  id: string;
+  czech: string;
+  russian: string;
+  isCorrect: boolean;
+  correctRussian: string;
+  category: string;
+}
+
 export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   // Greetings
   { id: 'mc1', czech: 'Dobrý den', correctAnswer: 'Добрый день', options: ['Добрый вечер', 'Добрый день', 'Доброе утро', 'Спокойной ночи'], category: 'greetings' },
@@ -213,4 +222,49 @@ export const sentenceBuildingExercises: SentenceBuildingExercise[] = [
   { id: 'sb12', correctSentence: 'Mluví česky a rusky.', translation: 'Он говорит по-чешски и по-русски.', words: ['Mluví', 'česky', 'a', 'rusky', '.'], category: 'grammar' },
   { id: 'sb13', correctSentence: 'Kde je nádraží?', translation: 'Где вокзал?', words: ['Kde', 'je', 'nádraží', '?'], category: 'grammar' },
   { id: 'sb14', correctSentence: 'Nerozumím česky.', translation: 'Я не понимаю по-чешски.', words: ['Nerozumím', 'česky', '.'], category: 'grammar' },
+];
+
+export const trueFalseQuestions: TrueFalseQuestion[] = [
+  // Greetings - mix of correct and incorrect
+  { id: 'tf1', czech: 'Dobrý den', russian: 'Добрый день', isCorrect: true, correctRussian: 'Добрый день', category: 'greetings' },
+  { id: 'tf2', czech: 'Na shledanou', russian: 'Здравствуйте', isCorrect: false, correctRussian: 'До свидания', category: 'greetings' },
+  { id: 'tf3', czech: 'Děkuji', russian: 'Пожалуйста', isCorrect: false, correctRussian: 'Спасибо', category: 'greetings' },
+  { id: 'tf4', czech: 'Ahoj', russian: 'Привет', isCorrect: true, correctRussian: 'Привет', category: 'greetings' },
+  { id: 'tf5', czech: 'Promiňte', russian: 'Извините', isCorrect: true, correctRussian: 'Извините', category: 'greetings' },
+  { id: 'tf6', czech: 'Prosím', russian: 'Спасибо', isCorrect: false, correctRussian: 'Пожалуйста', category: 'greetings' },
+  // Food
+  { id: 'tf7', czech: 'Chléb', russian: 'Хлеб', isCorrect: true, correctRussian: 'Хлеб', category: 'food' },
+  { id: 'tf8', czech: 'Mléko', russian: 'Кофе', isCorrect: false, correctRussian: 'Молоко', category: 'food' },
+  { id: 'tf9', czech: 'Brambory', russian: 'Картофель', isCorrect: true, correctRussian: 'Картофель', category: 'food' },
+  { id: 'tf10', czech: 'Sýr', russian: 'Масло', isCorrect: false, correctRussian: 'Сыр', category: 'food' },
+  { id: 'tf11', czech: 'Kuře', russian: 'Курица', isCorrect: true, correctRussian: 'Курица', category: 'food' },
+  { id: 'tf12', czech: 'Rajče', russian: 'Огурец', isCorrect: false, correctRussian: 'Помидор', category: 'food' },
+  // Family
+  { id: 'tf13', czech: 'Bratr', russian: 'Брат', isCorrect: true, correctRussian: 'Брат', category: 'family' },
+  { id: 'tf14', czech: 'Dcera', russian: 'Сестра', isCorrect: false, correctRussian: 'Дочь', category: 'family' },
+  { id: 'tf15', czech: 'Dědeček', russian: 'Дедушка', isCorrect: true, correctRussian: 'Дедушка', category: 'family' },
+  { id: 'tf16', czech: 'Manželka', russian: 'Мать', isCorrect: false, correctRussian: 'Жена', category: 'family' },
+  { id: 'tf17', czech: 'Babička', russian: 'Бабушка', isCorrect: true, correctRussian: 'Бабушка', category: 'family' },
+  // Colors
+  { id: 'tf18', czech: 'Červená', russian: 'Красный', isCorrect: true, correctRussian: 'Красный', category: 'colors' },
+  { id: 'tf19', czech: 'Modrá', russian: 'Зелёный', isCorrect: false, correctRussian: 'Синий', category: 'colors' },
+  { id: 'tf20', czech: 'Zelená', russian: 'Зелёный', isCorrect: true, correctRussian: 'Зелёный', category: 'colors' },
+  { id: 'tf21', czech: 'Bílá', russian: 'Чёрный', isCorrect: false, correctRussian: 'Белый', category: 'colors' },
+  { id: 'tf22', czech: 'Fialová', russian: 'Фиолетовый', isCorrect: true, correctRussian: 'Фиолетовый', category: 'colors' },
+  // Transport
+  { id: 'tf23', czech: 'Vlak', russian: 'Поезд', isCorrect: true, correctRussian: 'Поезд', category: 'transport' },
+  { id: 'tf24', czech: 'Letadlo', russian: 'Вертолёт', isCorrect: false, correctRussian: 'Самолёт', category: 'transport' },
+  { id: 'tf25', czech: 'Kolo', russian: 'Велосипед', isCorrect: true, correctRussian: 'Велосипед', category: 'transport' },
+  { id: 'tf26', czech: 'Tramvaj', russian: 'Автобус', isCorrect: false, correctRussian: 'Трамвай', category: 'transport' },
+  // City
+  { id: 'tf27', czech: 'Náměstí', russian: 'Площадь', isCorrect: true, correctRussian: 'Площадь', category: 'city' },
+  { id: 'tf28', czech: 'Knihovna', russian: 'Книжный магазин', isCorrect: false, correctRussian: 'Библиотека', category: 'city' },
+  { id: 'tf29', czech: 'Lékárna', russian: 'Аптека', isCorrect: true, correctRussian: 'Аптека', category: 'city' },
+  { id: 'tf30', czech: 'Divadlo', russian: 'Кино', isCorrect: false, correctRussian: 'Театр', category: 'city' },
+  // Numbers
+  { id: 'tf31', czech: 'Tři', russian: 'Три', isCorrect: true, correctRussian: 'Три', category: 'numbers' },
+  { id: 'tf32', czech: 'Pět', russian: 'Шесть', isCorrect: false, correctRussian: 'Пять', category: 'numbers' },
+  { id: 'tf33', czech: 'Deset', russian: 'Десять', isCorrect: true, correctRussian: 'Десять', category: 'numbers' },
+  { id: 'tf34', czech: 'Sedm', russian: 'Семь', isCorrect: true, correctRussian: 'Семь', category: 'numbers' },
+  { id: 'tf35', czech: 'Devět', russian: 'Восемь', isCorrect: false, correctRussian: 'Девять', category: 'numbers' },
 ];

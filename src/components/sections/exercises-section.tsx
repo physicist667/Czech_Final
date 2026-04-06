@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -10,8 +10,11 @@ import {
   fillBlankQuestions,
   matchingSets,
   sentenceBuildingExercises,
+  trueFalseQuestions,
 } from '@/data/exercises';
 import type { MatchingSet } from '@/data/exercises';
+import { allWords } from '@/data/vocabulary';
+import type { VocabWord } from '@/data/vocabulary';
 import { useCzechStore } from '@/store/czech-store';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -28,11 +31,22 @@ import {
   Link,
   ArrowRight,
   Shuffle,
+  Layers,
+  Repeat,
+  CircleCheck,
+  CircleX,
+  Keyboard,
+  Sparkles,
 } from 'lucide-react';
 
-type ExerciseType = 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building';
+type ExerciseType = 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building' | 'flashcards' | 'reverse-quiz' | 'true-false' | 'word-scramble' | 'typing-practice';
 
-const exerciseTypes: { id: ExerciseType; label: string; icon: React.ReactNode; description: string }[] = [
+const exerciseTypes: { id: ExerciseType; label: string; icon: React.ReactNode; description: string; isNew?: boolean }[] = [
+  { id: 'flashcards', label: 'Флеш-карточки', icon: <Layers className="size-5" />, description: 'Перелистывайте карточки для повторения слов', isNew: true },
+  { id: 'reverse-quiz', label: 'Обратный перевод', icon: <Repeat className="size-5" />, description: 'Выберите чешское слово по русскому переводу', isNew: true },
+  { id: 'true-false', label: 'Верно / Неверно', icon: <CircleCheck className="size-5" />, description: 'Быстрый тест: правильно ли переведено слово?', isNew: true },
+  { id: 'word-scramble', label: 'Соберите слово', icon: <Shuffle className="size-5" />, description: 'Составьте чешское слово из перемешанных букв', isNew: true },
+  { id: 'typing-practice', label: 'Напишите слово', icon: <Keyboard className="size-5" />, description: 'Введите чешское перевод вручную', isNew: true },
   { id: 'multiple-choice', label: 'Выберите перевод', icon: <Target className="size-5" />, description: 'Выберите правильный перевод из 4 вариантов' },
   { id: 'fill-blank', label: 'Заполните пропуск', icon: <PenLine className="size-5" />, description: 'Вставьте правильное слово' },
   { id: 'matching', label: 'Сопоставьте пары', icon: <Link className="size-5" />, description: 'Соедините чешские слова с русскими' },
@@ -48,7 +62,742 @@ function shuffleArray<T>(arr: T[]): T[] {
   return a;
 }
 
-// Multiple Choice Exercise
+function shuffleString(str: string): string[] {
+  const letters = str.split('');
+  // Fisher-Yates shuffle
+  for (let i = letters.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [letters[i], letters[j]] = [letters[j], letters[i]];
+  }
+  // Ensure it's actually shuffled (not the same as original)
+  const shuffled = letters.join('');
+  if (shuffled === str && str.length > 1) {
+    return shuffleString(str);
+  }
+  return letters;
+}
+
+// Helper: get random wrong options for reverse quiz
+function getWrongOptions(correctWord: VocabWord, all: VocabWord[], count: number): string[] {
+  const sameCategory = all.filter(w => w.czech !== correctWord.czech);
+  const shuffled = shuffleArray(sameCategory).slice(0, count);
+  return shuffled.map(w => w.czech);
+}
+
+// ===================== RESULTS CARD =====================
+function ResultsCard({ score, total, onRetry }: { score: number; total: number; onRetry: () => void }) {
+  const pct = Math.round((score / total) * 100);
+  return (
+    <Card className="p-8 text-center">
+      <Trophy className={cn('size-16 mx-auto mb-4', pct >= 70 ? 'text-amber-500' : 'text-muted-foreground')} />
+      <h3 className="text-2xl font-bold mb-2">
+        {pct >= 90 ? 'Отлично! 🎉' : pct >= 70 ? 'Хорошо! 👍' : 'Попробуйте ещё раз 💪'}
+      </h3>
+      <p className="text-lg mb-4">
+        {score} из {total} правильных ответов ({pct}%)
+      </p>
+      <Progress value={pct} className="h-3 mb-4 max-w-xs mx-auto" />
+      <Button onClick={onRetry}>
+        <RotateCcw className="size-4 mr-1" />
+        Попробовать снова
+      </Button>
+    </Card>
+  );
+}
+
+// ===================== FLASHCARDS =====================
+function FlashcardsQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
+  const [words] = useState<VocabWord[]>(() => shuffleArray(allWords).slice(0, 20));
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
+  const [known, setKnown] = useState<number[]>([]);
+  const [unknown, setUnknown] = useState<number[]>([]);
+  const [showResult, setShowResult] = useState(false);
+
+  const current = words[currentIdx];
+  const isDone = currentIdx >= words.length;
+
+  const handleRate = (knewIt: boolean) => {
+    if (knewIt) {
+      setKnown(prev => [...prev, currentIdx]);
+    } else {
+      setUnknown(prev => [...prev, currentIdx]);
+    }
+    setIsFlipped(false);
+    if (currentIdx + 1 >= words.length) {
+      const finalKnown = knewIt ? [...known, currentIdx] : known;
+      setShowResult(true);
+      onFinish(finalKnown.length, words.length);
+    } else {
+      setCurrentIdx(prev => prev + 1);
+    }
+  };
+
+  if (showResult) {
+    return (
+      <ResultsCard
+        score={known.length}
+        total={words.length}
+        onRetry={() => {
+          setCurrentIdx(0);
+          setIsFlipped(false);
+          setKnown([]);
+          setUnknown([]);
+          setShowResult(false);
+        }}
+      />
+    );
+  }
+
+  if (isDone) return null;
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <Badge variant="secondary">
+          Карточка {currentIdx + 1} из {words.length}
+        </Badge>
+        <div className="flex items-center gap-3 text-sm">
+          <span className="text-emerald-600 font-medium">✓ {known.length}</span>
+          <span className="text-red-500 font-medium">✗ {unknown.length}</span>
+        </div>
+      </div>
+      <Progress value={(currentIdx / words.length) * 100} className="h-2" />
+
+      <div
+        className="perspective-[1000px] cursor-pointer mx-auto max-w-md"
+        onClick={() => setIsFlipped(!isFlipped)}
+      >
+        <motion.div
+          className="relative w-full min-h-[280px]"
+          animate={{ rotateY: isFlipped ? 180 : 0 }}
+          transition={{ duration: 0.5, type: 'spring', stiffness: 200, damping: 25 }}
+          style={{ transformStyle: 'preserve-3d' }}
+        >
+          {/* Front side */}
+          <div
+            className="absolute inset-0 backface-hidden rounded-2xl border-2 border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50 to-white dark:from-emerald-950/50 dark:to-card p-8 flex flex-col items-center justify-center shadow-lg"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
+            <p className="text-sm text-muted-foreground mb-3">Чешское слово</p>
+            <p className="text-4xl font-bold text-emerald-700 dark:text-emerald-400 mb-3">{current.czech}</p>
+            <p className="text-sm text-muted-foreground italic">[{current.pronunciation}]</p>
+            <p className="text-xs text-muted-foreground mt-4">Нажмите, чтобы перевернуть</p>
+          </div>
+          {/* Back side */}
+          <div
+            className="absolute inset-0 backface-hidden rounded-2xl border-2 border-blue-200 dark:border-blue-800 bg-gradient-to-br from-blue-50 to-white dark:from-blue-950/50 dark:to-card p-8 flex flex-col items-center justify-center shadow-lg"
+            style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          >
+            <p className="text-sm text-muted-foreground mb-3">Русский перевод</p>
+            <p className="text-3xl font-bold mb-2">{current.russian}</p>
+            <p className="text-sm text-muted-foreground italic mt-2">&laquo;{current.example}&raquo;</p>
+            <p className="text-xs text-muted-foreground mt-1">{current.exampleTranslation}</p>
+          </div>
+        </motion.div>
+      </div>
+
+      {isFlipped && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex gap-3 justify-center"
+        >
+          <Button
+            variant="outline"
+            className="border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-950/50 min-w-[140px]"
+            onClick={() => handleRate(false)}
+          >
+            <X className="size-4 mr-1" />
+            Не знаю
+          </Button>
+          <Button
+            className="bg-emerald-600 hover:bg-emerald-700 min-w-[140px]"
+            onClick={() => handleRate(true)}
+          >
+            <Check className="size-4 mr-1" />
+            Знаю
+          </Button>
+        </motion.div>
+      )}
+    </div>
+  );
+}
+
+// ===================== REVERSE QUIZ =====================
+function ReverseQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
+  const [words] = useState<VocabWord[]>(() => shuffleArray(allWords).slice(0, 15));
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
+  const [answered, setAnswered] = useState(false);
+
+  const current = words[currentIdx];
+  const wrongOptions = useMemo(() => getWrongOptions(current, allWords, 3), [current]);
+  const options = useMemo(() => shuffleArray([current.czech, ...wrongOptions]), [current, wrongOptions]);
+
+  const handleAnswer = (answer: string) => {
+    if (answered) return;
+    setSelectedAnswer(answer);
+    setAnswered(true);
+    if (answer === current.czech) {
+      setScore(s => s + 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIdx >= words.length - 1) {
+      setShowResult(true);
+      onFinish(score + (selectedAnswer === current.czech ? 0 : 0), words.length);
+    } else {
+      setCurrentIdx(i => i + 1);
+      setSelectedAnswer(null);
+      setAnswered(false);
+    }
+  };
+
+  if (showResult) {
+    return (
+      <ResultsCard
+        score={score}
+        total={words.length}
+        onRetry={() => {
+          setCurrentIdx(0);
+          setSelectedAnswer(null);
+          setScore(0);
+          setShowResult(false);
+          setAnswered(false);
+        }}
+      />
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <Badge variant="secondary">Вопрос {currentIdx + 1} из {words.length}</Badge>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-emerald-600 font-medium">{score}</span>
+          <span className="text-muted-foreground">правильных</span>
+        </div>
+      </div>
+      <Progress value={(currentIdx / words.length) * 100} className="h-2" />
+
+      <Card className="p-6">
+        <div className="text-center mb-6">
+          <p className="text-sm text-muted-foreground mb-1">Выберите чешский перевод для:</p>
+          <p className="text-2xl font-bold">{current.russian}</p>
+          <p className="text-sm text-muted-foreground mt-1 italic text-emerald-600 dark:text-emerald-400">[{current.pronunciation}]</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {options.map((option) => {
+            const isSelected = selectedAnswer === option;
+            const isCorrect = option === current.czech;
+            let btnClass = 'border hover:bg-muted/50 cursor-pointer';
+            if (answered) {
+              if (isCorrect) btnClass = 'border-emerald-500 bg-emerald-50 dark:bg-emerald-950/50';
+              else if (isSelected && !isCorrect) btnClass = 'border-red-500 bg-red-50 dark:bg-red-950/50';
+              else btnClass = 'border opacity-50';
+            }
+            return (
+              <button
+                key={option}
+                onClick={() => handleAnswer(option)}
+                disabled={answered}
+                className={cn(
+                  'p-4 rounded-lg text-left text-sm font-medium transition-all flex items-center gap-2',
+                  btnClass
+                )}
+              >
+                {answered && isCorrect && <Check className="size-4 text-emerald-600 shrink-0" />}
+                {answered && isSelected && !isCorrect && <X className="size-4 text-red-600 shrink-0" />}
+                {option}
+              </button>
+            );
+          })}
+        </div>
+
+        {answered && (
+          <div className="mt-4 text-center">
+            {selectedAnswer === current.czech ? (
+              <p className="text-emerald-600 font-medium">Правильно! ✅</p>
+            ) : (
+              <p className="text-red-600">
+                Неправильно. Правильный ответ: <span className="font-bold">{current.czech}</span>
+              </p>
+            )}
+            <Button className="mt-3" onClick={handleNext}>
+              {currentIdx >= words.length - 1 ? 'Показать результат' : 'Следующий вопрос'}
+              <ChevronRight className="size-4 ml-1" />
+            </Button>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// ===================== TRUE / FALSE =====================
+function TrueFalseQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
+  const [questions] = useState(() => shuffleArray(trueFalseQuestions).slice(0, 15));
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
+  const [answered, setAnswered] = useState(false);
+
+  const current = questions[currentIdx];
+
+  const handleAnswer = (answer: boolean) => {
+    if (answered) return;
+    setSelectedAnswer(answer);
+    setAnswered(true);
+    if (answer === current.isCorrect) {
+      setScore(s => s + 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIdx >= questions.length - 1) {
+      setShowResult(true);
+      onFinish(score, questions.length);
+    } else {
+      setCurrentIdx(i => i + 1);
+      setSelectedAnswer(null);
+      setAnswered(false);
+    }
+  };
+
+  if (showResult) {
+    return (
+      <ResultsCard
+        score={score}
+        total={questions.length}
+        onRetry={() => {
+          setCurrentIdx(0);
+          setSelectedAnswer(null);
+          setScore(0);
+          setShowResult(false);
+          setAnswered(false);
+        }}
+      />
+    );
+  }
+
+  const userIsCorrect = selectedAnswer === current.isCorrect;
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <Badge variant="secondary">Вопрос {currentIdx + 1} из {questions.length}</Badge>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-emerald-600 font-medium">{score}</span>
+          <span className="text-muted-foreground">правильных</span>
+        </div>
+      </div>
+      <Progress value={(currentIdx / questions.length) * 100} className="h-2" />
+
+      <Card className="p-6">
+        <div className="text-center mb-6">
+          <p className="text-sm text-muted-foreground mb-2">Правильный ли это перевод?</p>
+          <div className="flex items-center justify-center gap-4">
+            <div className="text-center">
+              <p className="text-2xl font-bold text-emerald-700 dark:text-emerald-400">{current.czech}</p>
+            </div>
+            <span className="text-2xl text-muted-foreground">=</span>
+            <div className="text-center">
+              <p className="text-2xl font-bold">{current.russian}</p>
+            </div>
+          </div>
+        </div>
+
+        {!answered ? (
+          <div className="flex gap-4 justify-center">
+            <Button
+              variant="outline"
+              className="border-emerald-300 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950/50 min-w-[140px] h-14 text-lg"
+              onClick={() => handleAnswer(true)}
+            >
+              <CircleCheck className="size-5 mr-2" />
+              Верно
+            </Button>
+            <Button
+              variant="outline"
+              className="border-red-300 text-red-600 hover:bg-red-50 dark:hover:bg-red-950/50 min-w-[140px] h-14 text-lg"
+              onClick={() => handleAnswer(false)}
+            >
+              <CircleX className="size-5 mr-2" />
+              Неверно
+            </Button>
+          </div>
+        ) : (
+          <div className="text-center space-y-3">
+            <div className={cn(
+              'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium',
+              userIsCorrect
+                ? 'bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400'
+                : 'bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400'
+            )}>
+              {userIsCorrect ? (
+                <><Check className="size-4" /> Правильно!</>
+              ) : (
+                <><X className="size-4" /> Неправильно! Правильный перевод: {current.correctRussian}</>
+              )}
+            </div>
+            <div>
+              <Button onClick={handleNext}>
+                {currentIdx >= questions.length - 1 ? 'Показать результат' : 'Следующий вопрос'}
+                <ChevronRight className="size-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// ===================== WORD SCRAMBLE =====================
+function WordScrambleQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
+  const [words] = useState<VocabWord[]>(() => {
+    // Filter to words with Czech text that can be scrambled (not too short)
+    const eligible = allWords.filter(w => w.czech.length >= 3 && !w.czech.includes(' '));
+    return shuffleArray(eligible).slice(0, 15);
+  });
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [shuffledLetters, setShuffledLetters] = useState<string[]>([]);
+  const [selectedLetters, setSelectedLetters] = useState<string[]>([]);
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  const current = words[currentIdx];
+
+  useEffect(() => {
+    if (current) {
+      setShuffledLetters(shuffleString(current.czech));
+      setSelectedLetters([]);
+      setAnswered(false);
+      setIsCorrect(false);
+    }
+  }, [current, currentIdx]);
+
+  const availableLetters = useMemo(() => {
+    const counts: Record<string, number> = {};
+    const selCounts: Record<string, number> = {};
+    shuffledLetters.forEach(l => { counts[l] = (counts[l] || 0) + 1; });
+    selectedLetters.forEach(l => { selCounts[l] = (selCounts[l] || 0) + 1; });
+    return shuffledLetters.filter(l => (counts[l] || 0) > (selCounts[l] || 0));
+  }, [shuffledLetters, selectedLetters]);
+
+  const handleLetterClick = (letter: string) => {
+    if (answered) return;
+    setSelectedLetters(prev => [...prev, letter]);
+  };
+
+  const handleSelectedLetterClick = (index: number) => {
+    if (answered) return;
+    setSelectedLetters(prev => prev.filter((_, i) => i !== index));
+  };
+
+  const handleCheck = () => {
+    if (!current) return;
+    const joined = selectedLetters.join('');
+    const correct = joined.toLowerCase() === current.czech.toLowerCase();
+    setIsCorrect(correct);
+    setAnswered(true);
+    if (correct) setScore(s => s + 1);
+  };
+
+  const handleNext = () => {
+    if (currentIdx >= words.length - 1) {
+      setShowResult(true);
+      onFinish(score, words.length);
+    } else {
+      setCurrentIdx(i => i + 1);
+    }
+  };
+
+  if (showResult) {
+    return (
+      <ResultsCard
+        score={score}
+        total={words.length}
+        onRetry={() => {
+          setCurrentIdx(0);
+          setScore(0);
+          setShowResult(false);
+          setSelectedLetters([]);
+          setAnswered(false);
+          setIsCorrect(false);
+        }}
+      />
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <Badge variant="secondary">Слово {currentIdx + 1} из {words.length}</Badge>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-emerald-600 font-medium">{score}</span>
+          <span className="text-muted-foreground">правильных</span>
+        </div>
+      </div>
+      <Progress value={(currentIdx / words.length) * 100} className="h-2" />
+
+      <Card className="p-6">
+        <div className="text-center mb-4">
+          <p className="text-sm text-muted-foreground mb-1">Составьте слово для перевода:</p>
+          <p className="text-2xl font-bold">{current.russian}</p>
+          <p className="text-sm text-muted-foreground mt-1 italic text-emerald-600 dark:text-emerald-400">[{current.pronunciation}]</p>
+        </div>
+
+        {/* Selected letters area */}
+        <div className="min-h-[60px] border-2 border-dashed rounded-lg p-3 mb-4 flex flex-wrap gap-2 items-center justify-center">
+          {selectedLetters.length === 0 ? (
+            <p className="text-sm text-muted-foreground">Нажимайте на буквы ниже, чтобы составить слово</p>
+          ) : (
+            selectedLetters.map((letter, i) => (
+              <button
+                key={`sel-${i}`}
+                onClick={() => handleSelectedLetterClick(i)}
+                className={cn(
+                  'w-10 h-10 rounded-lg text-lg font-bold border-2 transition-all flex items-center justify-center',
+                  answered
+                    ? isCorrect
+                      ? 'border-emerald-400 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300'
+                      : 'border-red-400 bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300'
+                    : 'border-emerald-400 bg-emerald-100 dark:bg-emerald-900/50 hover:bg-emerald-200 dark:hover:bg-emerald-800/50 cursor-pointer text-emerald-700 dark:text-emerald-300'
+                )}
+              >
+                {letter}
+              </button>
+            ))
+          )}
+        </div>
+
+        {/* Available letters */}
+        <div className="flex flex-wrap gap-2 justify-center mb-4">
+          {availableLetters.map((letter, i) => (
+            <button
+              key={`avail-${letter}-${i}`}
+              onClick={() => handleLetterClick(letter)}
+              disabled={answered}
+              className="w-10 h-10 rounded-lg text-lg font-bold border-2 border-muted hover:bg-muted/50 cursor-pointer transition-all flex items-center justify-center"
+            >
+              {letter}
+            </button>
+          ))}
+        </div>
+
+        {!answered && selectedLetters.length > 0 && (
+          <div className="text-center flex gap-3 justify-center">
+            <Button variant="outline" onClick={() => setSelectedLetters([])}>
+              <RotateCcw className="size-4 mr-1" />
+              Сброс
+            </Button>
+            <Button onClick={handleCheck}>
+              <Check className="size-4 mr-1" />
+              Проверить
+            </Button>
+          </div>
+        )}
+
+        {answered && (
+          <div className="text-center space-y-3">
+            {isCorrect ? (
+              <p className="text-emerald-600 font-medium">Правильно! ✅</p>
+            ) : (
+              <p className="text-red-600">
+                Неправильно. Правильный ответ:{' '}
+                <span className="font-bold text-emerald-700 dark:text-emerald-400">{current.czech}</span>
+              </p>
+            )}
+            <Button onClick={handleNext}>
+              {currentIdx >= words.length - 1 ? 'Показать результат' : 'Следующее слово'}
+              <ChevronRight className="size-4 ml-1" />
+            </Button>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// ===================== TYPING PRACTICE =====================
+function TypingPracticeQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
+  const [words] = useState<VocabWord[]>(() => shuffleArray(allWords).slice(0, 12));
+  const [currentIdx, setCurrentIdx] = useState(0);
+  const [inputValue, setInputValue] = useState('');
+  const [score, setScore] = useState(0);
+  const [showResult, setShowResult] = useState(false);
+  const [answered, setAnswered] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [showHint, setShowHint] = useState(false);
+  const [mistakes, setMistakes] = useState(0);
+
+  const current = words[currentIdx];
+
+  const handleCheck = () => {
+    if (!current || answered) return;
+    const correct = inputValue.trim().toLowerCase() === current.czech.toLowerCase();
+    setIsCorrect(correct);
+    setAnswered(true);
+    if (!correct) setMistakes(m => m + 1);
+    if (correct) setScore(s => s + 1);
+  };
+
+  const handleNext = () => {
+    if (currentIdx >= words.length - 1) {
+      setShowResult(true);
+      onFinish(score, words.length);
+    } else {
+      setCurrentIdx(i => i + 1);
+      setInputValue('');
+      setAnswered(false);
+      setIsCorrect(false);
+      setShowHint(false);
+    }
+  };
+
+  // Show hint: reveal first and last letter
+  const getHint = () => {
+    if (!current) return '';
+    const word = current.czech;
+    if (word.length <= 2) return word[0] + '_';
+    return word[0] + '_'.repeat(word.length - 2) + word[word.length - 1];
+  };
+
+  if (showResult) {
+    return (
+      <ResultsCard
+        score={score}
+        total={words.length}
+        onRetry={() => {
+          setCurrentIdx(0);
+          setInputValue('');
+          setScore(0);
+          setShowResult(false);
+          setAnswered(false);
+          setIsCorrect(false);
+          setShowHint(false);
+          setMistakes(0);
+        }}
+      />
+    );
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <Badge variant="secondary">Слово {currentIdx + 1} из {words.length}</Badge>
+        <div className="flex items-center gap-2 text-sm">
+          <span className="text-emerald-600 font-medium">{score}</span>
+          <span className="text-muted-foreground">правильных</span>
+        </div>
+      </div>
+      <Progress value={(currentIdx / words.length) * 100} className="h-2" />
+
+      <Card className="p-6">
+        <div className="text-center mb-6">
+          <p className="text-sm text-muted-foreground mb-1">Напишите по-чешски:</p>
+          <p className="text-2xl font-bold">{current.russian}</p>
+          <p className="text-sm text-muted-foreground mt-1 italic text-emerald-600 dark:text-emerald-400">[{current.pronunciation}]</p>
+          {current.example && (
+            <p className="text-xs text-muted-foreground mt-2">
+              Пример: <span className="italic">&laquo;{current.example}&raquo;</span>
+            </p>
+          )}
+        </div>
+
+        {!answered ? (
+          <div className="space-y-4">
+            <div className="relative">
+              <input
+                type="text"
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' && inputValue.trim()) handleCheck();
+                }}
+                placeholder="Введите чешское слово..."
+                className={cn(
+                  'w-full p-4 rounded-lg border-2 text-lg font-medium text-center',
+                  'focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500',
+                  'bg-background placeholder:text-muted-foreground'
+                )}
+                autoFocus
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+              />
+            </div>
+
+            <div className="flex flex-col items-center gap-3">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowHint(!showHint)}
+                className="text-muted-foreground"
+              >
+                💡 Подсказка
+              </Button>
+              {showHint && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  className="text-sm font-mono tracking-widest text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-4 py-2 rounded-lg"
+                >
+                  {getHint()}
+                </motion.p>
+              )}
+
+              <Button
+                onClick={handleCheck}
+                disabled={!inputValue.trim()}
+                className="min-w-[200px]"
+              >
+                <Check className="size-4 mr-1" />
+                Проверить
+              </Button>
+            </div>
+          </div>
+        ) : (
+          <div className="text-center space-y-3">
+            <div className={cn(
+              'inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium',
+              isCorrect
+                ? 'bg-emerald-100 dark:bg-emerald-950/50 text-emerald-700 dark:text-emerald-400'
+                : 'bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400'
+            )}>
+              {isCorrect ? (
+                <><Check className="size-4" /> Правильно!</>
+              ) : (
+                <>
+                  <X className="size-4" />
+                  Ваш ответ: &laquo;{inputValue.trim()}&raquo; — Правильно: <span className="font-bold">{current.czech}</span>
+                </>
+              )}
+            </div>
+            <div>
+              <Button onClick={handleNext}>
+                {currentIdx >= words.length - 1 ? 'Показать результат' : 'Следующее слово'}
+                <ChevronRight className="size-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        )}
+      </Card>
+    </div>
+  );
+}
+
+// ===================== MULTIPLE CHOICE (original) =====================
 function MultipleChoiceQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
   const [questions] = useState(() => shuffleArray(multipleChoiceQuestions).slice(0, 15));
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -80,28 +829,18 @@ function MultipleChoiceQuiz({ onFinish }: { onFinish: (score: number, total: num
   };
 
   if (showResult) {
-    const pct = Math.round((score / questions.length) * 100);
     return (
-      <Card className="p-8 text-center">
-        <Trophy className={cn('size-16 mx-auto mb-4', pct >= 70 ? 'text-amber-500' : 'text-muted-foreground')} />
-        <h3 className="text-2xl font-bold mb-2">
-          {pct >= 90 ? 'Отлично! 🎉' : pct >= 70 ? 'Хорошо! 👍' : 'Попробуйте ещё раз 💪'}
-        </h3>
-        <p className="text-lg mb-4">
-          {score} из {questions.length} правильных ответов ({pct}%)
-        </p>
-        <Progress value={pct} className="h-3 mb-4 max-w-xs mx-auto" />
-        <Button onClick={() => {
+      <ResultsCard
+        score={score}
+        total={questions.length}
+        onRetry={() => {
           setShowResult(false);
           setCurrentIdx(0);
           setScore(0);
           setSelectedAnswer(null);
           setAnswered(false);
-        }}>
-          <RotateCcw className="size-4 mr-1" />
-          Попробовать снова
-        </Button>
-      </Card>
+        }}
+      />
     );
   }
 
@@ -173,7 +912,7 @@ function MultipleChoiceQuiz({ onFinish }: { onFinish: (score: number, total: num
   );
 }
 
-// Fill in the Blank Exercise
+// ===================== FILL IN THE BLANK (original) =====================
 function FillBlankQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
   const [questions] = useState(() => shuffleArray(fillBlankQuestions).slice(0, 10));
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -205,28 +944,18 @@ function FillBlankQuiz({ onFinish }: { onFinish: (score: number, total: number) 
   };
 
   if (showResult) {
-    const pct = Math.round((score / questions.length) * 100);
     return (
-      <Card className="p-8 text-center">
-        <Trophy className={cn('size-16 mx-auto mb-4', pct >= 70 ? 'text-amber-500' : 'text-muted-foreground')} />
-        <h3 className="text-2xl font-bold mb-2">
-          {pct >= 90 ? 'Отлично! 🎉' : pct >= 70 ? 'Хорошо! 👍' : 'Попробуйте ещё раз 💪'}
-        </h3>
-        <p className="text-lg mb-4">
-          {score} из {questions.length} правильных ответов ({pct}%)
-        </p>
-        <Progress value={pct} className="h-3 mb-4 max-w-xs mx-auto" />
-        <Button onClick={() => {
+      <ResultsCard
+        score={score}
+        total={questions.length}
+        onRetry={() => {
           setShowResult(false);
           setCurrentIdx(0);
           setScore(0);
           setSelectedAnswer(null);
           setAnswered(false);
-        }}>
-          <RotateCcw className="size-4 mr-1" />
-          Попробовать снова
-        </Button>
-      </Card>
+        }}
+      />
     );
   }
 
@@ -303,7 +1032,7 @@ function FillBlankQuiz({ onFinish }: { onFinish: (score: number, total: number) 
   );
 }
 
-// Matching Exercise
+// ===================== MATCHING EXERCISE (original) =====================
 function MatchingExercise({ onFinish }: { onFinish: (score: number, total: number) => void }) {
   const [set] = useState<MatchingSet>(() => matchingSets[Math.floor(Math.random() * matchingSets.length)]);
   const [selectedCzech, setSelectedCzech] = useState<string | null>(null);
@@ -373,7 +1102,6 @@ function MatchingExercise({ onFinish }: { onFinish: (score: number, total: numbe
       <Progress value={(matchedCount / set.pairs.length) * 100} className="h-2" />
 
       <div className="grid grid-cols-2 gap-4">
-        {/* Czech Column */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-center mb-2 text-emerald-700 dark:text-emerald-400">Чешский</p>
           {set.pairs.map((pair) => {
@@ -399,7 +1127,6 @@ function MatchingExercise({ onFinish }: { onFinish: (score: number, total: numbe
           })}
         </div>
 
-        {/* Russian Column */}
         <div className="space-y-2">
           <p className="text-sm font-medium text-center mb-2">Русский</p>
           {shuffledRussian.map((russian) => {
@@ -432,7 +1159,7 @@ function MatchingExercise({ onFinish }: { onFinish: (score: number, total: numbe
   );
 }
 
-// Sentence Building Exercise
+// ===================== SENTENCE BUILDING (original) =====================
 function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: number) => void }) {
   const [exercises] = useState(() => shuffleArray(sentenceBuildingExercises).slice(0, 8));
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -444,10 +1171,8 @@ function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: n
 
   const current = exercises[currentIdx];
 
-  // Compute shuffled words for current exercise and filter available
   const shuffledForCurrent = current ? shuffleArray(current.words) : [];
 
-  // Count available words based on how many times each word appears vs selected
   const getAvailableWords = () => {
     if (!current) return [];
     const counts: Record<string, number> = {};
@@ -492,29 +1217,19 @@ function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: n
   };
 
   if (showResult) {
-    const pct = Math.round((score / exercises.length) * 100);
     return (
-      <Card className="p-8 text-center">
-        <Trophy className={cn('size-16 mx-auto mb-4', pct >= 70 ? 'text-amber-500' : 'text-muted-foreground')} />
-        <h3 className="text-2xl font-bold mb-2">
-          {pct >= 90 ? 'Отлично! 🎉' : pct >= 70 ? 'Хорошо! 👍' : 'Попробуйте ещё раз 💪'}
-        </h3>
-        <p className="text-lg mb-4">
-          {score} из {exercises.length} правильных ({pct}%)
-        </p>
-        <Progress value={pct} className="h-3 mb-4 max-w-xs mx-auto" />
-        <Button onClick={() => {
+      <ResultsCard
+        score={score}
+        total={exercises.length}
+        onRetry={() => {
           setShowResult(false);
           setCurrentIdx(0);
           setScore(0);
           setSelectedWords([]);
           setAnswered(false);
           setIsCorrect(false);
-        }}>
-          <RotateCcw className="size-4 mr-1" />
-          Попробовать снова
-        </Button>
-      </Card>
+        }}
+      />
     );
   }
 
@@ -535,7 +1250,6 @@ function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: n
           <p className="text-lg font-medium">{current.translation}</p>
         </div>
 
-        {/* Selected words area */}
         <div className="min-h-[60px] border-2 border-dashed rounded-lg p-3 mb-4 flex flex-wrap gap-2 items-center">
           {selectedWords.length === 0 ? (
             <p className="text-sm text-muted-foreground w-full text-center">
@@ -559,7 +1273,6 @@ function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: n
           )}
         </div>
 
-        {/* Available words */}
         <div className="flex flex-wrap gap-2 justify-center mb-4">
           {availableWords.map((word, i) => (
             <button
@@ -606,7 +1319,7 @@ function SentenceBuildingQuiz({ onFinish }: { onFinish: (score: number, total: n
   );
 }
 
-// Main Exercises Section
+// ===================== MAIN EXERCISES SECTION =====================
 export function ExercisesSection() {
   const [selectedType, setSelectedType] = useState<ExerciseType | null>(null);
   const { addQuizScore, incrementStreak } = useCzechStore();
@@ -655,6 +1368,21 @@ export function ExercisesSection() {
             {selectedType === 'sentence-building' && (
               <SentenceBuildingQuiz onFinish={handleFinish('sentence-building')} />
             )}
+            {selectedType === 'flashcards' && (
+              <FlashcardsQuiz onFinish={handleFinish('flashcards')} />
+            )}
+            {selectedType === 'reverse-quiz' && (
+              <ReverseQuiz onFinish={handleFinish('reverse-quiz')} />
+            )}
+            {selectedType === 'true-false' && (
+              <TrueFalseQuiz onFinish={handleFinish('true-false')} />
+            )}
+            {selectedType === 'word-scramble' && (
+              <WordScrambleQuiz onFinish={handleFinish('word-scramble')} />
+            )}
+            {selectedType === 'typing-practice' && (
+              <TypingPracticeQuiz onFinish={handleFinish('typing-practice')} />
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -670,25 +1398,60 @@ export function ExercisesSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {exerciseTypes.map((type) => (
-          <Card
-            key={type.id}
-            className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.02] p-6"
-            onClick={() => setSelectedType(type.id)}
-          >
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-lg bg-emerald-100 dark:bg-emerald-900 text-emerald-600">
-                {type.icon}
+      {/* New exercises */}
+      <div>
+        <h3 className="text-sm font-medium text-muted-foreground mb-3 flex items-center gap-2">
+          <Sparkles className="size-4 text-amber-500" />
+          Новые упражнения для повторения слов
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {exerciseTypes.filter(t => t.isNew).map((type) => (
+            <Card
+              key={type.id}
+              className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.02] p-6 border-emerald-200 dark:border-emerald-800 bg-gradient-to-br from-emerald-50/50 to-card dark:from-emerald-950/20 dark:to-card"
+              onClick={() => setSelectedType(type.id)}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-emerald-100 dark:bg-emerald-900 text-emerald-600">
+                  {type.icon}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-semibold text-lg">{type.label}</h3>
+                    <Badge variant="secondary" className="text-xs bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300 border-0">Новое</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">{type.description}</p>
+                </div>
+                <ArrowRight className="size-5 text-muted-foreground mt-1 shrink-0" />
               </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-lg mb-1">{type.label}</h3>
-                <p className="text-sm text-muted-foreground">{type.description}</p>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      {/* Original exercises */}
+      <div>
+        <h3 className="text-sm font-medium text-muted-foreground mb-3">Классические упражнения</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {exerciseTypes.filter(t => !t.isNew).map((type) => (
+            <Card
+              key={type.id}
+              className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.02] p-6"
+              onClick={() => setSelectedType(type.id)}
+            >
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-lg bg-emerald-100 dark:bg-emerald-900 text-emerald-600">
+                  {type.icon}
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold text-lg mb-1">{type.label}</h3>
+                  <p className="text-sm text-muted-foreground">{type.description}</p>
+                </div>
+                <ArrowRight className="size-5 text-muted-foreground mt-1 shrink-0" />
               </div>
-              <ArrowRight className="size-5 text-muted-foreground mt-1 shrink-0" />
-            </div>
-          </Card>
-        ))}
+            </Card>
+          ))}
+        </div>
       </div>
     </div>
   );
