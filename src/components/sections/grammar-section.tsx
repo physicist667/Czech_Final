@@ -9,6 +9,8 @@ import { grammarLessons, type GrammarLesson } from '@/data/grammar';
 import { useCzechStore } from '@/store/czech-store';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { AdjectiveComparisonTable } from '@/components/sections/adjective-comparison-table';
+import { PrepositionCaseGuide } from '@/components/sections/preposition-case-guide';
 import {
   ChevronLeft,
   ChevronRight,
@@ -136,6 +138,22 @@ export function GrammarSection() {
               );
             })}
           </motion.div>
+
+          {/* Adjective Comparison Table */}
+          <div className="pt-4">
+            <h2 className="text-xl font-bold mb-3">
+              📐 Сравнение прилагательных
+            </h2>
+            <AdjectiveComparisonTable />
+          </div>
+
+          {/* Preposition Case Guide */}
+          <div className="pt-4">
+            <h2 className="text-xl font-bold mb-3">
+              📌 Предлоги и падежи
+            </h2>
+            <PrepositionCaseGuide />
+          </div>
         </>
       ) : lesson ? (
         <>
