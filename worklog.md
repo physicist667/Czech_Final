@@ -684,3 +684,24 @@ Stage Summary:
 - 6 наборов грамматических упражнений (60 вопросов): падежи, предлоги, прилагательные, глаголы, возвратные, условное наклонение
 - Все 9 упражнений теперь поддерживают выбор категории слов
 
+---
+Task ID: 1
+Agent: main
+Task: Add new vocabulary categories and exercises
+
+Work Log:
+- Added "work-career" category (20 words, wc1-wc20) to vocabulary.ts
+- Added "restaurant" category (20 words, rst1-rst20) to vocabulary.ts
+- Fixed allWords export type annotation to use VocabWord[]
+- Added 10 multiple-choice questions (5 per category) to exercises.ts
+- Added 10 fill-blank questions (5 per category) to exercises.ts
+- Added 2 matching sets (10 pairs each) to exercises.ts
+- Added 10 sentence-building exercises (5 per category) to exercises.ts
+- Added 10 true-false questions (5 per category) to exercises.ts
+- TypeScript compilation verified: zero new errors (pre-existing errors only in pronounDeclensions.ts)
+
+Stage Summary:
+- 40 new words added across 2 categories
+- 52 new exercise items added
+- Build passes without new errors
+

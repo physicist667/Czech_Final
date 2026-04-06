@@ -167,6 +167,18 @@ export const multipleChoiceQuestions: MultipleChoiceQuestion[] = [
   { id: 'mc98', czech: 'Trouba', correctAnswer: 'Духовка', options: ['Плита', 'Микроволновка', 'Духовка', 'Гриль'], category: 'furniture' },
   // Tech
   { id: 'mc99', czech: 'Telefon', correctAnswer: 'Телефон', options: ['Планшет', 'Телефон', 'Ноутбук', 'Часы'], category: 'tech' },
+  // Work and career
+  { id: 'mc-wc1', czech: 'Práce', correctAnswer: 'Работа', options: ['Учёба', 'Работа', 'Отдых', 'Путешествие'], category: 'work-career' },
+  { id: 'mc-wc2', czech: 'Pohovor', correctAnswer: 'Собеседование', options: ['Экзамен', 'Собеседование', 'Встреча', 'Дискуссия'], category: 'work-career' },
+  { id: 'mc-wc3', czech: 'Plat', correctAnswer: 'Зарплата', options: ['Стипендия', 'Пенсия', 'Зарплата', 'Премия'], category: 'work-career' },
+  { id: 'mc-wc4', czech: 'Dovolená', correctAnswer: 'Отпуск', options: ['Выходной', 'Отпуск', 'Больничный', 'Командировка'], category: 'work-career' },
+  { id: 'mc-wc5', czech: 'Smlouva', correctAnswer: 'Контракт / Договор', options: ['Резюме', 'Рекомендация', 'Контракт / Договор', 'Письмо'], category: 'work-career' },
+  // Restaurant
+  { id: 'mc-rst1', czech: 'Jídelní lístek', correctAnswer: 'Меню', options: ['Рецепт', 'Меню', 'Счёт', 'Чек'], category: 'restaurant' },
+  { id: 'mc-rst2', czech: 'Účet', correctAnswer: 'Счёт', options: ['Меню', 'Чаевые', 'Счёт', 'Бронь'], category: 'restaurant' },
+  { id: 'mc-rst3', czech: 'Spropitné', correctAnswer: 'Чаевые', options: ['Счёт', 'Чаевые', 'Десерт', 'Закуска'], category: 'restaurant' },
+  { id: 'mc-rst4', czech: 'Předkrm', correctAnswer: 'Закуска', options: ['Основное блюдо', 'Десерт', 'Напиток', 'Закуска'], category: 'restaurant' },
+  { id: 'mc-rst5', czech: 'Číšník', correctAnswer: 'Официант', options: ['Повар', 'Официант', 'Менеджер', 'Хостес'], category: 'restaurant' },
 ];
 
 export const fillBlankQuestions: FillBlankQuestion[] = [
@@ -237,6 +249,18 @@ export const fillBlankQuestions: FillBlankQuestion[] = [
   { id: 'fb46', sentence: 'Počítač je na stole.', sentenceWithBlank: '____ je na stole.', correctAnswer: 'Počítač', options: ['Telefon', 'Počítač', 'Televize', 'Rádio'], category: 'tech', hint: 'Электронное устройство для работы' },
   // Prepositions
   { id: 'fb47', sentence: 'Jsem doma.', sentenceWithBlank: 'Jsem ____ doma.', correctAnswer: 'už', options: ['už', 'ještě', 'ne', 'také'], category: 'adverbs', hint: 'Уже, в значении завершения' },
+  // Work and career
+  { id: 'fb-wc1', sentence: 'Mám novou práci v Praze.', sentenceWithBlank: 'Mám novou ____ v Praze.', correctAnswer: 'práci', options: ['práci', 'kariéru', 'pozici', 'smlouvu'], category: 'work-career', hint: 'Трудовая деятельность' },
+  { id: 'fb-wc2', sentence: 'Dostal jsem vyšší plat.', sentenceWithBlank: 'Dostal jsem vyšší ____.', correctAnswer: 'plat', options: ['účet', 'plat', 'příspěvek', 'výdaj'], category: 'work-career', hint: 'Денежное вознаграждение за труд' },
+  { id: 'fb-wc3', sentence: 'Můj šéf je velmi přísný.', sentenceWithBlank: 'Můj ____ je velmi přísný.', correctAnswer: 'šéf', options: ['šéf', 'kolega', 'známý', 'soused'], category: 'work-career', hint: 'Руководитель' },
+  { id: 'fb-wc4', sentence: 'Jedu na dovolenou na dva týdny.', sentenceWithBlank: 'Jedu na ____ na dva týdny.', correctAnswer: 'dovolenou', options: ['dovolenou', 'službu', 'cestu', 'akci'], category: 'work-career', hint: 'Время отдыха от работы' },
+  { id: 'fb-wc5', sentence: 'Podepsal jsem pracovní smlouvu.', sentenceWithBlank: 'Podepsal jsem pracovní ____.', correctAnswer: 'smlouvu', options: ['smlouvu', 'životopis', 'účet', 'rezervaci'], category: 'work-career', hint: 'Правовой документ о трудоустройстве' },
+  // Restaurant
+  { id: 'fb-rst1', sentence: 'Prosím, účet!', sentenceWithBlank: 'Prosím, ____!', correctAnswer: 'účet', options: ['účet', 'lístek', 'stůl', 'příbor'], category: 'restaurant', hint: 'Документ с суммой к оплате' },
+  { id: 'fb-rst2', sentence: 'Na předkrm si dám salát.', sentenceWithBlank: 'Na ____ si dám salát.', correctAnswer: 'předkrm', options: ['předkrm', 'dezert', 'hlavní chod', 'nápoj'], category: 'restaurant', hint: 'Первое блюдо' },
+  { id: 'fb-rst3', sentence: 'Číšník nám přinesl jídlo.', sentenceWithBlank: '____ nám přinesl jídlo.', correctAnswer: 'Číšník', options: ['Číšník', 'Kuchař', 'Šéf', 'Host'], category: 'restaurant', hint: 'Работник, обслуживающий столики' },
+  { id: 'fb-rst4', sentence: 'Objednali jsme láhev vína.', sentenceWithBlank: 'Objednali jsme ____ vína.', correctAnswer: 'láhev', options: ['láhev', 'sklenici', 'pórce', 'talíř'], category: 'restaurant', hint: 'Ёмкость для напитков' },
+  { id: 'fb-rst5', sentence: 'Tato porce je velmi velká.', sentenceWithBlank: 'Tato ____ je velmi velká.', correctAnswer: 'porce', options: ['porce', 'láhev', 'sklenice', 'předkrm'], category: 'restaurant', hint: 'Размер порции блюда' },
 ];
 
 export const matchingSets: MatchingSet[] = [
@@ -480,6 +504,38 @@ export const matchingSets: MatchingSet[] = [
       { czech: 'Klávesnice', russian: 'Клавиатура' },
     ],
   },
+  {
+    id: 'ms-wc1',
+    title: 'Работа и карьера',
+    pairs: [
+      { czech: 'Práce', russian: 'Работа' },
+      { czech: 'Kariéra', russian: 'Карьера' },
+      { czech: 'Pohovor', russian: 'Собеседование' },
+      { czech: 'Plat', russian: 'Зарплата' },
+      { czech: 'Šéf', russian: 'Начальник' },
+      { czech: 'Kolega', russian: 'Коллега' },
+      { czech: 'Smlouva', russian: 'Контракт' },
+      { czech: 'Dovolená', russian: 'Отпуск' },
+      { czech: 'Pozice', russian: 'Должность' },
+      { czech: 'Životopis', russian: 'Резюме' },
+    ],
+  },
+  {
+    id: 'ms-rst1',
+    title: 'В ресторане',
+    pairs: [
+      { czech: 'Jídelní lístek', russian: 'Меню' },
+      { czech: 'Účet', russian: 'Счёт' },
+      { czech: 'Spropitné', russian: 'Чаевые' },
+      { czech: 'Předkrm', russian: 'Закуска' },
+      { czech: 'Hlavní chod', russian: 'Основное блюдо' },
+      { czech: 'Dezert', russian: 'Десерт' },
+      { czech: 'Nápoj', russian: 'Напиток' },
+      { czech: 'Rezervace', russian: 'Бронь' },
+      { czech: 'Číšník', russian: 'Официант' },
+      { czech: 'Sklenice', russian: 'Бокал' },
+    ],
+  },
 ];
 
 export const sentenceBuildingExercises: SentenceBuildingExercise[] = [
@@ -535,6 +591,18 @@ export const sentenceBuildingExercises: SentenceBuildingExercise[] = [
   { id: 'sb37', correctSentence: 'Můj telefon je nový.', translation: 'Мой телефон новый.', words: ['Můj', 'telefon', 'je', 'nový', '.'], category: 'tech' },
   // Furniture
   { id: 'sb38', correctSentence: 'Koupili jsme nový gauč.', translation: 'Мы купили новый диван.', words: ['Koupili', 'jsme', 'nový', 'gauč', '.'], category: 'furniture' },
+  // Work and career
+  { id: 'sb-wc1', correctSentence: 'Mám novou práci v Praze.', translation: 'У меня новая работа в Праге.', words: ['Mám', 'novou', 'práci', 'v', 'Praze', '.'], category: 'work-career' },
+  { id: 'sb-wc2', correctSentence: 'Podepsal jsem pracovní smlouvu.', translation: 'Я подписал трудовой контракт.', words: ['Podepsal', 'jsem', 'pracovní', 'smlouvu', '.'], category: 'work-career' },
+  { id: 'sb-wc3', correctSentence: 'Můj šéf je velmi přísný.', translation: 'Мой начальник очень строгий.', words: ['Můj', 'šéf', 'je', 'velmi', 'přísný', '.'], category: 'work-career' },
+  { id: 'sb-wc4', correctSentence: 'Hledám novou pozici v IT.', translation: 'Я ищу новую должность в IT.', words: ['Hledám', 'novou', 'pozici', 'v', 'IT', '.'], category: 'work-career' },
+  { id: 'sb-wc5', correctSentence: 'Jedu na dovolenou na dva týdny.', translation: 'Я еду в отпуск на две недели.', words: ['Jedu', 'na', 'dovolenou', 'na', 'dva', 'týdny', '.'], category: 'work-career' },
+  // Restaurant
+  { id: 'sb-rst1', correctSentence: 'Prosím o jídelní lístek.', translation: 'Меню, пожалуйста.', words: ['Prosím', 'o', 'jídelní', 'lístek', '.'], category: 'restaurant' },
+  { id: 'sb-rst2', correctSentence: 'Číšník nám přinesl jídlo.', translation: 'Официант принёс нам еду.', words: ['Číšník', 'nám', 'přinesl', 'jidlo', '.'], category: 'restaurant' },
+  { id: 'sb-rst3', correctSentence: 'Na dezert si dám palačinky.', translation: 'На десерт я возьму блинчики.', words: ['Na', 'dezert', 'si', 'dám', 'palačinky', '.'], category: 'restaurant' },
+  { id: 'sb-rst4', correctSentence: 'Chci udělat rezervaci na sedm hodin.', translation: 'Я хочу сделать бронь на семь часов.', words: ['Chci', 'udělat', 'rezervaci', 'na', 'sedm', 'hodin', '.'], category: 'restaurant' },
+  { id: 'sb-rst5', correctSentence: 'Chci ochutnat české speciality.', translation: 'Я хочу попробовать чешские деликатесы.', words: ['Chci', 'ochutnat', 'české', 'speciality', '.'], category: 'restaurant' },
 ];
 
 export const trueFalseQuestions: TrueFalseQuestion[] = [
@@ -636,4 +704,16 @@ export const trueFalseQuestions: TrueFalseQuestion[] = [
   { id: 'tf75', czech: 'Skříň', russian: 'Шкаф', isCorrect: true, correctRussian: 'Шкаф', category: 'furniture' },
   { id: 'tf76', czech: 'Gauč', russian: 'Кровать', isCorrect: false, correctRussian: 'Диван', category: 'furniture' },
   { id: 'tf77', czech: 'Trouba', russian: 'Духовка', isCorrect: true, correctRussian: 'Духовка', category: 'furniture' },
+  // Work and career
+  { id: 'tf-wc1', czech: 'Práce', russian: 'Работа', isCorrect: true, correctRussian: 'Работа', category: 'work-career' },
+  { id: 'tf-wc2', czech: 'Pohovor', russian: 'Отпуск', isCorrect: false, correctRussian: 'Собеседование', category: 'work-career' },
+  { id: 'tf-wc3', czech: 'Plat', russian: 'Зарплата', isCorrect: true, correctRussian: 'Зарплата', category: 'work-career' },
+  { id: 'tf-wc4', czech: 'Dovolená', russian: 'Командировка', isCorrect: false, correctRussian: 'Отпуск', category: 'work-career' },
+  { id: 'tf-wc5', czech: 'Kolega', russian: 'Начальник', isCorrect: false, correctRussian: 'Коллега', category: 'work-career' },
+  // Restaurant
+  { id: 'tf-rst1', czech: 'Účet', russian: 'Счёт', isCorrect: true, correctRussian: 'Счёт', category: 'restaurant' },
+  { id: 'tf-rst2', czech: 'Předkrm', russian: 'Десерт', isCorrect: false, correctRussian: 'Закуска', category: 'restaurant' },
+  { id: 'tf-rst3', czech: 'Spropitné', russian: 'Чаевые', isCorrect: true, correctRussian: 'Чаевые', category: 'restaurant' },
+  { id: 'tf-rst4', czech: 'Číšník', russian: 'Повар', isCorrect: false, correctRussian: 'Официант', category: 'restaurant' },
+  { id: 'tf-rst5', czech: 'Dezert', russian: 'Основное блюдо', isCorrect: false, correctRussian: 'Десерт', category: 'restaurant' },
 ];
