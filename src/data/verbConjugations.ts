@@ -1260,6 +1260,23 @@ export const verbConjugations: VerbConjugation[] = [
     notes: 'Совершенный вид. Прошедшее: změnil (от корня změn-). Будущее: změníme (от корня změn-).',
   },
   {
+    verbId: 'cv1',
+    czech: 'Říkat',
+    russian: 'Говорить (что-л.)',
+    isPerfective: false,
+    conjugations: {
+      present: ['říkám', 'říkáš', 'říká', 'říkáme', 'říkáte', 'říkají'],
+      past: ['říkal jsem', 'říkal jsi', 'říkal', 'říkali jsme', 'říkali jste', 'říkali'],
+      future: ['budu říkat', 'budeš říkat', 'bude říkat', 'budeme říkat', 'budete říkat', 'budou říkat'],
+    },
+    pronunciations: {
+      present: ['ржикам', 'ржикаш', 'ржика', 'ржикамэ', 'ржикатэ', 'ржикайи'],
+      past: ['ржикал йэм', 'ржикал йси', 'ржикал', 'ржикали йсмэ', 'ржикали йстэ', 'ржикали'],
+      future: ['буду ржикат', 'будэш ржикат', 'будэ ржикат', 'будэмэ ржикат', 'будэтэ ржикат', 'будоу ржикат'],
+    },
+    notes: 'Несовершенный вид. В отличие от mluvit (говорить вообще), říkat означает «говорить что-то конкретное». Несовершенный пара: říct.',
+  },
+  {
     verbId: 'cv2',
     czech: 'Vyprávět',
     russian: 'Рассказывать',
@@ -1584,6 +1601,23 @@ export const verbConjugations: VerbConjugation[] = [
   },
   // === Food verbs (fv) ===
   {
+    verbId: 'fv1',
+    czech: 'Uvařit',
+    russian: 'Сварить',
+    isPerfective: true,
+    conjugations: {
+      present: ['—', '—', '—', '—', '—', '—'],
+      past: ['uvařil jsem', 'uvařil jsi', 'uvařil', 'uvařili jsme', 'uvařili jste', 'uvařili'],
+      future: ['uvařím', 'uvaříš', 'uvaří', 'uvaříme', 'uvaříte', 'uvaří'],
+    },
+    pronunciations: {
+      present: ['', '', '', '', '', ''],
+      past: ['уваржил йэм', 'уваржил йси', 'уваржил', 'уваржили йсмэ', 'уваржили йстэ', 'уваржили'],
+      future: ['уваржим', 'увариш', 'увари', 'уваржимэ', 'уваритэ', 'увари'],
+    },
+    notes: 'Совершенный вид. Глаголы совершенного вида не имеют настоящего времени. Будущее совпадает с формой настоящего несовершенного вида. Несовершенный пара: vařit (vb33).',
+  },
+  {
     verbId: 'fv2',
     czech: 'Osmažit',
     russian: 'Пожарить',
@@ -1871,6 +1905,24 @@ export const verbConjugations: VerbConjugation[] = [
       future: ['змразим', 'змразиш', 'змрази', 'змразимэ', 'змразитэ', 'змрази'],
     },
     notes: 'Совершенный вид. Несовершенный пара: mrazit.',
+  },
+  // === Travel verbs (trw) ===
+  {
+    verbId: 'trw18',
+    czech: 'Fotografovat',
+    russian: 'Фотографировать',
+    isPerfective: false,
+    conjugations: {
+      present: ['fotografuji', 'fotografuješ', 'fotografuje', 'fotografujeme', 'fotografujete', 'fotografují'],
+      past: ['fotografoval jsem', 'fotografoval jsi', 'fotografoval', 'fotografovali jsme', 'fotografovali jste', 'fotografovali'],
+      future: ['budu fotografovat', 'budeš fotografovat', 'bude fotografovat', 'budeme fotografovat', 'budete fotografovat', 'budou fotografovat'],
+    },
+    pronunciations: {
+      present: ['фотографуйи', 'фотографуеш', 'фотографуэ', 'фотографуэмэ', 'фотографуетэ', 'фотографуйи'],
+      past: ['фотографовал йэм', 'фотографовал йси', 'фотографовал', 'фотографовали йсмэ', 'фотографовали йстэ', 'фотографовали'],
+      future: ['буду фотографовать', 'будэш фотографовать', 'будэ фотографовать', 'будэмэ фотографовать', 'будэтэ фотографовать', 'будоу фотографовать'],
+    },
+    notes: 'Несовершенный вид. Глагол на -ovat. Совершенный пара: vyfotografovat.',
   },
 ];
 

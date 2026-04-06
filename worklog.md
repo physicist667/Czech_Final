@@ -579,3 +579,48 @@ Updated 4 profession declension entries in `src/data/nounDeclensions.ts` to matc
 ### Verification:
 - `npx tsc --noEmit` — zero errors in nounDeclensions.ts (pre-existing errors in pronounDeclensions.ts are unrelated)
 - All 40 profession entries now match the current vocabulary category
+
+---
+Task ID: 4
+Agent: verb-conjugation-agent
+Task: Fix verb ID mismatches and add conjugations for new verbs
+
+Work Log:
+- Read worklog.md, vocabulary.ts and verbConjugations.ts to understand current state
+- Identified mismatches: vb16-vb20 in vocabulary were adjectives, vb26-vb35 should be vb16-vb25, v26-v45 should be vb26-vb45
+- Confirmed adjectives category already exists with adj1-adj30 (including duplicates of the misplaced vb16-vb20)
+- Removed 5 misplaced adjectives (vb16-vb20: Velký, Malý, Nový, Starý, Krásný) from verbs category
+- Renamed vb26-vb35 → vb16-vb25 (Bydlet through Otevřít) to match verbConjugations.ts
+- Renamed v26-v45 → vb26-vb45 (Vést through Poslouchat) to match verbConjugations.ts
+- Updated category name from "Глаголы и прилагательные" to "Глаголы"
+- Confirmed cv2-cv20 and fv2-fv14, fv17-fv20 already exist in verbConjugations.ts (added by previous agents)
+- Added cv1: Říkat (imperfective, -ám/-áš pattern)
+- Added fv1: Uvařit (perfective, -ím/-íš pattern, pairs with vb33 Vařit)
+- Added trw18: Fotografovat (imperfective, -uji/-uješ pattern)
+- Verified TypeScript compilation: 0 errors in modified files (105 pre-existing errors in pronounDeclensions.ts unchanged)
+
+Stage Summary:
+- Fixed 35 verb ID mismatches (10 renamed vb26→vb16 to vb35→vb25, 20 renamed v26→vb26 to v45→vb45, 5 removed)
+- Added 3 new verb conjugations (cv1, fv1, trw18)
+- Total verb conjugations now: 115
+- Verb IDs in vocabulary.ts now correctly match verbConjugations.ts for all 45 verbs (vb1-vb45)
+Task ID: 3
+Agent: noun-declension-agent
+Task: Add missing noun declensions for nature, emotions, clothing, fruits, travel, abstract categories
+
+Work Log:
+- Read existing nounDeclensions.ts (7874 lines, 878 entries) and vocabulary.ts
+- Generated 44 new noun declension entries using Python script for accuracy
+- Added 6 new const arrays: natureNtDeclensions (20), emotionsExtraDeclensions (15), clothingExtraDeclensions (3), fruitsExtraDeclensions (2), travelExtraDeclensions (3), abstractExtraDeclensions (1)
+- Modified declensionCategories export to spread new arrays into existing categories: nature, emotions, clothing, fruits, travel, abstract
+- Verified TypeScript compilation: zero errors in nounDeclensions.ts (pre-existing errors in pronounDeclensions.ts unchanged)
+
+Stage Summary:
+- Added 44 noun declensions across 6 categories
+- Total noun declensions now: 922 (was 878)
+- Nature (nt1-nt20): 20 entries — Strom, Květina, Tráva, Řeka, Hora, Moře, Les, Slunce, Měsíc, Hvězda, Déšť, Sníh, Vítr, Země, Obloha, Jaro, Léto, Podzim, Zima, Kámen
+- Emotions (em21-em40 nouns): 15 entries — lítost, stud, hrdost, opatrnost, odvaha, ticho, nuda, úžas, úlek, rozčílenost, optimista, pesimista, sympatie, antipatie, empatie
+- Clothing: 3 entries — snowboardové boty (plural-only), náprsník, zip
+- Fruits: 2 entries — Hroznové víno, Brukvová
+- Travel: 3 entries — Muzeum, Hraniční přechod, Pamětní předmět
+- Abstract: 1 entry — Porce
