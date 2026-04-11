@@ -541,6 +541,476 @@ V neděli ráno děláme snídani společně. Babička peče buchty — je to ro
     ],
   },
 
+  // --- Story 11: Můj kamarád ---
+  {
+    id: 'a1-11',
+    level: 'A1',
+    title: 'Můj kamarád',
+    titleRussian: 'Мой друг',
+    text: `Mám kamaráda. Jmenuje se Martin. Je mu dvacet let. Bydlí v Praze, ale pochází z Brna. Martin je velmi milý a zábavný člověk. Má modré oči a tmavé vlasy.
+
+Martin studuje ekonomii na univerzitě. Ráno chodí do školy a odpoledne pracuje v kavárně. Má rád hudbu a hraje na kytaru. Víkendy tráví s přáteli nebo čte knihy.
+
+Každý měsíc si voláme a povídáme si. Martin má dobrý smysl pro humor. Rád dělá vtipy a směje se. Je to můj nejlepší kamarád.`,
+    textRussian: `У меня есть друг. Его зовут Мартин. Ему двадцать лет. Он живёт в Праге, но родом из Брно. Мартин — очень милый и весёлый человек. У него голубые глаза и тёмные волосы.
+
+Мартин изучает экономику в университете. Утром он ходит в школу, а днём работает в кафе. Он любит музыку и играет на гитаре. Выходные он проводит с друзьями или читает книги.
+
+Каждый месяц мы звоним друг другу и разговариваем. У Мартина хорошее чувство юмора. Он любит шутить и смеяться. Это мой лучший друг.`,
+    vocabulary: [
+      { czech: 'kamarád', russian: 'друг, товарищ' },
+      { czech: 'pocházet', russian: 'быть родом (из)' },
+      { czech: 'milý', russian: 'милый, приятный' },
+      { czech: 'zábavný', russian: 'весёлый, забавный' },
+      { czech: 'ekonomie', russian: 'экономика' },
+      { czech: 'smysl pro humor', russian: 'чувство юмора' },
+      { czech: 'vtip', russian: 'шутка' },
+    ],
+    questions: [
+      {
+        id: 'a1-11-q1',
+        question: 'Откуда родом Мартин?',
+        options: ['Из Праги', 'Из Брно', 'Из Остравы', 'Из Пльзеня'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-11-q2',
+        question: 'Где Мартин работает?',
+        options: ['В школе', 'В банке', 'В кафе', 'В магазине'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-11-q3',
+        question: 'На каком инструменте играет Мартин?',
+        options: ['На пианино', 'На скрипке', 'На гитаре', 'На барабанах'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 12: V zoo ---
+  {
+    id: 'a1-12',
+    level: 'A1',
+    title: 'V zoo',
+    titleRussian: 'В зоопарке',
+    text: `V sobotu jedeme s rodinou do zoo. Zoo je v centru města. Je tam velký park s mnoha zvířaty. Vstupenka stojí dvě stě korun. Děti mají vstup zdarma.
+
+Nejprve jdeme vidět slony. Sloni jsou velmi velcí a chytří. Jedí listy a ovoce. Potom jdeme k lvům. Lvi odpočívají na slunci. Je velmi horko.
+
+Děti chtějí vidět opice. Opice jsou velmi zábavné. Skáčou po stromech a hrají si. Na závěr jdeme k vodním ptákům. Krmíme kachny malým chlebem. Je to krásný den.`,
+    textRussian: `В субботу мы с семьёй едем в зоопарк. Зоопарк находится в центре города. Там большой парк с множеством животных. Билет стоит двести крон. Дети входят бесплатно.
+
+Сначала мы идём смотреть слонов. Слоны очень большие и умные. Они едят листья и фрукты. Потом мы идём к львам. Львы отдыхают на солнце. Очень жарко.
+
+Дети хотят посмотреть обезьян. Обезьяны очень забавные. Они прыгают по деревьям и играют. В конце мы идём к водоплавающим птицам. Кормим уток маленьким хлебом. Это прекрасный день.`,
+    vocabulary: [
+      { czech: 'zoo', russian: 'зоопарк' },
+      { czech: 'vstupenka', russian: 'билет (входной)' },
+      { czech: 'zvíře', russian: 'животное' },
+      { czech: 'slon', russian: 'слон' },
+      { czech: 'opice', russian: 'обезьяна' },
+      { czech: 'skákat', russian: 'прыгать' },
+      { czech: 'krmit', russian: 'кормить' },
+    ],
+    questions: [
+      {
+        id: 'a1-12-q1',
+        question: 'Сколько стоит билет в зоопарк?',
+        options: ['100 крон', '200 крон', '300 крон', '150 крон'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-12-q2',
+        question: 'Что делают львы в зоопарке?',
+        options: ['Бегают', 'Отдыхают на солнце', 'Едят', 'Плавают'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-12-q3',
+        question: 'Кого дети кормят хлебом?',
+        options: ['Слонов', 'Обезьян', 'Уток', 'Львов'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 13: Na nádraží ---
+  {
+    id: 'a1-13',
+    level: 'A1',
+    title: 'Na nádraží',
+    titleRussian: 'На вокзале',
+    text: `Dnes jedu na vlaku do Olomouce. Jsem na hlavním nádraží v Brně. Nádraží je velké a plné lidí. Hledám svůj nástupiště. Nástupiště číslo pět je vpravo.
+
+Kupuji jízdenku v pokladně. Jízdenka do Olomouce stojí sto padesát korun. Vlak odjíždí v deset hodin. Mám ještě třicet minut. Jdu do bufetu a kupuji kávu a rohlík.
+
+Na nástupišti stojí můj vlak. Je to rychlík. Vlakový průvodčí kontroluje jízdenky. Sedám si u okna a čtu knihu. Cesta trvá jednu hodinu. Těším se na Olomouc.`,
+    textRussian: `Сегодня я еду на поезде в Оломоуц. Я на главном вокзале в Брно. Вокзал большой и полный людей. Я ищу свою платформу. Платформа номер пять — направо.
+
+Покупаю билет в кассе. Билет до Оломоуца стоит сто пятьдесят крон. Поезд отправляется в десять часов. У меня ещё тридцать минут. Я иду в буфет и покупаю кофе и булочку.
+
+На платформе стоит мой поезд. Это скорый поезд. Проводник проверяет билеты. Я сажусь у окна и читаю книгу. Дорога занимает один час. Я с нетерпением жду Оломоуца.`,
+    vocabulary: [
+      { czech: 'nádraží', russian: 'вокзал, станция' },
+      { czech: 'nástupiště', russian: 'платформа' },
+      { czech: 'jízdenka', russian: 'билет' },
+      { czech: 'pokladna', russian: 'касса' },
+      { czech: 'rychlík', russian: 'скорый поезд' },
+      { czech: 'průvodčí', russian: 'проводник' },
+      { czech: 'těšit se', russian: 'с нетерпением ждать' },
+    ],
+    questions: [
+      {
+        id: 'a1-13-q1',
+        question: 'Куда едет герой?',
+        options: ['В Прагу', 'В Остраву', 'В Оломоуц', 'В Пльзень'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-13-q2',
+        question: 'Сколько стоит билет?',
+        options: ['100 крон', '150 крон', '200 крон', '250 крон'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-13-q3',
+        question: 'Сколько длится поездка?',
+        options: ['30 минут', '45 минут', '1 час', '2 часа'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 14: Moje škola ---
+  {
+    id: 'a1-14',
+    level: 'A1',
+    title: 'Moje škola',
+    titleRussian: 'Моя школа',
+    text: `Moje škola se jmenuje Základní škola Husova. Je na ulici Husova v centru města. Budova je stará, ale velmi krásná. Má tři patra a velkou zahradu.
+
+Ve škole je dvacet tříd a sto pět set žáků. Učitelé jsou velmi milí a pracovití. Moje oblíbená učitelka je paní Nováková. Učí matematiku. Matematika je obtížná, ale paní Nováková výborně vysvětluje.
+
+Moje třída je ve druhém patře. V třídě je dvacet žáků. Máme hodiny češtiny, matematiky, angličtiny a tělesné výchovy. Přestávky trvají patnáct minut. Na přestávce hrajeme fotbal nebo povídáme s kamarády.`,
+    textRussian: `Моя школа называется Начальная школа Гусова. Она находится на улице Гусова в центре города. Здание старое, но очень красивое. В нём три этажа и большой сад.
+
+В школе двадцать классов и полторы тысячи учеников. Учителя очень милые и трудолюбивые. Моя любимая учительница — пани Новакова. Она преподаёт математику. Математика сложная, но пани Новакова отлично объясняет.
+
+Мой класс на втором этаже. В классе двадцать учеников. У нас уроки чешского, математики, английского и физкультуры. Перемены длятся пятнадцать минут. На перемене мы играем в футбол или разговариваем с друзьями.`,
+    vocabulary: [
+      { czech: 'základní škola', russian: 'начальная школа' },
+      { czech: 'budova', russian: 'здание' },
+      { czech: 'žák', russian: 'ученик' },
+      { czech: 'učitelka', russian: 'учительница' },
+      { czech: 'obtížný', russian: 'сложный, трудный' },
+      { czech: 'přestávka', russian: 'перемена' },
+      { czech: 'tělesná výchova', russian: 'физкультура' },
+    ],
+    questions: [
+      {
+        id: 'a1-14-q1',
+        question: 'Как зовут любимую учительницу героя?',
+        options: ['Пани Новакова', 'Пани Дворжакова', 'Пани Сватова', 'Пани Кральова'],
+        correctAnswer: 0,
+      },
+      {
+        id: 'a1-14-q2',
+        question: 'На каком этаже находится класс героя?',
+        options: ['На первом', 'На втором', 'На третьем', 'В подвале'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-14-q3',
+        question: 'Сколько длятся перемены?',
+        options: ['10 минут', '15 минут', '20 минут', '30 минут'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 15: V sobotu ---
+  {
+    id: 'a1-15',
+    level: 'A1',
+    title: 'V sobotu',
+    titleRussian: 'В субботу',
+    text: `V sobotu ráno vstávám pozdě. Vstavám v devět hodin. Dělám si snídani. Jím chléb se sýrem a piju čaj. Potom se sprchuji a oblékám se.
+
+Odpoledne jdu do parku s kamarádem Petrem. Počasí je hezké. Svítí slunce a je teplý vzduch. Chodíme po parku a děláme si fotografie. Petr má nový foťák.
+
+Večer jdeme do kina. Dáváme český film. Film je velmi zajímavý a vtipný. Po filmu jdeme do restaurace. Dám si pizzu a Petr dá si těstoviny. Vrátíme se domů v jedenáct hodin večer. Je to skvělý den.`,
+    textRussian: `В субботу утром я встаю поздно. Встаю в девять часов. Готовлю себе завтрак. Ем хлеб с сыром и пью чай. Потом принимаю душ и одеваюсь.
+
+Днём я иду в парк с другом Петром. Погода хорошая. Светит солнце и тёплый воздух. Мы гуляем по парку и делаем фотографии. У Петра новый фотоаппарат.
+
+Вечером мы идём в кино. Идёт чешский фильм. Фильм очень интересный и забавный. После фильма мы идём в ресторан. Я беру пиццу, а Петр — макароны. Возвращаемся домой в одиннадцать часов вечера. Это отличный день.`,
+    vocabulary: [
+      { czech: 'vstávat', russian: 'вставать' },
+      { czech: 'snídaně', russian: 'завтрак' },
+      { czech: 'sprchovat se', russian: 'принимать душ' },
+      { czech: 'oblekat se', russian: 'одеваться' },
+      { czech: 'počasí', russian: 'погода' },
+      { czech: 'foťák', russian: 'фотоаппарат' },
+      { czech: 'těstoviny', russian: 'макароны, паста' },
+    ],
+    questions: [
+      {
+        id: 'a1-15-q1',
+        question: 'Во сколько герой встаёт в субботу?',
+        options: ['В семь часов', 'В восемь часов', 'В девять часов', 'В десять часов'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-15-q2',
+        question: 'Куда друзья идут вечером?',
+        options: ['В театр', 'В кино', 'На концерт', 'В музей'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-15-q3',
+        question: 'Что Петр ест в ресторане?',
+        options: ['Пиццу', 'Салат', 'Макароны', 'Суп'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 16: Lékař ---
+  {
+    id: 'a1-16',
+    level: 'A1',
+    title: 'Lékař',
+    titleRussian: 'Врач',
+    text: `Dnes nejsem zdravý. Bolí mě hlava a mám rýmu. Volám mamince a říkám jí o svém zdraví. Maminka říká: „Jdi k lékaři!" Svolávám si schůzku s doktorem.
+
+Jdu do nemocnice na ulici Palackého. Čekárna je plná lidí. Čekám třicet minut. Pak přijde sestra a volá moje jméno. Jdu do ordinace. Doktor se jmenuje pan Dvořák.
+
+Doktor se mě ptá na mé potíže. Ptá se: „Kdy to začalo?" Říkám: „Včera večer." Doktor mě prohlíží a měří teplotu. Mám teplotu třicet sedm a pět. Doktor říká, že to není vážné. Píše mi recept na léky. Léky si beru v lékárně.`,
+    textRussian: `Сегодня я не здоров. У меня болит голова и насморк. Звоню маме и рассказываю о своём здоровье. Мама говорит: «Иди к врачу!» Записываюсь на приём к доктору.
+
+Я иду в больницу на улице Палацкого. Приёмная полна людей. Жду тридцать минут. Потом приходит медсестра и вызывает моё имя. Я вхожу в кабинет. Доктора зовут пан Дворжак.
+
+Доктор спрашивает меня о моих жалобах. Спрашивает: «Когда это началось?» Я отвечаю: «Вчера вечером.» Доктор осматривает меня и измеряет температуру. У меня температура тридцать семь и пять. Доктор говорит, что это не серьёзно. Пишет мне рецепт на лекарства. Лекарства я беру в аптеке.`,
+    vocabulary: [
+      { czech: 'zdravý', russian: 'здоровый' },
+      { czech: 'bolí mě hlava', russian: 'у меня болит голова' },
+      { czech: 'rýma', russian: 'насморк' },
+      { czech: 'lékař', russian: 'врач, доктор' },
+      { czech: 'nemocnice', russian: 'больница' },
+      { czech: 'ordinace', russian: 'кабинет (врачебный)' },
+      { czech: 'recept', russian: 'рецепт' },
+    ],
+    questions: [
+      {
+        id: 'a1-16-q1',
+        question: 'На что жалуется герой?',
+        options: ['Болит живот и горло', 'Болит голова и насморк', 'Болит спина', 'Болит нога'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-16-q2',
+        question: 'Сколько минут он ждёт в приёмной?',
+        options: ['15 минут', '20 минут', '30 минут', '45 минут'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-16-q3',
+        question: 'Какова температура героя?',
+        options: ['36,5', '37,0', '37,5', '38,0'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 17: Dům a zahrada ---
+  {
+    id: 'a1-17',
+    level: 'A1',
+    title: 'Dům a zahrada',
+    titleRussian: 'Дом и сад',
+    text: `Náš dům stojí na okraji města. Je to malý dům se zahradou. Dům má podkroví, přízemí a malou garáž. Před domem je malá zahrada s květinami a stromy.
+
+V přízemí je obývací pokoj, kuchyně a koupelna. Obývací pokoj je velký a světlý. V kuchyni vaří maminka. Má ráda vaření a pečení. V koupelně je vana a sprcha.
+
+V podkroví jsou dvě ložnice a moje pracovna. V ložnici mám postel, skříň a stůl. Z okna vidím zahradu. V zahradě rostou jablka, hrušky a třešně. Na jaře kvetou a na podzim sbíráme ovoce.`,
+    textRussian: `Наш дом стоит на окраине города. Это маленький дом с садом. У дома есть мансарда, первый этаж и маленький гараж. Перед домом небольшой сад с цветами и деревьями.
+
+На первом этаже гостиная, кухня и ванная. Гостиная большая и светлая. На кухне готовит мама. Она любит готовить и печь. В ванной есть ванна и душ.
+
+На мансарде две спальни и мой кабинет. В спальне у меня кровать, шкаф и стол. Из окна я вижу сад. В саду растут яблоки, груши и вишни. Весной они цветут, а осенью мы собираем фрукты.`,
+    vocabulary: [
+      { czech: 'dům', russian: 'дом' },
+      { czech: 'zahrada', russian: 'сад' },
+      { czech: 'okraj města', russian: 'окраина города' },
+      { czech: 'podkroví', russian: 'мансарда' },
+      { czech: 'obývací pokoj', russian: 'гостиная' },
+      { czech: 'ložnice', russian: 'спальня' },
+      { czech: 'sbírat', russian: 'собирать' },
+    ],
+    questions: [
+      {
+        id: 'a1-17-q1',
+        question: 'Где стоит дом?',
+        options: ['В центре города', 'На окраине города', 'В деревне', 'На горе'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-17-q2',
+        question: 'Что находится в кухне?',
+        options: ['Постель и шкаф', 'Ванна и душ', 'Стол и стул', 'Не указано'],
+        correctAnswer: 3,
+      },
+      {
+        id: 'a1-17-q3',
+        question: 'Какие фрукты растут в саду?',
+        options: ['Яблоки, груши и вишни', 'Апельсины и лимоны', 'Клубника и малина', 'Сливы и абрикосы'],
+        correctAnswer: 0,
+      },
+    ],
+  },
+
+  // --- Story 18: Na trhu ---
+  {
+    id: 'a1-18',
+    level: 'A1',
+    title: 'Na trhu',
+    titleRussian: 'На рынке',
+    text: `Každou sobotu chodím na trh. Trh je na hlavním náměstí. Je tam mnoho stánků s ovocem, zeleninou a pečivem. Prodejci jsou velmi přátelští a usměvaví.
+
+Dnes kupuji jablka, banány a rajčata. Jablka stojí padesát korun za kilogram. Banány jsou levnější, stojí třicet korun. Rajčata jsou čerstvá a krásně červená. Také kupuji chléb a rohlíky od pekaře.
+
+Na trhu je také stánek s květinami. Kupuji malou kytici růží pro maminku. Maminka má ráda červené růže. Jejich vůně je velmi příjemná. Z trhu odcházím s plnou taškou jídla a s květinami.`,
+    textRussian: `Каждую субботу я хожу на рынок. Рынок находится на главной площади. Там много прилавков с фруктами, овощами и выпечкой. Продавцы очень дружелюбные и улыбчивые.
+
+Сегодня покупаю яблоки, бананы и помидоры. Яблоки стоят пятьдесят крон за килограмм. Бананы дешевле, стоят тридцать крон. Помидоры свежие и красиво красные. Также покупаю хлеб и булочки у пекаря.
+
+На рынке есть ещё прилавок с цветами. Покупаю маленький букет роз для мамы. Мама любит красные розы. Их аромат очень приятный. С рынка ухожу с полной сумкой еды и цветами.`,
+    vocabulary: [
+      { czech: 'trh', russian: 'рынок' },
+      { czech: 'náměstí', russian: 'площадь' },
+      { czech: 'stánek', russian: 'прилавок, палатка' },
+      { czech: 'zelenina', russian: 'овощи' },
+      { czech: 'prodejce', russian: 'продавец' },
+      { czech: 'kytice', russian: 'букет' },
+      { czech: 'vůně', russian: 'аромат, запах' },
+    ],
+    questions: [
+      {
+        id: 'a1-18-q1',
+        question: 'Где находится рынок?',
+        options: ['На улице', 'В торговом центре', 'На главной площади', 'В парке'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-18-q2',
+        question: 'Сколько стоят бананы за килограмм?',
+        options: ['20 крон', '30 крон', '40 крон', '50 крон'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-18-q3',
+        question: 'Что герой покупает для мамы?',
+        options: ['Хлеб', 'Букет роз', 'Фрукты', 'Овощи'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 19: Sport ---
+  {
+    id: 'a1-19',
+    level: 'A1',
+    title: 'Sport',
+    titleRussian: 'Спорт',
+    text: `Mám rád sport. Každý den dělám cvičení. Ráno běhám v parku třicet minut. Běhání je velmi zdravé. Po běhání se sprchuji a snídám.
+
+Dvakrát týdně hraju fotbal s kamarády. Hrajeme na sportovišti u školy. Máme dva týmy. Můj tým se jmenuje „Tigři". Často vyhráváme, ale někdy prohráváme.
+
+V zimě jezdím lyžovat. Jezdíme s rodinou do hor. Lyžování je velmi zábavné, ale také obtížné. V létě plavu v bazénu. Plavání je můj oblíbený sport. Sport dělá lidi zdravé a šťastné.`,
+    textRussian: `Я люблю спорт. Каждый день делаю зарядку. Утром бегаю в парке тридцать минут. Бег очень полезен для здоровья. После бега принимаю душ и завтракаю.
+
+Два раза в неделю играю в футбол с друзьями. Играем на спортплощадке у школы. У нас две команды. Моя команда называется «Тигры». Мы часто выигрываем, но иногда проигрываем.
+
+Зимой катаюсь на лыжах. Мы ездим с семьёй в горы. Катание на лыжах очень весёлое, но и сложное. Летом плаваю в бассейне. Плавание — мой любимый спорт. Спорт делает людей здоровыми и счастливыми.`,
+    vocabulary: [
+      { czech: 'sport', russian: 'спорт' },
+      { czech: 'běhat', russian: 'бегать' },
+      { czech: 'sportoviště', russian: 'спортплощадка' },
+      { czech: 'tým', russian: 'команда' },
+      { czech: 'vyhrávat', russian: 'выигрывать' },
+      { czech: 'lyžovat', russian: 'кататься на лыжах' },
+      { czech: 'plavat', russian: 'плавать' },
+    ],
+    questions: [
+      {
+        id: 'a1-19-q1',
+        question: 'Сколько минут герой бегает утром?',
+        options: ['15 минут', '20 минут', '30 минут', '45 минут'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-19-q2',
+        question: 'Как называется команда героя?',
+        options: ['„Sokol"', '„Orli"', '„Tigři"', '„Levi"'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-19-q3',
+        question: 'Какой любимый спорт героя?',
+        options: ['Футбол', 'Бег', 'Плавание', 'Лыжи'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 20: V létě ---
+  {
+    id: 'a1-20',
+    level: 'A1',
+    title: 'V létě',
+    titleRussian: 'Летом',
+    text: `Léto je moje oblíbené roční období. Je velmi teplo a slunečno. Každý den svítí slunce. Nechci sedět doma. Chci být venku s přáteli.
+
+V létě chodím na koupaliště. Koupaliště je nedaleko našeho domu. Voda je čistá a příjemná. Koupám se a opaluji se na dece. Také hraju volejbal na písku s kamarády.
+
+Na prázdniny jedeme s rodinou k moři. Bydlíme v malém hotelu u pláže. Každý den plaveme v moři a chodíme na procházky. Večer jedeme do restaurace a jíme mořské plody. Léto je krásné.`,
+    textRussian: `Лето — моё любимое время года. Очень тепло и солнечно. Каждый день светит солнце. Не хочу сидеть дома. Хочу быть на улице с друзьями.
+
+Летом я хожу на купальню. Купальня недалеко от нашего дома. Вода чистая и приятная. Я купаюсь и загораю на покрывале. Также играю в волейбол на песке с друзьями.
+
+На каникулы мы с семьёй едем к морю. Живём в маленьком отеле у пляжа. Каждый день купаемся в море и ходим на прогулки. Вечером ездим в ресторан и едим морепродукты. Лето прекрасное.`,
+    vocabulary: [
+      { czech: 'léto', russian: 'лето' },
+      { czech: 'roční období', russian: 'время года' },
+      { czech: 'koupaliště', russian: 'купальня, пляж (пресн.)' },
+      { czech: 'opalovat se', russian: 'загорать' },
+      { czech: 'prázdniny', russian: 'каникулы' },
+      { czech: 'moře', russian: 'море' },
+      { czech: 'mořské plody', russian: 'морепродукты' },
+    ],
+    questions: [
+      {
+        id: 'a1-20-q1',
+        question: 'Какое любимое время года героя?',
+        options: ['Весна', 'Лето', 'Осень', 'Зима'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a1-20-q2',
+        question: 'Во что герой играет на песке?',
+        options: ['В футбол', 'В теннис', 'В волейбол', 'В баскетбол'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a1-20-q3',
+        question: 'Что семья ест в ресторане вечером?',
+        options: ['Пиццу', 'Морепродукты', 'Макароны', 'Салат'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
   // ===================== A2 STORIES =====================
 
   // --- Story 11: Cesta do Prahy ---
@@ -1162,6 +1632,526 @@ O půlnoci někteří lidé chodí na půlnoční mši do kostela. My zůstává
         id: 'a2-10-q4',
         question: 'Что семья делает после ужина?',
         options: ['Идёт в церковь', 'Идёт к рождественской ёлке за подарками', 'Едет к родственникам', 'Играет в настольные игры'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story a2-11: Na letišti ---
+  {
+    id: 'a2-11',
+    level: 'A2',
+    title: 'Na letišti',
+    titleRussian: 'В аэропорту',
+    text: `Vloni v létě jsem letěl na dovolenou do Španělska. Na letiště v Praze Ruzyni jsem přijel autobusem asi dvě hodiny před odletem. Chtěl jsem mít dost času na odbavení a kontrolu.
+Na letišti bylo plno lidí. Nejdřív jsem šel k automatu na odbavení, kde jsem si vytiskl palubní lístek. Pak jsem si dal zavazadlo na pás a šel do bezpečnostní kontroly. Musel jsem vyndat notebook a tekutiny z batohu. Kontrola trvala asi patnáct minut.
+Protože jsem měl ještě hodinu času, posadil jsem se do kavárny. Dal jsem si kávu a croissant a četl si noviny. Pak jsem šel k bráně, kde už čekali ostatní cestující. Letuška nás přivítala a ukázala nám místa v letadle.
+Let trval asi tři hodiny. Přistáli jsme v Barceloně, kde bylo třicet pět stupňů. Byl jsem rád, že jsem přiletěl, a hned šel na hotel.`,
+    textRussian: `В прошлом летом я летел в отпуск в Испанию. В аэропорт Праги Рузине я приехал на автобусе примерно за два часа до вылета. Я хотел иметь достаточно времени на регистрацию и досмотр.
+В аэропорту было полно людей. Сначала я подошёл к автомату регистрации, где распечатал посадочный талон. Затем я сдал багаж на ленту и пошёл к досмотровой зоне. Мне пришлось достать ноутбук и жидкости из рюкзака. Досмотр занял около пятнадцати минут.
+Поскольку у меня был ещё час времени, я сел в кафе. Выпил кофе, съел круассан и читал газету. Потом я пошёл к выходу на посадку, где уже ждали остальные пассажиры. Стюардесса приветствовала нас и показала места в самолёте.
+Полёт длился около трёх часов. Мы приземлились в Барселоне, где было тридцать пять градусов. Я был рад, что прилетел, и сразу отправился в отель.`,
+    vocabulary: [
+      { czech: 'letiště', russian: 'аэропорт' },
+      { czech: 'odlet', russian: 'вылет' },
+      { czech: 'odbavení', russian: 'регистрация' },
+      { czech: 'palubní lístek', russian: 'посадочный талон' },
+      { czech: 'zavazadlo', russian: 'багаж' },
+      { czech: 'bezpečnostní kontrola', russian: 'досмотр (безопасность)' },
+      { czech: 'letuška', russian: 'стюардесса' },
+      { czech: 'přistát', russian: 'приземлиться' },
+    ],
+    questions: [
+      {
+        id: 'a2-11-q1',
+        question: 'Сколько времени до вылета автор приехал в аэропорт?',
+        options: ['За полчаса', 'За час', 'За два часа', 'За три часа'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-11-q2',
+        question: 'Что автор сделал в кафе?',
+        options: ['Поел суп', 'Выпил кофе и съел круассан', 'Подождал друзей', 'Купил сувениры'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-11-q3',
+        question: 'Какая была температура в Барселоне?',
+        options: ['20 градусов', '25 градусов', '30 градусов', '35 градусов'],
+        correctAnswer: 3,
+      },
+      {
+        id: 'a2-11-q4',
+        question: 'Сколько длился полёт?',
+        options: ['Два часа', 'Три часа', 'Четыре часа', 'Пять часов'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story a2-12: Stěhování ---
+  {
+    id: 'a2-12',
+    level: 'A2',
+    title: 'Stěhování',
+    titleRussian: 'Переезд',
+    text: `Minulý měsíc se moje kamarádka Lenka rozhodla přestěhovat. Do té doby bydlela v malém bytě na okraji města, ale našla si větší byt blíže centru. Já jsem jí slíbil, že jí pomůžu s přesunem věcí.
+V sobotu ráno jsem přijel k ní v devět hodin. Lenka už měla všechny krabice připravené. Většinu věcí jsme nesli po schodech, protože v domě nebyl výtah. Bylo to náročné, zvláště když jsme nesli těžký nábytek. Kamarád Martin přijel s dodávkou, takže jsme menší věci mohli vozit.
+Kolem poledne jsme měli všechno naložené. Jeli jsme na novou adresu, která byla asi deset minut daleko. Nový byt je ve čtvrtém patře, ale tentokrát tam výtah je. Rozkládání věcí trvalo celé odpoledne. Lenka systematicky vybalovala jednu krabici za druhou a určovala, kam každá věc patří.
+Večer jsme byli všichni úplně vyčerpaní, ale spokojení. Lenka objednala pizzu pro všechny, kteří jí pomáhali. Seděli jsme v prázdném obývacím pokoji, jedli pizzu a plánovali, jak bude nový byt vypadat, až ho Lenka zařídí.`,
+    textRussian: `В прошлом месяце моя подруга Ленка решила переехать. До этого она жила в маленькой квартире на окраине города, но нашла себе квартиру побольше ближе к центру. Я обещал ей помочь с перевозкой вещей.
+В субботу утром я приехал к ней в девять часов. Ленка уже подготовила все коробки. Большинство вещей мы несли по лестнице, потому что в доме не было лифта. Это было тяжело, особенно когда мы несли тяжёлую мебель. Друг Мартин приехал с фургоном, поэтому мелкие вещи мы могли перевозить.
+Около полудня мы всё погрузили. Мы поехали на новый адрес, который был примерно в десяти минутах езды. Новая квартира на четвёртом этаже, но на этот раз там есть лифт. Разбор вещей занял всё вторую половину дня. Ленка систематически распаковывала одну коробку за другой и определяла, куда относится каждая вещь.
+Вечером мы все были совершенно измождены, но довольны. Ленка заказала пиццу для всех, кто ей помогал. Мы сидели в пустой гостиной, ели пиццу и планировали, как будет выглядеть новая квартира, когда Ленка её обставит.`,
+    vocabulary: [
+      { czech: 'stěhování', russian: 'переезд' },
+      { czech: 'přestěhovat se', russian: 'переехать' },
+      { czech: 'krabice', russian: 'коробка' },
+      { czech: 'nábytek', russian: 'мебель' },
+      { czech: 'dodávka', russian: 'фургон' },
+      { czech: 'rozkládat', russian: 'разбирать, раскладывать' },
+      { czech: 'vyčerpaný', russian: 'измождённый, истощённый' },
+      { czech: 'zařídit', russian: 'обставить, оборудовать' },
+    ],
+    questions: [
+      {
+        id: 'a2-12-q1',
+        question: 'Почему переезд был тяжёлым?',
+        options: ['Был дождь', 'Не было лифта в старом доме', 'Было очень жарко', 'Ленка жила далеко'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-12-q2',
+        question: 'На каком этаже находится новая квартира?',
+        options: ['На втором', 'На третьем', 'На четвёртом', 'На пятом'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-12-q3',
+        question: 'Чем закончился день переезда?',
+        options: ['Ужином в ресторане', 'Пиццей в пустой гостиной', 'Поездкой в парк', 'Просмотром фильма'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-12-q4',
+        question: 'На чём перевозили вещи?',
+        options: ['На автобусе', 'На личной машине', 'На фургоне Мартина', 'На поезде'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story a2-13: Hudební koncert ---
+  {
+    id: 'a2-13',
+    level: 'A2',
+    title: 'Hudební koncert',
+    titleRussian: 'Музыкальный концерт',
+    text: `Už dlouho jsem chtěl jít na živý koncert a minulý měsíc se mi to konečně podařilo. Moje oblíbená česká kapela Chinaski vystupovala v pražské O2 areně. Vstupenky jsem si koupil už v lednu, protože jsem věděl, že se rychle vyprodají.
+S kamarádem Petrem jsme se sešli u metra v sedm hodin večer. V hale arény bylo plno lidí — prodávali se suvenýry, trička a plakáty. Já jsem si koupil tričko s logem kapely. Před začátkem koncertu jsme si dali něco k pití a poslouchali předkapelu, která hrála asi třicet minut.
+Když vyšla hlavní kapela, celá aréna začala ječet. Hráli své nejznámější písně, publikum zpívalo a tleskalo. Atmosféra byla neuvěřitelná. Během koncertu zaznělo i několik nových písní z jejich posledního alba. Zvuk i světelné efekty byly skvělé.
+Koncert skončil kolem jedenácté hodiny. Lidé pomalu odcházeli, ale stále se bavili a zpívali. Cestou domů jsme s Petrem probírali, která píseň se nám líbila nejvíc. Byl to nezapomenutelný večer a já se už těším na další koncert.`,
+    textRussian: `Давно хотел пойти на живой концерт, и в прошлом месяце мне это наконец-то удалось. Моя любимая чешская группа Chinaski выступала в пражской арене O2. Билеты я купил ещё в январе, потому что знал, что они быстро распродадутся.
+С другом Петром мы встретились у метро в семь часов вечера. В фойе арены было полно людей — продавались сувениры, футболки и плакаты. Я купил футболку с логотипом группы. Перед началом концерта мы выпили чего-нибудь и слушали группу на разогреве, которая играла около тридцати минут.
+Когда вышла главная группа, вся арена взорвалась криками. Они играли свои самые известные песни, публика пела и хлопала. Атмосфера была невероятной. Во время концерта прозвучало также несколько новых песен с их последнего альбома. Звук и световые эффекты были великолепными.
+Концерт закончился около одиннадцати часов. Люди медленно расходились, но всё ещё веселились и пели. По дороге домой мы с Петром обсуждали, какая песня понравилась больше всего. Это был незабываемый вечер, и я уже жду следующий концерт.`,
+    vocabulary: [
+      { czech: 'koncert', russian: 'концерт' },
+      { czech: 'vstupenka', russian: 'билет' },
+      { czech: 'vyprodat se', russian: 'распродаться' },
+      { czech: 'aréna', russian: 'арена' },
+      { czech: 'předkapela', russian: 'группа на разогреве' },
+      { czech: 'publikum', russian: 'публика' },
+      { czech: 'světelný efekt', russian: 'световой эффект' },
+      { czech: 'nezapomenutelný', russian: 'незабываемый' },
+    ],
+    questions: [
+      {
+        id: 'a2-13-q1',
+        question: 'Где проходил концерт?',
+        options: ['В театре', 'В клубе', 'В O2 арене', 'На стадионе'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-13-q2',
+        question: 'Почему автор купил билеты заранее?',
+        options: ['Они были дешевле', 'Они быстро распродаются', 'Он хотел лучшие места', 'Был лимит на продажу'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-13-q3',
+        question: 'Что автор купил в фойе?',
+        options: ['Постер', 'CD с альбомом', 'Футболку с логотипом группы', 'Книгу'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-13-q4',
+        question: 'Во сколько закончился концерт?',
+        options: ['В 9 часов', 'В 10 часов', 'В 11 часов', 'В полночь'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story a2-14: Na výstavě ---
+  {
+    id: 'a2-14',
+    level: 'A2',
+    title: 'Na výstavě',
+    titleRussian: 'На выставке',
+    text: `Minulý týden jsem navštívil zajímavou výstavu v Národním muzeu v Praze. Výstava se jmenovala „Starověký Egypt" a představovala artefakty, které byly přivezeny z egyptských muzeí. Vstupenku jsem si rezervoval přes internet už týden předem.
+Když jsem přišel k muzeu, fronta byla dlouhá, ale já jsem měl rezervaci, takže jsem šel rovnou dovnitř. První sál byl věnován faraonům — viděl jsem sochy, šperky a hrobky. U jedné vitríny stál průvodce, který vyprávěl o Tutanchamonovi. Poslouchal jsem ho asi dvacet minut a dozvěděl jsem se mnoho zajímavého.
+Druhá část výstavy ukazovala každodenní život starověkých Egypťanů. Byly tam modely domů, nářadí, nádobí a dokonce i mumie. Každý exponát měl popisek v češtině a angličtině. Měl jsem u sebe audioprůvodce, takže jsem si mohl přehrávat doplňující informace.
+Návštěva výstavy trvala asi dvě a půl hodiny. Na konci jsem si koupil knihu o starověkém Egyptě v muzejním obchodě. Byla to fascinující zkušenost a rozhodně chci navštívit i další výstavy, které Národní muzeum nabízí.`,
+    textRussian: `На прошлой неделе я посетил интересную выставку в Национальном музее в Праге. Выставка называлась «Древний Египет» и представляла артефакты, которые были привезены из египетских музеев. Билет я забронировал через интернет ещё за неделю.
+Когда я пришёл к музею, очередь была длинная, но у меня была бронь, поэтому я прошёл прямо внутрь. Первый зал был посвящён фараонам — я видел статуи, украшения и гробницы. У одной витрины стоял экскурсовод, который рассказывал о Тутанхамоне. Я слушал его около двадцати минут и узнал много интересного.
+Вторая часть выставки показывала повседневную жизнь древних египтян. Там были модели домов, орудия труда, посуда и даже мумии. Каждый экспонат имел подпись на чешском и английском языках. У меня был с собой аудиогид, поэтому я мог прослушивать дополнительную информацию.
+Посещение выставки длилось около двух с половиной часов. В конце я купил книгу о древнем Египте в музейном магазине. Это был захватывающий опыт, и я определённо хочу посетить и другие выставки, которые предлагает Национальный музей.`,
+    vocabulary: [
+      { czech: 'výstava', russian: 'выставка' },
+      { czech: 'artefakt', russian: 'артефакт' },
+      { czech: 'rezervace', russian: 'бронь' },
+      { czech: 'faraon', russian: 'фараон' },
+      { czech: 'průvodce', russian: 'экскурсовод' },
+      { czech: 'exponát', russian: 'экспонат' },
+      { czech: 'audioprůvodce', russian: 'аудиогид' },
+      { czech: 'fascinující', russian: 'захватывающий' },
+    ],
+    questions: [
+      {
+        id: 'a2-14-q1',
+        question: 'Как называлась выставка?',
+        options: ['Staré Praha', 'Starověký Egypt', 'Římská říše', 'Pražský hrad'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-14-q2',
+        question: 'Почему автор не стоял в очереди?',
+        options: ['Был ранний утро', 'У него была бронь', 'Очередь была короткая', 'Он пришёл после обеда'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-14-q3',
+        question: 'О ком рассказывал экскурсовод?',
+        options: ['О Клеопатре', 'О Рамзесе', 'О Тутанхамоне', 'Об Александрии'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-14-q4',
+        question: 'Что автор купил в музее?',
+        options: ['Сувенир', 'Книгу о древнем Египте', 'Картину', 'CD с аудиогидом'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story a2-15: Sportovní den ---
+  {
+    id: 'a2-15',
+    level: 'A2',
+    title: 'Sportovní den',
+    titleRussian: 'Спортивный день',
+    text: `Naše firma uspořádala sportovní den pro všechny zaměstnance. Konal se minulou sobotu v sportovním areálu na okraji města. Účast nebyla povinná, ale většina kolegů se přihlásila, protože slíbili zajímavý program a občerstvení.
+Ráno jsme se sešli v devět hodin. Program začal rozcvičkou, kterou vedl profesionální trenér. Potom nás rozdělili do čtyř týmů. Každý tým měl jinou barvu — my jsme byli v modrém týmu. První disciplína byl běh na překážkách. Museli jsme přelézt stěnu, proběhnout tunelem a přeskakovat pneumatiky. Bylo to vyčerpávající, ale zábavné.
+Po obědě, který jsme měli v areálu, následoval turnaj v volejbalu a poté překážková dráha na vodě. Modrý tým nevyhrál, ale skončil jsme na druhém místě, což nás potěšilo. Nejlepší moment dne byl závod v canoe, kde náš tým předvedl skvělou spolupráci.
+Večer proběhlo vyhlášení výsledků a předání cen. Všichni dostali pamětní tričko a medaili za účast. Byli jsme unavení, ale spokojení. Tento sportovní den nás všechny přiblížil a já si uvědomil, že potřebuji víc sportovat.`,
+    textRussian: `Наша компания организовала спортивный день для всех сотрудников. Он прошёл в прошлую субботу в спортивном комплексе на окраине города. Участие не было обязательным, но большинство коллег записались, потому что пообещали интересную программу и угощение.
+Утром мы встретились в девять часов. Программа началась с разминки, которую проводил профессиональный тренер. Потом нас разделили на четыре команды. Каждая команда имела свой цвет — мы были в синей команде. Первой дисциплиной был бег с препятствиями. Нам нужно было перелезть через стену, пробежать по туннелю и перепрыгивать через покрышки. Это было изнурительно, но весело.
+После обеда, который был в комплексе, последовал турнир по волейболу, а затем водная полоса препятствий. Синяя команда не победила, но мы заняли второе место, что нас порадовало. Лучший момент дня — гонка на каноэ, где наша команда показала отличное взаимодействие.
+Вечером прошло подведение итогов и вручение наград. Все получили памятную футболку и медаль за участие. Мы были уставшими, но довольными. Этот спортивный день сблизил нас всех, и я осознал, что мне нужно больше заниматься спортом.`,
+    vocabulary: [
+      { czech: 'zaměstnanec', russian: 'сотрудник' },
+      { czech: 'rozcvička', russian: 'разминка' },
+      { czech: 'disciplína', russian: 'дисциплина' },
+      { czech: 'běh na překážkách', russian: 'бег с препятствиями' },
+      { czech: 'turnaj', russian: 'турнир' },
+      { czech: 'spolupráce', russian: 'взаимодействие, сотрудничество' },
+      { czech: 'vyhlášení', russian: 'подведение итогов' },
+      { czech: 'pamětní', russian: 'памятный' },
+    ],
+    questions: [
+      {
+        id: 'a2-15-q1',
+        question: 'В каком цвете была команда автора?',
+        options: ['Красном', 'Зелёном', 'Синем', 'Жёлтом'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-15-q2',
+        question: 'Какое место заняла команда автора?',
+        options: ['Первое', 'Второе', 'Третье', 'Четвёртое'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-15-q3',
+        question: 'Что было лучшим моментом дня по мнению автора?',
+        options: ['Бег с препятствиями', 'Волейбольный турнир', 'Гонка на каноэ', 'Разминка утром'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-15-q4',
+        question: 'Что каждый получил в конце дня?',
+        options: ['Денежную премию', 'Памятную футболку и медаль', 'Билет на матч', 'Книгу о спорте'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story a2-16: Návštěva muzea ---
+  {
+    id: 'a2-16',
+    level: 'A2',
+    title: 'Návštěva muzea',
+    titleRussian: 'Посещение музея',
+    text: `V neděli jsem se rozhodl navštívit Národní technické muzeum v Praze. Už dlouho jsem o tom slyšel, ale nikdy jsem tam nebyl. Muzeum se nachází blízko Výstaviště Holešovice a je v krásné budově z počátku dvacátého století.
+Koupil jsem si rodinnou vstupenku, protože jel i se svým synem, kterému je deset let. Hned u vchodu nás přivítal velký model parního vlaku, který syna zaujal na první pohled. První patro bylo věnováno dopravě — viděli jsme staré automobily, motocyly a jízdní kola. Syn si mohl sednout do repliky historického letadla.
+Ve druhém patře byla expozice „Architektura a stavitelství". Viděli jsme modely slavných českých staveb a dozvěděli jsme se o historii české architektury. V dalším sále nás zaujala expozice o vesmíru — viděli jsme model raket, skafandr astronauta a dokonce i kousek meteoritu.
+Návštěva muzea trvala přes tři hodiny, ale syn se ani chvíli nenudil. Na konci jsme šli do muzejní kavárny, kde jsme si dali koláč a limonádu. Domů jsme odjeli spokojení a plni nových vědomostí. Syn už teď chce jít znovu.`,
+    textRussian: `В воскресенье я решил посетить Национальный технический музей в Праге. Я давно о нём слышал, но никогда там не был. Музей находится рядом с Выставищем Голешовице и расположен в красивом здании начала двадцатого века.
+Я купил семейный билет, потому что поехал с сыном, которому десять лет. Прямо у входа нас приветствовала большая модель паровоза, которая сразу привлекла сына. Первый этаж был посвящён транспорту — мы видели старые автомобили, мотоциклы и велосипеды. Сын мог сесть в копию исторического самолёта.
+На втором этаже была экспозиция «Архитектура и строительство». Мы видели модели известных чешских зданий и узнали об истории чешской архитектуры. В следующем зале нас заинтересовала экспозиция о космосе — мы видели модель ракет, скафандр астронавта и даже кусок метеорита.
+Посещение музея длилось более трёх часов, но сын ни разу не заскучал. В конце мы пошли в музейное кафе, где съели пирог и выпили лимонад. Домой мы уехали довольные и полные новых знаний. Сын уже сейчас хочет пойти туда снова.`,
+    vocabulary: [
+      { czech: 'technické muzeum', russian: 'технический музей' },
+      { czech: 'parní vlak', russian: 'паровоз' },
+      { czech: 'replika', russian: 'копия, реплика' },
+      { czech: 'expozice', russian: 'экспозиция' },
+      { czech: 'architektura', russian: 'архитектура' },
+      { czech: 'vesmír', russian: 'космос' },
+      { czech: 'skafandr', russian: 'скафандр' },
+      { czech: 'meteorit', russian: 'метеорит' },
+    ],
+    questions: [
+      {
+        id: 'a2-16-q1',
+        question: 'С кем автор пошёл в музей?',
+        options: ['С женой', 'С другом', 'С сыном', 'Один'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-16-q2',
+        question: 'Что было на первом этаже музея?',
+        options: ['Экспозиция о космосе', 'Экспозиция о транспорте', 'Экспозиция об архитектуре', 'Кинотеатр'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-16-q3',
+        question: 'Сколько длилось посещение музея?',
+        options: ['Около часа', 'Около двух часов', 'Более трёх часов', 'Полдня'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-16-q4',
+        question: 'Что сын делал в конце?',
+        options: ['Хотел уйти', 'Заснул', 'Захотел прийти снова', 'Плакал'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story a2-17: Dovolená u moře ---
+  {
+    id: 'a2-17',
+    level: 'A2',
+    title: 'Dovolená u moře',
+    titleRussian: 'Отпуск на море',
+    text: `Letos v létě jsme s manželkou strávili dva týdny na dovolené v Chorvatsku. Ubytování jsme si rezervovali v malém apartmánu v pobřežním městečku Split. Měli jsme výhled na moře a pláž byla jen pět minut chůze od našeho apartmánu.
+První týden bylo počasí dokonalé — každý den svítilo slunce a teplota dosahovala třiceti dvou stupňů. Ráno jsme snídali na balkoně s výhledem na moře. Potom jsme šli na pláž, kde jsme plavali, četli knihy a opalovali se. Odpoledne jsme chodili procházky po historickém centru Splitu a navštívili jsme Dioklecianův palác.
+Druhý týden jsme si půjčili auto a podnikli jsme několik výletů. Jeli jsme do národního parku Krka, kde jsme viděli krásné vodopády. Další den jsme jeli do městečka Trogir, které je na seznamu UNESCO. Procházeli jsme úzkými uličkami a ochutnávali chorvatské specialty v místních restauracích.
+Návrat domů byl smutný — nechtěli jsme opustit tohle krásné místo. Ale vzali jsme si spoustu fotek a vzpomínek. Už teď plánujeme, kam pojedeme příští rok. Chorvatsko nás nadchlo a určitě se tam chceme vrátit.`,
+    textRussian: `Этим летом мы с женой провели две недели в отпуске в Хорватии. Жильё мы забронировали в маленькой квартире в прибрежном городке Сплит. У нас был вид на море, а пляж находился всего в пяти минутах ходьбы от нашей квартиры.
+Первая неделя — погода была идеальной — каждый день светило солнце, а температура достигала тридцати двух градусов. Утром мы завтракали на балконе с видом на море. Потом шли на пляж, где плавали, читали книги и загорали. Днём мы гуляли по историческому центру Сплита и посетили Дворец Диоклетиана.
+На вторую неделю мы арендовали машину и совершили несколько экскурсий. Мы поехали в национальный парк Крка, где увидели красивые водопады. На следующий день поехали в городок Трогир, который входит в список ЮНЕСКО. Мы гуляли по узким улочкам и пробовали хорватские деликатесы в местных ресторанах.
+Возвращение домой было грустным — мы не хотели покидать это прекрасное место. Но мы привезли множество фотографий и воспоминаний. Уже сейчас планируем, куда поедем в следующем году. Хорватия нас очаровала, и мы определённо хотим туда вернуться.`,
+    vocabulary: [
+      { czech: 'apartmán', russian: 'квартира (сдаваемая в аренду)' },
+      { czech: 'výhled', russian: 'вид' },
+      { czech: 'opalovat se', russian: 'загорать' },
+      { czech: 'národní park', russian: 'национальный парк' },
+      { czech: 'vodopád', russian: 'водопад' },
+      { czech: 'specialita', russian: 'деликатес, фирменное блюдо' },
+      { czech: 'vzpomínka', russian: 'воспоминание' },
+      { czech: 'nadchnout', russian: 'очаровать, восхитить' },
+    ],
+    questions: [
+      {
+        id: 'a2-17-q1',
+        question: 'Где семья провела отпуск?',
+        options: ['В Италии', 'В Черногории', 'В Хорватии', 'В Греции'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-17-q2',
+        question: 'Что они посетили в Сплите?',
+        options: ['Замок', 'Дворец Диоклетиана', 'Аквариум', 'Церковь'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-17-q3',
+        question: 'Что делала семья на второй неделе?',
+        options: ['Отдыхала на пляже', 'Арендовала машину и ездила на экскурсии', 'Занималась серфингом', 'Училась хорватскому языку'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-17-q4',
+        question: 'Какая была температура в первую неделю?',
+        options: ['25 градусов', '28 градусов', '32 градуса', '35 градусов'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story a2-18: Domácí mazlíčci ---
+  {
+    id: 'a2-18',
+    level: 'A2',
+    title: 'Domácí mazlíčci',
+    titleRussian: 'Домашние питомцы',
+    text: `Naše rodina má dva domácí mazlíčky — psa a kočku. Pes se jmenuje Hafík a je to zlatý retrívr. Je mu pět let a je to velmi energické zvíře, které miluje pohyb a hračky. Kočka se jmenuje Minka, je jí tři roky a je to perská kočka s dlouhou bílou srstí.
+Když jsme si pořídili Hafíka, bylo mu jen dva měsíce. Museli jsme ho naučit základní povely — sedni, lehni, ke mně a zůstaň. Chodili jsme s ním na psí školu, kde cvičitel pomáhal s výchovou. Hafík se rychle učil a dnes je to velmi poslušný pes. Ráno si s ním běhám v parku, což je dobré pro nás oba.
+Minka přišla do naší rodiny o rok později. Na rozdíl od Hafíka je to klidné zvíře, které tráví většinu dne spánkem. Ráda sedí na parapetu a sleduje ptáčky za oknem. Jednou denně si s ní hraji — má ráda hračky s peřím a malé míčky. Jejím oblíbeným místem v bytě je můj pracovní stůl, kam mi leze, když pracuji na počítači.
+Hafík a Minka spolu vycházejí docela dobře, i když si občas hrají. Když Hafík příliš štěká, Minka ho upozorní tím, že ho uhodí tlapkou. Je vtipné je sledovat. Doma bez nich by bylo smutno — přinášejí nám spoustu radosti.`,
+    textRussian: `В нашей семье два домашних питомца — собака и кошка. Собаку зовут Хафик, это золотистый ретривер. Ему пять лет, и это очень энергичное животное, которое любит движение и игрушки. Кошку зовут Минка, ей три года, и это персидская кошка с длинной белой шерстью.
+Когда мы завели Хафика, ему было всего два месяца. Нам нужно было научить его основным командам — «сидеть», «лежать», «ко мне» и «место». Мы ходили с ним на собачью школу, где дрессировщик помогал с воспитанием. Хафик быстро учился, и сейчас он очень послушная собака. По утрам я бегаю с ним в парке, что полезно для нас обоих.
+Минка появилась в нашей семье на год позже. В отличие от Хафика, это спокойное животное, которое проводит большую часть дня во сне. Она любит сидеть на подоконнике и следить за птичками за окном. Раз в день я играю с ней — ей нравятся игрушки с перьями и маленькие мячики. Её любимое место в квартире — мой рабочий стол, куда она забирается, когда я работаю за компьютером.
+Хафик и Минка довольно хорошо ладят, хотя иногда и играют. Когда Хафик слишком лает, Минка даёт ему понять, хлопнув его лапой. Забавно за ними наблюдать. Дома без них было бы грустно — они приносят нам много радости.`,
+    vocabulary: [
+      { czech: 'domácí mazlíček', russian: 'домашний питомец' },
+      { czech: 'retrívr', russian: 'ретривер' },
+      { czech: 'pořídit si', russian: 'завести (животное)' },
+      { czech: 'povel', russian: 'команда (собачья)' },
+      { czech: 'cvičitel', russian: 'дрессировщик, тренер' },
+      { czech: 'výchova', russian: 'воспитание' },
+      { czech: 'parapet', russian: 'подоконник' },
+      { czech: 'vycházet spolu', russian: 'ладить друг с другом' },
+    ],
+    questions: [
+      {
+        id: 'a2-18-q1',
+        question: 'Сколько питомцев в семье?',
+        options: ['Одна собака', 'Одна кошка', 'Собака и кошка', 'Две собаки'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-18-q2',
+        question: 'Породы какого типа собака и кошка?',
+        options: ['Овчарка и сиамская', 'Ретривер и персидская', 'Пудель и британская', 'Лабрадор и мейн-кун'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-18-q3',
+        question: 'Что делает Минка, когда автор работает за компьютером?',
+        options: ['Спит на кровати', 'Сидит на подоконнике', 'Лезет на рабочий стол', 'Играет с Хафиком'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-18-q4',
+        question: 'Как Минка реагирует, когда Хафик слишком лает?',
+        options: ['Прячется', 'Лает тоже', 'Хлопает его лапой', 'Бежит к хозяину'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story a2-19: V knihkupectví ---
+  {
+    id: 'a2-19',
+    level: 'A2',
+    title: 'V knihkupectví',
+    titleRussian: 'В книжном магазине',
+    text: `V sobotu odpoledne jsem šel do velkého knihkupectví v centru města. Potřeboval jsem si koupit učebnici češtiny a knížku, kterou mi doporučil kamarád. Knihkupectví se jmenovalo „Kosmas" a mělo tři patra plná knih.
+Nejdřív jsem šel do sekce s učebnicemi cizích jazyků. Hledal jsem učebnici pro úroveň B1, protože A2 už jsem zvládl. Nakonec jsem si vybral učebnici s názvem „Čeština pro cizince — krok za krokem". Vedle učebnice jsem našel i pracovní sešit, takže jsem vzal oboje.
+Potom jsem sešel do přízemí, kde byla sekce beletrie. Hledal jsem román, který mi doporučil kamarád — „Život je jinak" od českého autora Karla Čapka. Vzal jsem do ruky několik dalších knih a prohlížel jsem si je. Nakonec jsem koupil tři knihy — učebnici, pracovní sešit a Čapkův román.
+U pokladny mě překvapila cena — celkem to stálo devět set padesát korun. Zvýhodnil jsem si věrnostní kartou, takže jsem ušetřil deset procent. Prodavač mi knihy zabalil a popřál mi hezké čtení. Domů jsem šel spokojený s plným igelitem knih.`,
+    textRussian: `В субботу днём я пошёл в большой книжный магазин в центре города. Мне нужно было купить учебник чешского языка и книжку, которую порекомендовал друг. Книжный магазин назывался «Kosmas» и имел три этажа, полных книг.
+Сначала я пошёл в секцию с учебниками иностранных языков. Я искал учебник для уровня B1, потому что A2 я уже освоил. В конце концов я выбрал учебник под названием «Чешский для иностранцев — шаг за шагом». Рядом с учебником я нашёл и рабочую тетрадь, поэтому взял оба.
+Потом я спустился на первый этаж, где была секция художественной литературы. Я искал роман, который порекомендовал друг — «Жизнь иначе» чешского автора Карела Чапека. Я взял в руки несколько других книг и просматривал их. В итоге я купил три книги — учебник, рабочую тетрадь и роман Чапека.
+У кассы меня удивила цена — всего это стоило девятьсот пятьдесят крон. Я воспользовался дисконтной картой, поэтому сэкономил десять процентов. Продавец упаковал мне книги и пожелал приятного чтения. Домой я пошёл довольный с полным пакетом книг.`,
+    vocabulary: [
+      { czech: 'knihkupectví', russian: 'книжный магазин' },
+      { czech: 'učebnice', russian: 'учебник' },
+      { czech: 'pracovní sešit', russian: 'рабочая тетрадь' },
+      { czech: 'beletrie', russian: 'художественная литература' },
+      { czech: 'román', russian: 'роман' },
+      { czech: 'věrnostní karta', russian: 'дисконтная карта' },
+      { czech: 'zabalit', russian: 'упаковать' },
+      { czech: 'igelit', russian: 'пакет (полиэтиленовый)' },
+    ],
+    questions: [
+      {
+        id: 'a2-19-q1',
+        question: 'Для какого уровня автор искал учебник?',
+        options: ['A1', 'A2', 'B1', 'B2'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-19-q2',
+        question: 'Сколько этажей было в книжном магазине?',
+        options: ['Один', 'Два', 'Три', 'Четыре'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-19-q3',
+        question: 'Сколько книг в итоге купил автор?',
+        options: ['Одну', 'Две', 'Три', 'Четыре'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-19-q4',
+        question: 'Сколько процентов скидки дал дисконтная карта?',
+        options: ['5%', '10%', '15%', '20%'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story a2-20: České Vánoce ---
+  {
+    id: 'a2-20',
+    level: 'A2',
+    title: 'České vánoční tradice',
+    titleRussian: 'Чешские рождественские традиции',
+    text: `Vánoce jsou v Česku nejdůležitější svátek v roce. Připravují se na ně už od začátku prosince, kdy se začínají zdobit ulice a obchody. Lidé peklí vánoční cukroví a kupují dárky pro své blízké. V Česku se slaví hlavně 24. prosince, který se nazývá Štědrý den.
+Na Štědrý den se rodina sejde u společného stolu. Podle tradice se na stůl dává extra talíř pro případného hosta, který by přišel. Jídlo musí být postní — tradičně se podává smažený kapr s bramborovým salátem a vánoční polévka s houby. Po večeři se chodí zpívat koledy.
+Jednou z nejznámějších českých vánočních tradic je házení ořechového mušle. Po večeři si každý vybere ořech, rozbije ho a podívá se na vnitřní stranu mušle. Pokud je zdravá a celá, znamená to štěstí a zdraví pro další rok. Další tradicí je pouštění lodiček ze skořápek ořechů — na dřevěné míse s vodou se zjišťuje, kdo bude mít v příštím roce štěstí.
+Po večeři se rodina přesune k vánočnímu stromku, kde čekají dárky. Podle české tradice dárky přináší Ježíšek, nikoliv Santa Claus nebo Děda Mráz. Děti s nadšením rozbalují dárky, zatímco dospělí pijí svařené víno a jedli vánoční cukroví. Celá atmosféra Vánoc je plná klidu, lásky a rodinné pohody.`,
+    textRussian: `Рождество в Чехии — самый важный праздник в году. К нему начинают готовиться с начала декабря, когда начинают украшать улицы и магазины. Люди пекут рождественское печенье и покупают подарки для своих близких. В Чехии главным образом празднуется 24 декабря, который называется Сочельник.
+В Сочельник семья собирается за общим столом. По традиции на стол ставят дополнительную тарелку на случай нежданного гостя. Еда должна быть постной — традиционно подают жареного карпа с картофельным салатом и рождественский суп с грибами. После ужина ходят петь колядки.
+Одна из самых известных чешских рождественских традиций — гадание по грецкому ореху. После ужина каждый выбирает орех, раскалывает его и смотрит на внутреннюю часть скорлупы. Если она целая и здоровая, это означает счастье и здоровье на следующий год. Ещё одна традиция — запускание лодочек из скорлупок грецких орехов — на деревянной миске с водой узнают, кому повезёт в следующем году.
+После ужина семья переходит к рождественской ёлке, где ждут подарки. По чешской традиции подарки приносит Малыш Иисус, а не Санта-Клаус или Дед Мороз. Дети с восторгом распаковывают подарки, а взрослые пьют глинтвейн и едят рождественское печенье. Вся атмосфера Рождества наполнена покоем, любовью и семейным уютом.`,
+    vocabulary: [
+      { czech: 'cukroví', russian: 'печенье (рождественское)' },
+      { czech: 'Štědrý den', russian: 'Сочельник' },
+      { czech: 'postní jídlo', russian: 'постная еда' },
+      { czech: 'kapr', russian: 'карп' },
+      { czech: 'koleda', russian: 'колядка' },
+      { czech: 'mušle ořechu', russian: 'скорлупа ореха' },
+      { czech: 'Ježíšek', russian: 'Малыш Иисус (чешский Дед Мороз)' },
+      { czech: 'rodinná pohoda', russian: 'семейный уют' },
+    ],
+    questions: [
+      {
+        id: 'a2-20-q1',
+        question: 'Когда в Чехии отмечается главный рождественский день?',
+        options: ['23 декабря', '24 декабря', '25 декабря', '31 декабря'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-20-q2',
+        question: 'Что означает гадание по скорлупе ореха?',
+        options: ['Богатство', 'Здоровье и счастье', 'Любовь', 'Путешествие'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'a2-20-q3',
+        question: 'Кто приносит подарки детям по чешской традиции?',
+        options: ['Дед Мороз', 'Санта-Клаус', 'Малыш Иисус', 'Волшебник'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'a2-20-q4',
+        question: 'Зачем ставят дополнительную тарелку на стол?',
+        options: ['Для украшения', 'Для гостя, который может прийти', 'Для питомца', 'Это старая традиция без смысла'],
         correctAnswer: 1,
       },
     ],

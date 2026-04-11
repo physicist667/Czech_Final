@@ -645,6 +645,526 @@ Zdravý životní styl není těžký. Stačí začít pomalu a nedávat se.`,
     ],
   },
 
+  // --- Story 11: Ekologický život ---
+  {
+    id: 'b1-11',
+    level: 'B1',
+    title: 'Ekologický život',
+    titleRussian: 'Экологический образ жизни',
+    text: `V posledních letech se stále více lidí zajímá o ekologický způsob života. Mnoho Čechů se snaží omezit svou uhlíkovou stopu a žít v souladu s přírodou. Někteří lidé se dokonce rozhodli žít zcela bez plastu, což je v dnešní době velmi obtížné, ale ne nemožné.
+V obchodech se často objevují produkty v ekologickém balení. Spotřebitelé mají možnost volit mezi běžným zbožím a výrobky z udržitelných zdrojů. Mnoho firem také začalo vyrábět produkty z recyklovaných materiálů, což je krok správným směrem. Stále však platí, že ekologické produkty bývají dražší než konvenční.
+Můj kamarád Martin před rokem založil komunitní zahradu v našem městě. Lidé si tam mohou pronajmout záhonek a pěstovat vlastní zeleninu a byliny. Je to skvělý způsob, jak strávit čas venku, poznat sousedy a snížit dopad na životní prostředí. Zahrada se stala oblíbeným místem pro rodiny s dětmi.
+Myslím, že každý z nás může udělat malé změny, které mají velký význam. Třídění odpadu, omezování plástů, nákup místních produktů nebo chození pěšky — to vše jsou kroky, které pomáhají naší planetě. Důležité je začít a nevzdávat se.`,
+    textRussian: `В последние годы всё больше людей интересуется экологическим образом жизни. Многие чехи стараются сократить свой углеродный след и жить в гармонии с природой. Некоторые люди даже решили жить полностью без пластика, что в наши дни очень сложно, но не невозможно.
+В магазинах часто появляются продукты в экологической упаковке. Потребители имеют возможность выбирать между обычными товарами и изделиями из устойчивых источников. Многие компании также начали производить продукцию из переработанных материалов, что является шагом в правильном направлении. Однако по-прежнему верно, что экологические продукты обычно дороже обычных.
+Мой друг Мартин год назад создал общественный сад в нашем городе. Люди могут арендовать там грядку и выращивать собственные овощи и травы. Это отличный способ провести время на свежем воздухе, познакомиться с соседями и снизить воздействие на окружающую среду. Сад стал любимым местом для семей с детьми.
+Я думаю, что каждый из нас может сделать небольшие изменения, которые имеют большое значение. Сортировка мусора, сокращение пластика, покупка местных продуктов или ходьба пешком — всё это шаги, которые помогают нашей планете. Важно начать и не сдаваться.`,
+    vocabulary: [
+      { czech: 'uhlíková stopa', russian: 'углеродный след' },
+      { czech: 'udržitelný zdroj', russian: 'устойчивый источник' },
+      { czech: 'recyklovaný materiál', russian: 'переработанный материал' },
+      { czech: 'komunitní zahrada', russian: 'общественный сад' },
+      { czech: 'záhonek', russian: 'грядка' },
+      { czech: 'pěstovat', russian: 'выращивать' },
+      { czech: 'spotřebitel', russian: 'потребитель' },
+      { czech: 'konvenční', russian: 'обычный, традиционный' },
+    ],
+    questions: [
+      {
+        id: 'b1-11-q1',
+        question: 'Что такое углеродный след по мнению автора?',
+        options: ['След от обуви', 'Воздействие человека на окружающую среду', 'Вид топлива', 'Тип продукции'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-11-q2',
+        question: 'Что Martín создал в городе?',
+        options: ['Ресторан', 'Общественный сад', 'Магазин', 'Школу'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-11-q3',
+        question: 'Какие продукты обычно дороже?',
+        options: ['Обычные продукты', 'Экологические продукты', 'Местные продукты', 'Импортные продукты'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-11-q4',
+        question: 'Какие шаги автор рекомендует делать?',
+        options: ['Купить машину', 'Сортировать мусор и ходить пешком', 'Переехать в деревню', 'Купировать продукты'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 12: Na farmě ---
+  {
+    id: 'b1-12',
+    level: 'B1',
+    title: 'Na farmě',
+    titleRussian: 'На ферме',
+    text: `Minulý víkend jsem strávil na farmě svých známých, kteří žijí na jihu Moravy. Jižní Morava je známá svou krásnou krajinou, vinicemi a pohostinností místních obyvatel. Farma se nachází v malé vesnici u hranic se Slovenskem, kde je nádherný výhled na okolní kopce.
+Ráno jsem vstával v šest hodin, abych pomáhal s krmením zvířat. Na farmě chovají krávy, kozy, slepice a několik ovcí. Nejvíce mě bavilo dojení koz — ze začátku jsem to nedokázal, ale po několika pokusech se mi to povedlo. Farmař mi vysvětlil, že kozy jsou velmi inteligentní zvířata a každá má svou vlastní povahu.
+Odpoledne jsme jeli na pole sbírat jablka. Stromy byly plné červených a žlutých jabek, které voněly na celou farmu. Nasbírali jsme přes padesát kilogramů jabek, které jsme potom používali na mošt a jablečný koláč. Práce na čerstvém vzduchu mě nesmírně bavila a ani jsem si nevšiml, jak rychle utekl den.
+Večer jsme seděli na verandě, pili domácí jablečný mošt a povídali si o životě na farmě. Farmař řekl, že práce na farmě je náročná, ale dává mu obrovskou svobodu a spokojenost. Rozhodl jsem se, že se příští rok určitě vrátím.`,
+    textRussian: `В прошлые выходные я провёл на ферме своих знакомых, которые живут на юге Моравии. Южная Моравия известна своей красивой природой, виноградниками и гостеприимством местных жителей. Ферма находится в маленькой деревне у границы со Словакией, откуда открывается чудесный вид на окружающие холмы.
+Утром я вставал в шесть часов, чтобы помочь с кормлением животных. На ферме разводят коров, коз, кур и несколько овец. Больше всего мне нравилось доить коз — сначала у меня не получалось, но после нескольких попыток у меня вышло. Фермер объяснил мне, что козы — очень умные животные, и у каждой свой характер.
+Днём мы поехали на поле собирать яблоки. Деревья были полны красных и жёлтых яблок, аромат которых разносился по всей ферме. Мы собрали более пятидесяти килограммов яблок, которые потом использовали для сока и яблочного пирога. Работа на свежем воздухе безумно нравилась мне, и я даже не заметил, как быстро пролетел день.
+Вечером мы сидели на веранде, пили домашний яблочный сок и разговаривали о жизни на ферме. Фермер сказал, что работа на ферме — тяжёлая, но даёт ему огромную свободу и удовлетворение. Я решил, что обязательно вернусь в следующем году.`,
+    vocabulary: [
+      { czech: 'farma', russian: 'ферма' },
+      { czech: 'chovat zvířata', russian: 'разводить животных' },
+      { czech: 'dojit', russian: 'доить' },
+      { czech: 'sbírat', russian: 'собирать' },
+      { czech: 'mošt', russian: 'сок (фруктовый)' },
+      { czech: 'pohostinnost', russian: 'гостеприимство' },
+      { czech: 'náročný', russian: 'трудоёмкий, сложный' },
+      { czech: 'veranda', russian: 'веранда' },
+    ],
+    questions: [
+      {
+        id: 'b1-12-q1',
+        question: 'Где находится ферма?',
+        options: ['На севере Чехии', 'На юге Моравии', 'В Праге', 'У границы с Польшей'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-12-q2',
+        question: 'Какие животные есть на ферме?',
+        options: ['Только коровы', 'Коровы, козы, куры и овцы', 'Лошади и свиньи', 'Только птицы'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-12-q3',
+        question: 'Что делали днём?',
+        options: ['Кормили животных', 'Собирали яблоки', 'Чинили забор', 'Красили дом'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-12-q4',
+        question: 'Что фермер сказал о работе на ферме?',
+        options: ['Это лёгкая работа', 'Это тяжёлая, но даёт свободу', 'Это скучно', 'Он хочет переехать в город'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 13: Můj soused ---
+  {
+    id: 'b1-13',
+    level: 'B1',
+    title: 'Můj soused',
+    titleRussian: 'Мой сосед',
+    text: `Už deset let bydlím ve stejném domě a mám velmi zajímavé sousedy. V domě je celkem dvanáct bytů a každý obyvatel je jiný — mladí studenti, rodiny s dětmi i starší lidé. Nejvíce si rozumím s panem Novákem, který bydlí naproti mně a je mu sedmdesát pět let.
+Pan Novák je bývalý učitel dějepisu. Každý večer sedíme na lavičce před domem a povídáme si. Vypráví mi fascinující příběhy z české historie, které jsem nikdy v učebnicích nenašel. Má obrovskou knihovnu a půjčuje mi knihy, které mě inspirují k dalšímu studiu. Je to jako můj vlastní dědeček, i když jsme nijak příbuzní.
+Někdy sousedské vztahy nejsou jednoduché. Například paní Dvořáková, která bydlí v prvním patře, si stěžuje na hluk, když má někdo návštěvu. Jednou zavolala policii, protože studenti v pátém patře hráli hudbu příliš hlasitě. Naštěstí se situace vyřešila a studenti si od té doby dávají pozor na hlasitost.
+Přesto si myslím, že dobrí sousedé jsou velkou výhodou. Když jsem jednou onemocněl, pan Novák mi přinesl polévku a paní Svobodová mi nakoupila léky. Vzájemná pomoc a respekt jsou základem dobrého sousedského vztahu. Jsem vděčný, že žiju v takovém sousedství.`,
+    textRussian: `Уже десять лет я живу в одном и том же доме, и у меня очень интересные соседи. В доме всего двенадцать квартир, и каждый житель разный — молодые студенты, семьи с детьми и пожилые люди. Больше всего я общаюсь с паном Новаком, который живёт напротив меня и которому семьдесят пять лет.
+Пан Новак — бывший учитель истории. Каждый вечер мы сидим на скамейке перед домом и разговариваем. Он рассказывает мне увлекательные истории из чешской истории, которых я никогда не находил в учебниках. У него огромная библиотека, и он одалживает мне книги, которые вдохновляют меня на дальнейшую учёбу. Он как мой собственный дедушка, хотя мы не родственники.
+Иногда соседские отношения бывают непростыми. Например, пани Дворжакова, которая живёт на первом этаже, жалуется на шум, когда у кого-то есть гости. Однажды она вызвала полицию, потому что студенты на пятом этаже играли музыку слишком громко. К счастью, ситуация разрешилась, и с тех пор студенты следят за громкостью.
+Всё же я думаю, что хорошие соседи — это большое преимущество. Когда я однажды заболел, пан Новак принёс мне суп, а пани Свободова купила мне лекарства. Взаимопомощь и уважение — основа хороших соседских отношений. Я благодарен, что живу в таком окружении.`,
+    vocabulary: [
+      { czech: 'soused', russian: 'сосед' },
+      { czech: 'dějepis', russian: 'история (школьный предмет)' },
+      { czech: 'bývalý', russian: 'бывший' },
+      { czech: 'příbuzný', russian: 'родственник' },
+      { czech: 'stěžovat si', russian: 'жаловаться' },
+      { czech: 'vzájemná pomoc', russian: 'взаимопомощь' },
+      { czech: 'respekt', russian: 'уважение' },
+      { czech: 'sousedství', russian: 'соседство, округ' },
+    ],
+    questions: [
+      {
+        id: 'b1-13-q1',
+        question: 'Сколько лет автор живёт в доме?',
+        options: ['Пять лет', 'Десять лет', 'Пятнадцать лет', 'Двадцать лет'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-13-q2',
+        question: 'Кем работал пан Новак?',
+        options: ['Врачом', 'Учителем истории', 'Писателем', 'Полицейским'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-13-q3',
+        question: 'Почему пани Дворжакова вызвала полицию?',
+        options: ['Из-за пожара', 'Из-за громкой музыки', 'Из-за кражи', 'Из-за затопления'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-13-q4',
+        question: 'Что сделали соседи, когда автор заболел?',
+        options: ['Вызвали врача', 'Принесли суп и купили лекарства', 'Уехали', 'Ничего'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 14: Vlaky v Česku ---
+  {
+    id: 'b1-14',
+    level: 'B1',
+    title: 'Vlaky v Česku',
+    titleRussian: 'Поезда в Чехии',
+    text: `České dráhy jsou jedním z nejlepších způsobů, jak cestovat po zemi. Síť železnic pokrývá téměř celou Českou republiku a spojuje velká města s malými vesnicemi. Osobní vlaky jezdí pravidelně a jsou poměrně levné, což je důležité pro studenty a seniory, kteří mají slevy.
+Rychlíky a expresy jsou pohodlnější a rychlejší, ale také dražší. Cesta z Prahy do Brna trvá přibližně dvě a půl hodiny rychlíkem, zatímco osobním vlakem to trvá přes čtyři hodiny. V posledních letech České dráhy modernizovaly svůj vozový park a nové vlaky jsou čisté, tiché a mají Wi-Fi připojení.
+Nedávno jsem cestoval vlakem z Prahy do Olomouce. Vlaková nádraží v Česku bývají centrem města a často jsou to krásné historické budovy. Nádraží v Olomouci je přímo v centru a je to jedna z nejkrásnějších staveb ve městě. Cesta proběhla bez problémů, ale jednou za čas se stane, že vlak má zpoždění.
+Mnoho lidí si stěžuje na zpoždění vlaků, ale podle mého názoru je železniční doprava stále spolehlivější než silniční. V zimě, když jsou silnice zasněžené, vlaky jezdí mnohem spolehlivěji. Navíc můžete během cesty číst, pracovat nebo jen sledovat krajinu z okna.`,
+    textRussian: `Чешские железные дороги — один из лучших способов путешествовать по стране. Сеть железных дорог покрывает практически всю Чешскую Республику и соединяет крупные города с маленькими деревнями. Пригородные поезда ходят регулярно и довольно недорогие, что важно для студентов и пенсионеров, у которых есть скидки.
+Скорые и экспрессы удобнее и быстрее, но и дороже. Путь из Праги в Брно занимает примерно два с половиной часа на скором поезде, тогда как на пригородном — более четырёх часов. В последние годы Чешские железные дороги модернизировали свой подвижной состав, и новые поезда чистые, тихие и с Wi-Fi.
+Недавно я путешествовал на поезде из Праги в Оломоуц. Железнодорожные вокзалы в Чехии обычно находятся в центре города, и часто это красивые исторические здания. Вокзал в Оломоуце прямо в центре — одно из красивейших сооружений города. Поездка прошла без проблем, но иногда случается, что поезд опаздывает.
+Многие жалуются на опоздания поездов, но, по моему мнению, железнодорожный транспорт всё ещё надёжнее автомобильного. Зимой, когда дороги заснежены, поезда ходят гораздо надёжнее. Кроме того, во время поездки можно читать, работать или просто любоваться пейзажем из окна.`,
+    vocabulary: [
+      { czech: 'železnice', russian: 'железная дорога' },
+      { czech: 'rychlík', russian: 'скорый поезд' },
+      { czech: 'osobní vlak', russian: 'пригородный поезд' },
+      { czech: 'modernizovat', russian: 'модернизировать' },
+      { czech: 'vozový park', russian: 'подвижной состав' },
+      { czech: 'nádraží', russian: 'вокзал, станция' },
+      { czech: 'zpoždění', russian: 'опоздание' },
+      { czech: 'spolehlivý', russian: 'надёжный' },
+    ],
+    questions: [
+      {
+        id: 'b1-14-q1',
+        question: 'Сколько занимает путь из Праги в Брно на скором поезде?',
+        options: ['Один час', 'Примерно два с половиной часа', 'Четыре часа', 'Шесть часов'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-14-q2',
+        question: 'Кто имеет скидки на поезда?',
+        options: ['Только дети', 'Только туристы', 'Студенты и пенсионеры', 'Все без исключения'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-14-q3',
+        question: 'Что нового в поездах в последние годы?',
+        options: ['Больше мест', 'Wi-Fi и модернизация', 'Бесплатная еда', 'Телевизоры'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-14-q4',
+        question: 'Почему автор считает поезда надёжнее автомобилей зимой?',
+        options: ['Поезда быстрее', 'Дороги заснежены, а поезда ездят надёжнее', 'Поезда дешевле', 'Поезда теплее'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 15: Svatba ---
+  {
+    id: 'b1-15',
+    level: 'B1',
+    title: 'Svatba',
+    titleRussian: 'Свадьба',
+    text: `V Česku se tradičně svatba koná v sobotu a je to velká událost nejen pro snoubence, ale i pro celou rodinu a přátele. Přípravy na svatbu začínají mnoho měsíců předem. Nejdůležitější je vybrat datum, rezervovat restauraci a pozvat hosty. Některé páry si najímají svatební agenturu, která jim pomůže s organizací.
+Svatební obřad se většinou koná na radnici nebo v kostele. Civilní obřad na radnici je kratší a formálnější — oddací úředník přečte text a páru se ptá, zda si chtějí vzít. Církevní obřad je delší, zahřívá duchovní a je doplněn modlitbou. Po obřadu následuje svatební hostina, kde je bohatý program.
+Na svatební hostině se podává tradiční české jídlo — svatební polévka, pečené maso, saláty a svatební koláč. Zábava trvá až do pozdní noci. Hraje živá hudba, hosté tančí a soutěží. Oblíbenou tradicí je rozbíjení talíře, které má přinést štěstí, a nevěsta si musí zamést střepy.
+Svatba v Česku bývá nákladná záležitost. Průměrná svatba stojí sto až dvě stě tisíc korun, ale mnoho párů se snaží ušetřit a uspořádat svatbu podle vlastních představ. Myslím, že nejdůležitější není luxus, ale láskyplná atmosféra a společná radost.`,
+    textRussian: `В Чехии свадьба традиционно проходит в субботу — это большое событие не только для жениха и невесты, но и для всей семьи и друзей. Подготовка к свадьбе начинается за много месяцев. Самое важное — выбрать дату, забронировать ресторан и пригласить гостей. Некоторые пары нанимают свадебное агентство, которое помогает с организацией.
+Свадебная церемония обычно проходит в мэрии или в церкви. Гражданская церемония в мэрии короче и формальнее — чиновник зачитывает текст и спрашивает пару, хотят ли они пожениться. Церковная церемония длиннее, её проводит священник, и она сопровождается молитвой. После церемонии следует свадебный пир с богатой программой.
+На свадебном пиру подают традиционную чешскую еду — свадебный суп, запечённое мясо, салаты и свадебный торт. Веселье длится до поздней ночи. Играет живая музыка, гости танцуют и участвуют в конкурсах. Популярная традиция — разбивание тарелки, которое должно принести счастье, а невеста должна подмести осколки.
+Свадьба в Чехии обычно — дорогое мероприятие. Средняя свадьба стоит от ста до двухсот тысяч крон, но многие пары стараются сэкономить и организуют свадьбу по своим представлениям. Я думаю, что самое важное — не роскошь, а атмосфера любви и общая радость.`,
+    vocabulary: [
+      { czech: 'svatba', russian: 'свадьба' },
+      { czech: 'snoubenec', russian: 'жених, наречённый' },
+      { czech: 'oddací úředník', russian: 'чиновник ЗАГСа' },
+      { czech: 'církevní obřad', russian: 'церковная церемония' },
+      { czech: 'svatební hostina', russian: 'свадебный пир' },
+      { czech: 'zamést střepy', russian: 'подмести осколки' },
+      { czech: 'nákladný', russian: 'дорогой, затратный' },
+      { czech: 'svatební agentura', russian: 'свадебное агентство' },
+    ],
+    questions: [
+      {
+        id: 'b1-15-q1',
+        question: 'В какой день традиционно проходит свадьба в Чехии?',
+        options: ['В пятницу', 'В субботу', 'В воскресенье', 'В любой день'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-15-q2',
+        question: 'Где проходит гражданская церемония?',
+        options: ['В церкви', 'В ресторане', 'В мэрии', 'В парке'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-15-q3',
+        question: 'Что должна сделать невеста после разбивания тарелки?',
+        options: ['Заплакать', 'Подмести осколки', 'Танцевать', 'Поцеловать жениха'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-15-q4',
+        question: 'Что, по мнению автора, самое важное на свадьбе?',
+        options: ['Роскошь', 'Атмосфера любви и общая радость', 'Дорогой ресторан', 'Много гостей'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 16: Nemocnice ---
+  {
+    id: 'b1-16',
+    level: 'B1',
+    title: 'Nemocnice',
+    titleRussian: 'Больница',
+    text: `Před třemi týdny jsem měl vážnou nehodu na kole a musel jsem jet do nemocnice. Uklouzl jsem na mokré dlažbě a zlomil jsem si ruku. Záchranka přijela za deset minut a odvezla mě na pohotovost v nemocnici Na Homolce. Byl jsem vyděšený, protože jsem nikdy předtím nebyl v české nemocnici.
+Na pohotovosti jsem čekal asi hodinu, než mě vyšetřil lékař. Sestřička mi dala protizánětlivé léky a provedla rentgen. Rentgen ukázal, že je to zlomenina v oblasti zápěstí. Lékař mi vysvětlil, že budu muset nosit sádu po dobu šesti týdnů. Nasadil mi sádu a řekl, abych přišel na kontrolu za dva týdny.
+Léčba v České republice je na vysoké úrovni, ale čekací doby mohou být dlouhé, zvláště u specialistů. Například na ortopeda se čeká i několik týdnů. Naštěstí moje situace nevyžadovala operaci. Celkové náklady na léčbu byly asi dva tisíce korun, z čehož většinu hradila zdravotní pojišťovna.
+Zkušenost s nemocnicí mě přiměla přemýšlet o zdraví. Uvědomil jsem si, jak snadné je si zranit a jak důležité je nosit chrániče při sportu. Také jsem si uvědomil, že oceňuji české zdravotnictví — personál byl profesionální, laskavý a trpělivý, i když jsem nemluvil perfektně česky.`,
+    textRussian: `Три недели назад у меня была серьёзная авария на велосипеде, и мне пришлось поехать в больницу. Я поскользнулся на мокрой плитке и сломал руку. Скорая приехала через десять минут и увезла меня в приёмный покой больницы На Гомолке. Я был напуган, потому что раньше никогда не был в чешской больнице.
+В приёмном покое я ждал около часа, прежде чем меня осмотрел врач. Медсестра дала мне противовоспалительные лекарства и сделала рентген. Рентген показал, что это перелом в области запястья. Врач объяснил мне, что мне нужно будет носить гипс в течение шести недель. Он наложил гипс и сказал прийти на осмотр через две недели.
+Лечение в Чешской Республике на высоком уровне, но сроки ожидания могут быть долгими, особенно у специалистов. Например, к ортопеду можно ждать несколько недель. К счастью, моя ситуация не требовала операции. Общие расходы на лечение составили около двух тысяч крон, из которых большую часть оплатила страховая компания.
+Опыт в больнице заставил меня задуматься о здоровье. Я осознал, как легко получить травму и как важно носить защиту при занятиях спортом. Также я понял, что ценю чешское здравоохранение — персонал был профессиональным, добрым и терпеливым, даже если я говорил не на идеальном чешском.`,
+    vocabulary: [
+      { czech: 'nemocnice', russian: 'больница' },
+      { czech: 'záchranka', russian: 'скорая помощь' },
+      { czech: 'pohotovost', russian: 'приёмный покой, скорая' },
+      { czech: 'rentgen', russian: 'рентген' },
+      { czech: 'zlomenina', russian: 'перелом' },
+      { czech: 'sáda', russian: 'гипс' },
+      { czech: 'zdravotní pojišťovna', russian: 'медицинская страховая компания' },
+      { czech: 'chrániče', russian: 'защита (спортивная)' },
+    ],
+    questions: [
+      {
+        id: 'b1-16-q1',
+        question: 'Как автор сломал руку?',
+        options: ['Падение с лестницы', 'Поскользнулся на мокрой плитке', 'ДТП', 'Спортивная травма'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-16-q2',
+        question: 'Сколько автор ждал в приёмном покое?',
+        options: ['Десять минут', 'Около получаса', 'Около часа', 'Три часа'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-16-q3',
+        question: 'Как долго автор должен носить гипс?',
+        options: ['Две недели', 'Четыре недели', 'Шесть недель', 'Восемь недель'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-16-q4',
+        question: 'Кто оплатил большую часть лечения?',
+        options: ['Автор сам', 'Страховая компания', 'Государство', 'Родители'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 17: Historie Prahy ---
+  {
+    id: 'b1-17',
+    level: 'B1',
+    title: 'Historie Prahy',
+    titleRussian: 'История Праги',
+    text: `Praha je hlavní město České republiky a jedno z nejkrásnějších měst v Evropě. Její historie sahá až do devátého století, kdy byla založena hradem na kopci nad Vltavou. Legenda říká, že zakladatelem Prahy byla kněžna Libuše, která viděla vizi města, jehož sláva se dotkne hvězd.
+Během středověku se Praha stala důležitým centrem obchodu a kultury. V čtrnáctém století, za vlády Karla IV., zažila Praha svůj zlatý věk. Karel IV. založil Karlovu univerzitu, postavil Karlův most a nechal přestavět Pražský hrad. V té době byla Praha jedním z největších měst v Evropě a sídlem císaře.
+V sedmnáctém století, po bitvě na Bílé hoře, se Praha stala součástí habsburské říše. Barokní architektura, kterou dnes obdivujeme, pochází právě z tohoto období. V devatenáctém století začalo národní obrození — Češi znovuobjevovali svůj jazyk, kulturu a identitu. Byla postavena Národní muzeum a Národní divadlo.
+Dnes je Praha moderní metropolí, která spojuje historii s současností. Každý rok ji navštíví miliony turistů z celého světa. Myslím, že Praha je fascinující město, kde se na každém rohu skrývá kus historie.`,
+    textRussian: `Прага — столица Чешской Республики и один из красивейших городов Европы. Её история уходит в девятый век, когда она была основана замком на холме над Влтавой. Легенда гласит, что основательницей Праги была княгиня Либуше, которая увидела видение города, слава которого дотянется до звёзд.
+В Средние века Прага стала важным центром торговли и культуры. В четырнадцатом веке, во время правления Карла IV, Прага пережила свой золотой век. Карл IV основал Карлов университет, построил Карлов мост и заказал перестройку Пражского замка. В то время Прага была одним из крупнейших городов Европы и резиденцией императора.
+В семнадцатом веке, после битвы на Белой горе, Прага стала частью Габсбургской империи. Барочная архитектура, которой мы сегодня восхищаемся, происходит именно из этого периода. В девятнадцатом веке началось национальное возрождение — чехи заново открывали свой язык, культуру и идентичность. Были построены Национальный музей и Национальный театр.
+Сегодня Прага — современная столица, которая соединяет историю с современностью. Каждый год её посещают миллионы туристов со всего мира. Я думаю, что Прага — очаровательный город, где за каждым углом скрывается кусочек истории.`,
+    vocabulary: [
+      { czech: 'zakladatel', russian: 'основатель' },
+      { czech: 'zlatý věk', russian: 'золотой век' },
+      { czech: 'sídlo císaře', russian: 'резиденция императора' },
+      { czech: 'barokní architektura', russian: 'барочная архитектура' },
+      { czech: 'národní obrození', russian: 'национальное возрождение' },
+      { czech: 'identita', russian: 'идентичность' },
+      { czech: 'metropole', russian: 'столица, мегаполис' },
+      { czech: 'fascinující', russian: 'очаровательный, увлекательный' },
+    ],
+    questions: [
+      {
+        id: 'b1-17-q1',
+        question: 'Кто, по легенде, основал Прагу?',
+        options: ['Карл IV', 'Княгиня Либуше', 'Император', 'Преподобный Вацлав'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-17-q2',
+        question: 'В каком веке Прага пережила золотой век?',
+        options: ['В тринадцатом', 'В четырнадцатом', 'В пятнадцатом', 'В шестнадцатом'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-17-q3',
+        question: 'Что НЕ построил Карл IV?',
+        options: ['Карлов университет', 'Карлов мост', 'Национальный театр', 'Перестройка Пражского замка'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-17-q4',
+        question: 'Когда началось чешское национальное возрождение?',
+        options: ['В семнадцатом веке', 'В восемнадцатом веке', 'В девятнадцатом веке', 'В двадцатом веке'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 18: Cestování po Evropě ---
+  {
+    id: 'b1-18',
+    level: 'B1',
+    title: 'Cestování po Evropě',
+    titleRussian: 'Путешествие по Европе',
+    text: `Cestování po Evropě je jednou z největších výhod života v České republice. Díky tomu, že Česko leží v srdci Evropy, můžete za pár hodin dojet vlakem nebo autem do Německa, Rakouska, Polska nebo na Slovensko. Všechny tyto země mají bohatou kulturu, krásnou přírodu a lahodné jídlo.
+Jednou z nejlepších možností, jak cestovat po Evropě, je Interrail pas. S Interrail pasem můžete jezdit vlaky v celé Evropě za jednu cenu. Je to obzvláště výhodné pro mladé lidi do dvaceti šesti let, kteří mají slevu. Předloni jsem s přáteli cestoval s Interrail pasem a navštívili jsme šest zemí za čtrnáct dní.
+Nezapomenutelná byla návštěva Benátek v Itálii. Plavit se po kanálech v gondole, obdivovat gotické paláce a pít italskou kávu na náměstí svatého Marka — to jsou zážitky, které si pamatuji celý život. Také jsme navštívili Vídeň, kde jsme viděli operu a ochutnali tradiční vídeňský štrúdl.
+Cestování mě učí být otevřený a tolerantní. Když poznávám jiné kultury, zvyky a jazyky, získávám nový pohled na svět. Myslím, že každý člověk by měl cestovat, protože to obohacuje život a pomáhá porozumět ostatním lidem.`,
+    textRussian: `Путешествие по Европе — одно из главных преимуществ жизни в Чешской Республике. Благодаря тому, что Чехия находится в сердце Европы, можно за несколько часов доехать на поезде или машине до Германии, Австрии, Польши или Словакии. Все эти страны богаты культурой, красивой природой и вкусной едой.
+Одна из лучших возможностей путешествовать по Европе — билет Interrail. С билетом Interrail можно ездить на поездах по всей Европе за одну цену. Это особенно выгодно для молодых людей до двадцати шести лет, у которых есть скидка. Позапрошлый год я путешествовал с билетом Interrail с друзьями, и мы посетили шесть стран за четырнадцать дней.
+Незабываемым было посещение Венеции в Италии. Кататься по каналам на гондоле, восхищаться готическими дворцами и пить итальянский кофе на площади Святого Марка — это впечатления, которые я помню всю жизнь. Мы также посетили Вену, где увидели оперу и попробовали традиционный венский штрудель.
+Путешествия учат меня быть открытым и терпимым. Когда я знакомлюсь с другими культурами, обычаями и языками, я приобретаю новый взгляд на мир. Я думаю, что каждый человек должен путешествовать, потому что это обогащает жизнь и помогает понять других людей.`,
+    vocabulary: [
+      { czech: 'Interrail pas', russian: 'билет Interrail' },
+      { czech: 'výhodný', russian: 'выгодный' },
+      { czech: 'nezapomenutelný', russian: 'незабываемый' },
+      { czech: 'gondola', russian: 'гондола' },
+      { czech: 'gotický', russian: 'готический' },
+      { czech: 'tolerantní', russian: 'терпимый' },
+      { czech: 'obohacovat', russian: 'обогащать' },
+      { czech: 'ochutnat', russian: 'попробовать (на вкус)' },
+    ],
+    questions: [
+      {
+        id: 'b1-18-q1',
+        question: 'Почему путешествовать по Европе удобно из Чехии?',
+        options: ['Дешёвые билеты', 'Чехия в центре Европы', 'Много аэропортов', 'Хорошая погода'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-18-q2',
+        question: 'Сколько стран автор посетил за четырнадцать дней?',
+        options: ['Три', 'Четыре', 'Пять', 'Шесть'],
+        correctAnswer: 3,
+      },
+      {
+        id: 'b1-18-q3',
+        question: 'Где автор катался на гондоле?',
+        options: ['В Праге', 'В Венеции', 'В Вене', 'В Париже'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-18-q4',
+        question: 'Что, по мнению автора, даёт путешествие?',
+        options: ['Только усталость', 'Обогащает жизнь и помогает понять других', 'Много фотографий', 'Дорогие воспоминания'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 19: Volný čas ---
+  {
+    id: 'b1-19',
+    level: 'B1',
+    title: 'Volný čas',
+    titleRussian: 'Свободное время',
+    text: `V dnešní uspěchané době je volný čas vzácný a cenný. Mnoho lidí pracuje dlouhé hodiny a má málo času na koníčky a odpočinek. Podle průzkumů tráví Češi průměrně tři hodiny denně volným časem, což je méně než průměr v Evropské unii. Myslím, že je důležité věnovat čas tomu, co nás skutečně dělá šťastnými.
+Moje oblíbené činnosti v volném čase se mění podle ročního období. V létě jezdím na kole, plavu a chodím na výlety do přírody. V zimě se věnuji lyžování a čtení knih u krbu. Rád také vařím nové recepty, které najdu na internetu. Vaření je pro mě způsob relaxace — když vařím, zapomínám na starosti.
+V poslední době se stále více lidí věnuje kreativním činnostem. Malování, fotografie, hudba a psaní jsou velmi populární. Můj kamarád začal s keramikou a řekl, že mu to nesmírně pomáhá uklidnit mysl. Sociální sítě ukazují, že lidé chtějí sdílet své umělecké výtvory a hledat inspiraci.
+Domnívám se, že volný čas by měl být především časem pro sebe. Není důležité, co děláte — důležité je, abyste se cítili dobře. Ať už je to sport, umění, setkávání s přáteli nebo jen ticho a klid.`,
+    textRussian: `В сегодняшней суетливой поре свободное время — редкость и ценность. Многие люди работают долгие часы и мало времени уделяют хобби и отдыху. По опросам чехи проводят в среднем три часа в день на досуге, что меньше среднего по Европейскому союзу. Я думаю, что важно уделять время тому, что действительно делает нас счастливыми.
+Мои любимые занятия в свободное время меняются в зависимости от времени года. Летом я катаюсь на велосипеде, плаваю и хожу в походы на природу. Зимой занимаюсь лыжами и читаю книги у камина. Я также люблю готовить новые рецепты, которые нахожу в интернете. Готовка для меня — способ расслабиться — когда я готовлю, забываю о заботах.
+В последнее время всё больше людей занимаются творчеством. Рисование, фотография, музыка и письмо очень популярны. Мой друг начал заниматься керамикой и сказал, что это невероятно помогает ему успокоить разум. Социальные сети показывают, что люди хотят делиться своими художественными творениями и искать вдохновение.
+Я считаю, что свободное время должно быть, прежде всего, временем для себя. Неважно, чем вы занимаетесь — важно, чтобы вам было хорошо. Будь то спорт, искусство, встречи с друзьями или просто тишина и покой.`,
+    vocabulary: [
+      { czech: 'uspěchaný', russian: 'суетливый, торопливый' },
+      { czech: 'koníček', russian: 'хобби' },
+      { czech: 'průzkum', russian: 'опрос, исследование' },
+      { czech: 'roční období', russian: 'время года' },
+      { czech: 'keramika', russian: 'керамика' },
+      { czech: 'kreativní', russian: 'творческий' },
+      { czech: 'relaxace', russian: 'расслабление' },
+      { czech: 'umělecký výtvor', russian: 'художественное творение' },
+    ],
+    questions: [
+      {
+        id: 'b1-19-q1',
+        question: 'Сколько часов в день чехи проводят на досуге?',
+        options: ['Один час', 'Два часа', 'Три часа', 'Пять часов'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-19-q2',
+        question: 'Что автор делает зимой?',
+        options: ['Катается на велосипеде', 'Занимается лыжами и читает', 'Плавает', 'Ходит в походы'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-19-q3',
+        question: 'Что друг автора начал делать недавно?',
+        options: ['Рисовать', 'Керамикой', 'Фотографировать', 'Играть на пианино'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-19-q4',
+        question: 'Что, по мнению автора, самое важное в свободном времени?',
+        options: ['Быть продуктивным', 'Делать то, что приносит радость', 'Много работать', 'Путешествовать'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 20: Domov pro všechny ---
+  {
+    id: 'b1-20',
+    level: 'B1',
+    title: 'Domov pro všechny',
+    titleRussian: 'Дом для всех',
+    text: `Bydlení je v Česku jedno z největších témat, které lidi trápí. Ceny nemovitostí v posledních letech prudce vzrostly a mnoho mladých lidí si nemůže dovolit koupit vlastní byt. V Praze se průměrná cena bytu pohybuje kolem osmi milionů korun, což je pro většinu začínajících rodin nedostupné.
+Mnoho lidí se proto spoléhá na nájemní bydlení, ale i nájmy jsou dnes velmi vysoké. V centrech velkých měst se platí i dvacet tisíc korun měsíčně za malý byt. To vede k tomu, že mladí lidé žijí s rodiči déle než v minulosti, nebo bydlí v menších městech a dojíždí do práce.
+Situace je obzvláště těžká pro lidi, kteří se ocitli v nouzi. Bezdomovectví je problém, který se týká tisíců lidí v Česku. Na ulici žijí lidé různého věku a původu — někdo ztratil práci, někdo má zdravotní problémy nebo rodinné konflikty. Naštěstí existují organizace, které těmto lidem pomáhají — poskytují ubytování, jídlo a odbornou pomoc.
+Myslím, že bydlení je základní lidské právo a společnost by měla udělat více pro to, aby byl domov dostupný pro všechny. Stavba dostupných bytů, podpora nájemního bydlení a pomoc lidem v nouzi — to jsou kroky, které bychom měli podpořit. Každý člověk si zaslouží bezpečné místo, kde může spát a žít.`,
+    textRussian: `Жильё в Чехии — одна из главных проблем, беспокоящих людей. Цены на недвижимость в последние годы резко выросли, и многие молодые люди не могут позволить себе купить собственную квартиру. В Праге средняя цена квартиры составляет около восьми миллионов крон, что для большинства начинающих семей недоступно.
+Поэтому многие люди полагаются на арендное жильё, но и арендные платы сегодня очень высокие. В центрах крупных городов платят до двадцати тысяч крон в месяц за маленькую квартиру. Это приводит к тому, что молодые люди живут с родителями дольше, чем раньше, или живут в маленьких городах и ездят на работу.
+Ситуация особенно тяжёлая для людей, оказавшихся в беде. Бездомность — проблема, затрагивающая тысячи людей в Чехии. На улице живут люди разного возраста и происхождения — кто-то потерял работу, у кого-то проблемы со здоровьем или семейные конфликты. К счастью, существуют организации, которые помогают этим людям — предоставляют жильё, еду и профессиональную помощь.
+Я думаю, что жильё — основное право человека, и общество должно сделать больше, чтобы дом был доступен для всех. Строительство доступных квартир, поддержка арендного жилья и помощь людям в беде — это шаги, которые мы должны поддержать. Каждый человек заслуживает безопасного места, где можно спать и жить.`,
+    vocabulary: [
+      { czech: 'nemovitost', russian: 'недвижимость' },
+      { czech: 'nájemní bydlení', russian: 'арендное жильё' },
+      { czech: 'bezdomovectví', russian: 'бездомность' },
+      { czech: 'nouze', russian: 'беда, нужда' },
+      { czech: 'dostupný', russian: 'доступный' },
+      { czech: 'společnost', russian: 'общество' },
+      { czech: 'základní právo', russian: 'основное право' },
+      { czech: 'odborná pomoc', russian: 'профессиональная помощь' },
+    ],
+    questions: [
+      {
+        id: 'b1-20-q1',
+        question: 'Какова средняя цена квартиры в Праге?',
+        options: ['Около трёх миллионов крон', 'Около пяти миллионов крон', 'Около восьми миллионов крон', 'Около пятнадцати миллионов крон'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b1-20-q2',
+        question: 'Что делают многие молодые люди из-за высоких цен?',
+        options: ['Уезжают из страны', 'Живут с родителями или в пригородах', 'Покупают дом', 'Живут в палатках'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-20-q3',
+        question: 'Что организации предоставляют бездомным?',
+        options: ['Только деньги', 'Жильё, еду и профессиональную помощь', 'Только еду', 'Ничего'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b1-20-q4',
+        question: 'Что автор считает основным правом человека?',
+        options: ['Образование', 'Жильё', 'Работа', 'Здоровье'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
   // ===================== B2 STORIES =====================
 
   // --- Story 11: Budoucnost dopravy ---
@@ -1282,6 +1802,634 @@ Myslím, že být bilingvní je obrovská výhoda. Otevírá to dveře k další
         id: 'b2-10-q5',
         question: 'На скольких языках говорит сын автора?',
         options: ['На одном', 'На двух', 'На трёх', 'На четырёх'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 21: Evropská unie ---
+  {
+    id: 'b2-11',
+    level: 'B2',
+    title: 'Evropská unie',
+    titleRussian: 'Европейский союз',
+    text: `Česká republika je členem Evropské unie od roku 2004. Vstup do EU zásadně změnil naši ekonomiku, politiku i každodenní život. Otevřely se hranice, zrušilo se vízum a Češi získali právo pracovat a studovat v jakékoliv členské zemi. Mnoho mladých lidí využilo této příležitosti a odjelo za prací do Německa, Rakouska nebo Skandinávie.
+
+Přestože EU přináší mnoho výhod,existují i výrazné nevýhody. Někteří lidé pocítují ztrátu národní suverenity a kritizují to, že důležitá rozhodnutí přijímají úředníci v Bruselu, nikoliv volení politici v Praze. Euroskeptici argumentují, že Česko přispívá do rozpočtu EU více, než z něj získává, a že by země měla mít větší kontrolu nad vlastními zákony.
+
+Na druhé straně zastánci EU upozorňují, že bez evropské integrace by Česko jako malá země měla jen omezený vliv na mezinárodní scéně. Členství v uni nám umožňuje podílet se na tvorbě evropského práva, spolupracovat při řešení společných problémů jako je změna klimatu nebo migrace, a těžit z jednotného trhu s více než čtyřmi sty miliony spotřebitelů.
+
+Otázka evropské integrace zůstává jedním z nejdiskutovanějších témat. Myslím, že by obě strany měly naslouchat jedné druhé a hledat kompromis. Evropa není dokonalá, ale společně jsme silnější než samostatně.`,
+    textRussian: `Чешская Республика является членом Европейского союза с 2004 года. Вступление в ЕС коренным образом изменило нашу экономику, политику и повседневную жизнь. Открылись границы, отменены визы, и чехи получили право работать и учиться в любой стране-участнице. Многие молодые люди воспользовались этой возможностью и уехали на работу в Германию, Австрию или Скандинавию.
+
+Несмотря на то, что ЕС приносит много преимуществ, существуют и заметные недостатки. Некоторые люди чувствуют потерю национального суверенитета и критикуют то, что важные решения принимают чиновники в Брюсселе, а не избранные политики в Праге. Евроскептики утверждают, что Чехия вносит в бюджет ЕС больше, чем получает, и что страна должна иметь больший контроль над собственными законами.
+
+С другой стороны, сторонники ЕС отмечают, что без европейской интеграции Чехия как небольшая страна имела бы лишь ограниченное влияние на международной арене. Членство в союзе позволяет нам участвовать в формировании европейского права, сотрудничать в решении общих проблем, таких как изменение климата или миграция, и извлекать выгоду из единого рынка с более чем четырьмястами миллионами потребителей.
+
+Вопрос европейской интеграции остаётся одной из самых обсуждаемых тем. Я думаю, что обе стороны должны слушать друг друга и искать компромисс. Европа не совершенна, но вместе мы сильнее, чем по отдельности.`,
+    vocabulary: [
+      { czech: 'suverenita', russian: 'суверенитет' },
+      { czech: 'rozpočet', russian: 'бюджет' },
+      { czech: 'integrace', russian: 'интеграция' },
+      { czech: 'mezinárodní scéna', russian: 'международная арена' },
+      { czech: 'jednotný trh', russian: 'единый рынок' },
+      { czech: 'euroskeptik', russian: 'евроскептик' },
+      { czech: 'kompromis', russian: 'компромисс' },
+      { czech: 'úředník', russian: 'чиновник' },
+    ],
+    questions: [
+      {
+        id: 'b2-11-q1',
+        question: 'В каком году Чехия вступила в ЕС?',
+        options: ['В 2000 году', 'В 2002 году', 'В 2004 году', 'В 2007 году'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-11-q2',
+        question: 'Что критикуют евроскептики?',
+        options: ['Открытые границы', 'Решения, принимаемые в Брюсселе', 'Свободную торговлю', 'Климатические политики'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-11-q3',
+        question: 'Какое преимущество ЕС для малых стран упоминает автор?',
+        options: ['Бесплатное образование', 'Большее влияние на международной арене', 'Сильная армия', 'Дешёвая нефть'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-11-q4',
+        question: 'Сколько потребителей в едином рынке ЕС?',
+        options: ['Более 200 миллионов', 'Более 300 миллионов', 'Более 400 миллионов', 'Более 500 миллионов'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-11-q5',
+        question: 'Какую позицию занимает автор по вопросу ЕС?',
+        options: ['Полностью против', 'Полностью за', 'За диалог и компромисс', 'Не имеет мнения'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 22: Doprava budoucnosti ---
+  {
+    id: 'b2-12',
+    level: 'B2',
+    title: 'Doprava budoucnosti',
+    titleRussian: 'Транспорт будущего',
+    text: `Představte si město, ve kterém se auta pohybují bez řidičů, ulice jsou tiché a čistší a veřejná doprava přijede přesně včas. To není sci-fi — v některých městech už to začíná být realitou. Autonomní vozidla se testují v pilotních projektech v San Francisku, Šanghaji i v německých městech.
+
+Technologie samořiditelných aut je založena na kombinaci senzorů, kamer a umělé inteligence. Automobily dokážou rozpoznat chodce, cyklisty, překážky a dopravní značky. Podle studií by mohlo dojít k výraznému snížení počtu nehod, protože algoritmy nepodléhají únavě ani rozptýlení. Otázkou však zůstává, jak by se systém choval v nečekaných situacích, které nelze naprogramovat předem.
+
+Dalším trendem je elektrifikace letectví. Několik firem vyvíjí malá elektrická letadla pro kratší vzdálenosti, tzv. air taxis. Pokud by se tato technologie prosadila, mohli bychom létat mezi městy za zlomek současné ceny a s mnohem menšími emisemi. Překážkou je zatím kapacita baterií a bezpečnostní regulace.
+
+Přestože budoucnost dopravy zní lákavě, nesmíme zapomínat na sociální dopady. Mnoho lidí pracuje jako řidiči kamionů, taxikáři nebo kurýři. Pokud by jejich profese zmizely, bylo by nutné zajistit jejich přeskolení a nové pracovní příležitosti. Technologie musí sloužit lidem, ne naopak.`,
+    textRussian: `Представьте себе город, в котором автомобили движутся без водителей, улицы тихие и чистые, а общественный транспорт приходит точно вовремя. Это не научная фантастика — в некоторых городах это уже начинает становиться реальностью. Автономные транспортные средства тестируются в пилотных проектах в Сан-Франциско, Шанхае и немецких городах.
+
+Технология беспилотных автомобилей основана на комбинации датчиков, камер и искусственного интеллекта. Автомобили способны распознавать пешеходов, велосипедистов, препятствия и дорожные знаки. По данным исследований, количество аварий может значительно сократиться, поскольку алгоритмы не подвержены усталости и отвлечению. Однако остаётся вопрос, как система будет вести себя в непредвиденных ситуациях, которые нельзя запрограммировать заранее.
+
+Ещё одной тенденцией является электрификация авиации. Несколько компаний разрабатывают небольшие электрические самолёты для коротких дистанций, так называемые аэротакси. Если эта технология приживётся, мы могли бы летать между городами за долю нынешней цены и с гораздо меньшими выбросами. Препятствием пока является ёмкость батарей и правила безопасности.
+
+Несмотря на то, что будущее транспорта звучит заманчиво, мы не должны забывать о социальных последствиях. Многие люди работают водителями грузовиков, таксистами или курьерами. Если их профессии исчезнут, необходимо будет обеспечить их переподготовку и новые рабочие возможности. Технология должна служить людям, а не наоборот.`,
+    vocabulary: [
+      { czech: 'autonomní vozidlo', russian: 'автономное транспортное средство' },
+      { czech: 'senzor', russian: 'датчик' },
+      { czech: 'rozptýlení', russian: 'отвлечение, рассеянность' },
+      { czech: 'elektrifikace', russian: 'электрификация' },
+      { czech: 'kapacita baterií', russian: 'ёмкость батарей' },
+      { czech: 'přeskolení', russian: 'переподготовка' },
+      { czech: 'sociální dopad', russian: 'социальные последствия' },
+      { czech: 'regulace', russian: 'регулирование' },
+    ],
+    questions: [
+      {
+        id: 'b2-12-q1',
+        question: 'На чём основана технология беспилотных автомобилей?',
+        options: ['Только на GPS', 'На датчиках, камерах и искусственном интеллекте', 'На радиоуправлении', 'На магнитных дорожках'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-12-q2',
+        question: 'Почему беспилотные автомобили могут быть безопаснее?',
+        options: ['Они быстрее', 'Алгоритмы не устают и не отвлекаются', 'У них мощные тормоза', 'Они меньше'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-12-q3',
+        question: 'Что такое air taxis?',
+        options: ['Вертолёты', 'Маленькие электрические самолёты для коротких дистанций', 'Дроны для доставки', 'Электрические поезда'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-12-q4',
+        question: 'Какую социальную проблему упоминает автор?',
+        options: ['Дорожные пробки', 'Исчезновение профессий водителей', 'Загрязнение воздуха', 'Высокие цены на топливо'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-12-q5',
+        question: 'Какова основная мысль автора о технологиях?',
+        options: ['Технологии — это зло', 'Технологии должны служить людям', 'Технологии решат все проблемы', 'Технологии — это только бизнес'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 23: Sociální sítě ---
+  {
+    id: 'b2-13',
+    level: 'B2',
+    title: 'Sociální sítě',
+    titleRussian: 'Социальные сети',
+    text: `Sociální sítě se staly neodmyslitelnou součástí našeho života. Každý den trávíme průměrně přes dvě hodiny na platformách jako Instagram, TikTok nebo Facebook. Zpočátku to vypadalo jako nevinná zábava, ale postupně se ukázalo, že tyto aplikace mají hluboký vliv na naši psychiku, vztahy i vnímání světa.
+
+Algoritmy sociálních sítí jsou navrženy tak, aby udržely naši pozornost co nejdéle. Ukazují nám obsah, který vyvolává silné emoce — zlobu, pobouření nebo obavy. Studie prokázaly, že čím více času lidé tráví na sociálních sítích, tím více se cítí osamělí a nespokojení se svým životem. Neustálé srovnávání se s ideálními obrázky ostatních vede k pocitům méněcennosti.
+
+Na druhou stranu nelze popřít, že sociální sítě přinesly i pozitivní změny. Umožnily spojení lidí napříč kontinenty, usnadnily organizaci dobrovolnických aktivit a daly hlas menšinám, které dříve neměly možnost se projevit. Během pandemie byly sociální sítě pro mnohé jediným způsobem, jak zůstat v kontaktu s blízkými.
+
+Domnívám se, že klíčem je uvědomělý přístup. Místo toho, abychom sociální sítě zcela odmítli, měli bychom se naučit ovládat svůj čas a kriticky hodnotit informace, které přijímáme. Digitální gramotnost by měla být součástí vzdělávání už od útlého věku.`,
+    textRussian: `Социальные сети стали неотъемлемой частью нашей жизни. Каждый день мы в среднем проводим более двух часов на таких платформах, как Instagram, TikTok или Facebook. Поначалу это выглядело как невинное развлечение, но постепенно выяснилось, что эти приложения оказывают глубокое влияние на нашу психику, отношения и восприятие мира.
+
+Алгоритмы социальных сетей созданы так, чтобы удерживать наше внимание как можно дольше. Они показывают нам контент, вызывающий сильные эмоции — гнев, возмущение или тревогу. Исследования доказали, что чем больше времени люди проводят в социальных сетях, тем больше они чувствуют себя одинокими и недовольными своей жизнью. Постоянное сравнение себя с идеальными образами других ведёт к чувству неполноценности.
+
+С другой стороны, нельзя отрицать, что социальные сети принесли и позитивные изменения. Они позволили объединить людей на разных континентах, упростили организацию волонтёрской деятельности и дали голос меньшинствам, которые раньше не имели возможности высказаться. Во время пандемии социальные сети для многих были единственным способом оставаться на связи с близкими.
+
+Я считаю, что ключом является осознанный подход. Вместо того чтобы полностью отвергать социальные сети, мы должны научиться контролировать своё время и критически оценивать информацию, которую получаем. Цифровая грамотность должна быть частью образования с раннего возраста.`,
+    vocabulary: [
+      { czech: 'algoritmus', russian: 'алгоритм' },
+      { czech: 'vnímání světa', russian: 'восприятие мира' },
+      { czech: 'pocit méněcennosti', russian: 'чувство неполноценности' },
+      { czech: 'digitální gramotnost', russian: 'цифровая грамотность' },
+      { czech: 'uvědomělý přístup', russian: 'осознанный подход' },
+      { czech: 'odmyslitelný', russian: 'неотделимый' },
+      { czech: 'pobouření', russian: 'возмущение, негодование' },
+      { czech: 'zpočátku', russian: 'поначалу' },
+    ],
+    questions: [
+      {
+        id: 'b2-13-q1',
+        question: 'Сколько в среднем времени проводят люди в социальных сетях?',
+        options: ['Менее одного часа', 'Более двух часов', 'Более четырёх часов', 'Более шести часов'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-13-q2',
+        question: 'Для чего предназначены алгоритмы социальных сетей?',
+        options: ['Для обучения', 'Для удержания внимания пользователей', 'Для защиты данных', 'Для экономии денег'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-13-q3',
+        question: 'Что доказали исследования о социальных сетях?',
+        options: ['Они делают людей счастливее', 'Они вызывают одиночество и недовольство', 'Они не влияют на психику', 'Они улучшают отношения'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-13-q4',
+        question: 'Какое позитивное влияние социальных сетей упоминает автор?',
+        options: ['Повышение зарплат', 'Связь людей и голос меньшинствам', 'Лучшая еда', 'Больше путешествий'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 24: Láska a vztahy ---
+  {
+    id: 'b2-14',
+    level: 'B2',
+    title: 'Láska a vztahy',
+    titleRussian: 'Любовь и отношения',
+    text: `Moderní způsob seznamování se radikálně liší od toho, co znali naši prarodiče. Dnes je běžné poznat partnera přes seznamovací aplikace, kde se rozhodujeme za pár sekund na základě fotografie a krátkého popisu. Tento způsob sice zvyšuje šanci na seznámení, ale zároveň vytváří iluzi, že ideální partner je jen jedno kliknutí daleko.
+
+Paradoxně máme dnes více možností než kdykoliv předtím, a přesto je mnoho lidí samotnějších. Psychologové to vysvětlují tzv. paradokem výběru — čím více možností máme, tím těžší je se rozhodnout a tím spíše litujeme, že jsme si nevybrali lépe. Lidé často porovnávají své partnery s ideálními představami, které si vytvořili na základě filtrů a upravených fotografií.
+
+Dlouhodobé vztahy vyžadují něco, co aplikace nenabízejí — trpělivost, schopnost kompromisu a ochotu pracovat na problémech. Mladá generace má často zkreslené představy o lásce z filmů a seriálů, kde vše probíhá hladce a romanticky. Ve skutečnosti je každý vztah plný výzev, nedorozumění a každodenní rutiny.
+
+Přesto věřím, že skutečná láska existuje. Nejde ale o ten dramatický pocit z počátku, spíše o hluboké porozumění, důvěru a rozhodnutí být s někým i v těžkých chvílích. Láska není něco, co jen najdeme — je to něco, co společně vytváříme.`,
+    textRussian: `Современный способ знакомства кардинально отличается от того, что знали наши бабушки и дедушки. Сегодня обычно познакомиться с партнёром через приложения для знакомств, где мы принимаем решение за несколько секунд на основе фотографии и краткого описания. Этот способ действительно увеличивает шанс на знакомство, но в то же время создаёт иллюзию, что идеальный партнёр всего в одном клике.
+
+Парадоксально, но сегодня у нас больше возможностей, чем когда-либо раньше, и всё же многие люди чувствуют себя одинокими. Психологи объясняют это так называемым парадоксом выбора — чем больше у нас вариантов, тем сложнее принять решение и тем чаще мы сожалеем, что не выбрали лучше. Люди часто сравнивают своих партнёров с идеальными образами, которые создали на основе фильтров и отредактированных фотографий.
+
+Долгосрочные отношения требуют того, что приложения не предлагают — терпения, способности к компромиссу и готовности работать над проблемами. У молодого поколения часто искажённые представления о любви из фильмов и сериалов, где всё идёт гладко и романтично. На деле каждые отношения полны вызовов, недоразумений и повседневной рутины.
+
+Тем не менее я верю, что настоящая любовь существует. Но это не то драматическое чувство в начале, а скорее глубокое понимание, доверие и решение быть с кем-то и в трудные минуты. Любовь — это не то, что мы просто находим, это то, что мы вместе создаём.`,
+    vocabulary: [
+      { czech: 'seznamovací aplikace', russian: 'приложение для знакомств' },
+      { czech: 'paradox výběru', russian: 'парадокс выбора' },
+      { czech: 'zkreslená představa', russian: 'искажённое представление' },
+      { czech: 'trpělivost', russian: 'терпение' },
+      { czech: 'kompromis', russian: 'компромисс' },
+      { czech: 'porozumění', russian: 'понимание' },
+      { czech: 'důvěra', russian: 'доверие' },
+      { czech: 'iluze', russian: 'иллюзия' },
+    ],
+    questions: [
+      {
+        id: 'b2-14-q1',
+        question: 'Что такое парадокс выбора?',
+        options: ['Больше выбора — легче решить', 'Больше выбора — сложнее решить и больше сожалений', 'Меньше выбора — больше счастья', 'Выбор не влияет на чувства'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-14-q2',
+        question: 'Что создают фильтры и отредактированные фото?',
+        options: ['Реалистичные образы', 'Идеальные, нереалистичные образы', 'Исторические документы', 'Художественные произведения'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-14-q3',
+        question: 'Что необходимо для долгосрочных отношений?',
+        options: ['Много денег', 'Терпение, компромисс и готовность работать над проблемами', 'Общие хобби', 'Большой дом'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-14-q4',
+        question: 'Как автор определяет настоящую любовь?',
+        options: ['Драматическое чувство', 'Понимание, доверие и общие усилия', 'Физическое притяжение', 'Общие интересы'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-14-q5',
+        question: 'Откуда молодое поколение получает искажённые представления о любви?',
+        options: ['Из книг', 'Из фильмов и сериалов', 'От родителей', 'Из школы'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 25: Mentální zdraví ---
+  {
+    id: 'b2-15',
+    level: 'B2',
+    title: 'Mentální zdraví',
+    titleRussian: 'Психическое здоровье',
+    text: `Mentální zdraví je stejně důležité jako zdraví fyzické, ale společnost mu dlouho nevěnovala dostatečnou pozornost. Lidé s úzkostmi, depresí nebo jinými psychickými potížemi se často stydí vyhledat pomoc, protože se obávají předsudků okolí. Teprve v posledních letech se začalo mluvit o duševním zdraví otevřeněji.
+
+Stres je přirozenou součástí života, ale dlouhodobý chronický stres může mít devastující dopady na organismus. Zvyšuje riziko srdečních chorob, oslabuje imunitní systém a negativně ovlivňuje spánek i schopnost soustředění. V dnešní uspěchané době se mnoho lidí cítí pod tlakem — musí být výkonní v práci, dokonalí rodiče a aktivní na sociálních sítích.
+
+Psychoterapie se ukazuje jako účinný nástroj pro řešení mnoha psychických obtíží. Na rozdíl od léků, které často jen potlačují příznaky, terapie pomáhá odhalit příčiny problémů a vybudovat zdravější způsoby zvládání náročných situací. Kognitivně-behaviorální terapie učí pacienty rozpoznávat negativní myšlenkové vzorce a nahrazovat je realističtějšími.
+
+Domnívám se, že prevence je klíčová. Dostatečný spánek, pravidelný pohyb, vyvážená strava a čas strávený v přírodě mohou výrazně přispět k duševní pohodě. Neměli bychom se stydět mluvit o svých pocitech a vyhledávat podporu, když ji potřebujeme. Požádat o pomoc není znakem slabosti — je to znak odvahy.`,
+    textRussian: `Психическое здоровье не менее важно, чем физическое, но общество долгое время не уделяло ему достаточного внимания. Люди с тревогой, депрессией или другими психологическими проблемами часто стесняются обратиться за помощью, потому что боятся предубеждений окружающих. Только в последние годы стали говорить о душевном здоровье более открыто.
+
+Стресс — естественная часть жизни, но долгосрочный хронический стресс может иметь разрушительные последствия для организма. Он повышает риск сердечных заболеваний, ослабляет иммунную систему и негативно влияет на сон и способность концентрироваться. В сегодняшней суетливой эпохе многие люди чувствуют давление — они должны быть продуктивными на работе, идеальными родителями и активными в социальных сетях.
+
+Психотерапия доказала свою эффективность как инструмент для решения многих психологических проблем. В отличие от лекарств, которые часто лишь подавляют симптомы, терапия помогает выявить причины проблем и выработать более здоровые способы справляться с трудными ситуациями. Когнитивно-поведенческая терапия учит пациентов распознавать негативные мыслительные шаблоны и заменять их более реалистичными.
+
+Я считаю, что профилактика — ключевая. Достаточный сон, регулярная физическая активность, сбалансированное питание и время на природе могут значительно способствовать душевному благополучию. Нам не следует стесняться говорить о своих чувствах и обращаться за поддержкой, когда она нужна. Просить о помощи — не признак слабости, это признак смелости.`,
+    vocabulary: [
+      { czech: 'mentální zdraví', russian: 'психическое здоровье' },
+      { czech: 'úzkost', russian: 'тревога' },
+      { czech: 'předsudek', russian: 'предубеждение' },
+      { czech: 'chronický stres', russian: 'хронический стресс' },
+      { czech: 'psychoterapie', russian: 'психотерапия' },
+      { czech: 'kognitivně-behaviorální', russian: 'когнитивно-поведенческий' },
+      { czech: 'myšlenkový vzorec', russian: 'мыслительный шаблон' },
+      { czech: 'prevence', russian: 'профилактика' },
+    ],
+    questions: [
+      {
+        id: 'b2-15-q1',
+        question: 'Почему люди часто стесняются обращаться за психологической помощью?',
+        options: ['Из-за денег', 'Из-за страха перед предубеждениями окружающих', 'Из-за отсутствия врачей', 'Из-за нехватки времени'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-15-q2',
+        question: 'На что влияет хронический стресс?',
+        options: ['Только на настроение', 'На сердце, иммунитет, сон и концентрацию', 'Только на вес', 'На зрение'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-15-q3',
+        question: 'В чём преимущество терапии перед лекарствами?',
+        options: ['Быстрее действует', 'Выявляет причины и учит здоровым стратегиям', 'Дешевле', 'Не имеет побочных эффектов'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-15-q4',
+        question: 'Что автор считает ключевым для психического здоровья?',
+        options: ['Лекарства', 'Профилактика: сон, движение, питание, природа', 'Путешествия', 'Жёсткий режим'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-15-q5',
+        question: 'Что, по мнению автора, означает просьба о помощи?',
+        options: ['Слабость', 'Глупость', 'Смелость', 'Эгоизм'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 26: Umělá inteligence ---
+  {
+    id: 'b2-16',
+    level: 'B2',
+    title: 'Umělá inteligence',
+    titleRussian: 'Искусственный интеллект',
+    text: `Umělá inteligence proniká do téměř všech oblastí našeho života. Od doporučovacích algoritmů na Netflixu přes automatické překlady až po systémy diagnostikující nemoci — AI už není jen tématem science fiction. Otázka není, zda umělá inteligence změní náš svět, ale jak a za jakou cenu.
+
+Jednou z největších výzev je vliv AI na trh práce. Automatizace ohrožuje nejen manuální, ale stále více i kancelářská povolání. Algoritmy dokážou analyzovat právní dokumenty, psát články a dokonce generovat obrázky, které lze jen stěží odlišit od lidských děl. Odborníci se neshodují, zda AI spíše zničí pracovní místa, nebo vytvoří nová. Pravděpodobně se stane obojí — některé profese zmizí, ale zároveň vzniknou role, které dnes ještě neexistují.
+
+Etičtí filozofové upozorňují na další problémy. Kdo nese odpovědnost, když autonomní vozidlo způsobí nehodu? Jak zajistit, aby rozhodovací algoritmy nebyly založeny na předsudcích? A co práva autorská — patří umělecké dílo vytvořené umělou inteligencí programátorovi, uživateli, nebo nikomu?
+
+Jsme na prahu nové éry a je nezbytné, abychom jako společnost stanovili jasné pravidla. Umělá inteligence by měla sloužit člověku, nikoliv nahrazovat jeho schopnost kriticky myslet a tvořit. Technologie je nástroj, ne cíl sám o sobě.`,
+    textRussian: `Искусственный интеллект проникает практически во все сферы нашей жизни. От рекомендательных алгоритмов на Netflix до автоматических переводов и систем диагностики заболеваний — ИИ больше не просто тема научной фантастики. Вопрос не в том, изменит ли искусственный интеллект наш мир, а в том, как и какой ценой.
+
+Одной из главных вызовов является влияние ИИ на рынок труда. Автоматизация угрожает не только ручному, но всё больше и офисному труду. Алгоритмы способны анализировать юридические документы, писать статьи и даже генерировать изображения, которые с трудом можно отличить от человеческих работ. Эксперты расходятся во мнениях, уничтожит ли ИИ рабочие места или создаст новые. Вероятнее всего произойдёт и то, и другое — некоторые профессии исчезнут, но одновременно появятся роли, которых сегодня ещё не существует.
+
+Этики-философы указывают на дополнительные проблемы. Кто несёт ответственность, когда беспилотный автомобиль вызывает аварию? Как обеспечить, чтобы алгоритмы принятия решений не основывались на предубеждениях? И что с авторскими правами — кому принадлежит произведение искусства, созданное искусственным интеллектом: программисту, пользователю или никому?
+
+Мы на пороге новой эры, и необходимо, чтобы мы как общество установили чёткие правила. Искусственный интеллект должен служить человеку, а не заменять его способность критически мыслить и творить. Технология — это инструмент, а не цель сама по себе.`,
+    vocabulary: [
+      { czech: 'umělá inteligence', russian: 'искусственный интеллект' },
+      { czech: 'automatizace', russian: 'автоматизация' },
+      { czech: 'diagnostikovat', russian: 'диагностировать' },
+      { czech: 'odpovědnost', russian: 'ответственность' },
+      { czech: 'předsudek', russian: 'предубеждение' },
+      { czech: 'autorské právo', russian: 'авторское право' },
+      { czech: 'kriticky myslet', russian: 'критически мыслить' },
+      { czech: 'nástroj', russian: 'инструмент' },
+    ],
+    questions: [
+      {
+        id: 'b2-16-q1',
+        question: 'Какая основная проблема, связанная с ИИ и трудом?',
+        options: ['ИИ слишком дорогой', 'Автоматизация угрожает многим профессиям', 'ИИ работает медленно', 'ИИ не умеет читать'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-16-q2',
+        question: 'Что, по мнению авторов, скорее всего произойдёт с рабочими местами?',
+        options: ['Все исчезнут', 'Все будут созданы', 'Некоторые исчезнут, другие появятся', 'Ничего не изменится'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-16-q3',
+        question: 'Какой этический вопрос поднимается о беспилотных автомобилях?',
+        options: ['Кто их производит', 'Кто несёт ответственность за аварии', 'Сколько они стоят', 'Как быстро ездят'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-16-q4',
+        question: 'Чему, по мнению автора, должна служить технология?',
+        options: ['Бизнесу', 'Человеку', 'Правительству', 'Военным'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-16-q5',
+        question: 'Как автор характеризует технологию?',
+        options: ['Как угрозу', 'Как цель', 'Как инструмент', 'Как развлечение'],
+        correctAnswer: 2,
+      },
+    ],
+  },
+
+  // --- Story 27: Cestování ---
+  {
+    id: 'b2-17',
+    level: 'B2',
+    title: 'Cestování',
+    titleRussian: 'Путешествия',
+    text: `Rozhodl jsem se vydat na cestu sám. Nešlo o útěk před problémy, ale spíše o touhu poznat sebe sama v neznámém prostředí. Když cestujete s někým, neustále kompromisujete — kde se najíst, co navštívit, kdy vstát. Sólo cestování mi dalo svobodu, kterou jsem dříve nezažil. Bylo to poprvé, co jsem si uvědomil, jak moc ovlivňují nás ostatní lidé.
+
+Mí první zastávkou bylo Portugalsko. Pozdním odpolednem jsem dorazil do Lisabonu, unavený z letu a plný očekávání. Měl jsem jen batoh, mapu v telefonu a rezervaci na první noc. Všechno ostatní jsem nechal náhodě. Ten večer jsem seděl v malé hospůdce v uličkách Alfamy a jedl tradiční sardinky, zatímco kolem mě hrála živá fado hudba. Cítil jsem se naprosto šťastný a přitom svobodný.
+
+Nejvíce mě překvapilo, jak snadno jsem navazoval kontakt s lidmi. Když cestujete sami, jste přístupnější — ostatní cestovatelé vás snáze osloví a místní jsou ochotnější pomoci. V hostelu v Portu jsem potkal skupinu přátel z různých zemí a strávili jsme spolu celý týden objevováním města a jeho okolí.
+
+Cestování samo o sobě nás nezmění, ale odhalí to, co už v nás je. Když jste daleko od domova, odhodíte masky, které nosíte každý den, a ukážete svou skutečnou tvář. To je ta největší hodnota cestování — ne poznávání jiných zemí, ale poznávání sami sebe.`,
+    textRussian: `Я решил отправиться в путешествие в одиночку. Это не было бегством от проблем, а скорее стремлением познать себя в незнакомой обстановке. Когда вы путешествуете с кем-то, вы постоянно идёте на компромисс — где поесть, что посетить, когда вставать. Самостоятельное путешествие дало мне свободу, которую я раньше не испытывал. Впервые я осознал, как сильно на нас влияют другие люди.
+
+Моей первой остановкой была Португалия. Поздним днём я прибыл в Лиссабон, уставший после перелёта и полный ожиданий. У меня был только рюкзак, карта в телефоне и бронь на первую ночь. Всё остальное я предоставил случаю. В тот вечер я сидел в маленьком трактире в улочках Алфамы и ел традиционные сардины, а вокруг меня звучала живая музыка фаду. Я чувствовал себя абсолютно счастливым и одновременно свободным.
+
+Больше всего меня удивило, как легко я заводил знакомства с людьми. Когда вы путешествуете одни, вы более открыты — другие путешественники легче к вам подходят, а местные жители охотнее помогают. В хостеле в Порто я познакомился с группой друзей из разных стран, и мы вместе провели целую неделю, исследуя город и его окрестности.
+
+Путешествие само по себе нас не изменит, но оно раскроет то, что уже в нас есть. Когда вы далеко от дома, вы сбрасываете маски, которые носите каждый день, и показываете своё истинное лицо. Это величайшая ценность путешествий — не познание других стран, а познание самих себя.`,
+    vocabulary: [
+      { czech: 'sólo cestování', russian: 'самостоятельное путешествие' },
+      { czech: 'kompromisovat', russian: 'идти на компромисс' },
+      { czech: 'odhalit', russian: 'раскрыть' },
+      { czech: 'fado', russian: 'фаду (португальская музыка)' },
+      { czech: 'oslovit', russian: 'подойти, обратиться' },
+      { czech: 'hostel', russian: 'хостел' },
+      { czech: 'maska', russian: 'маска' },
+      { czech: 'skutečná tvář', russian: 'истинное лицо' },
+    ],
+    questions: [
+      {
+        id: 'b2-17-q1',
+        question: 'Почему автор решил путешествовать в одиночку?',
+        options: ['Убежал от проблем', 'Хотел познать себя в незнакомой обстановке', 'Не нашёл компаньона', 'Так было дешевле'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-17-q2',
+        question: 'Какая была первая остановка?',
+        options: ['Испания', 'Италия', 'Португалия', 'Франция'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-17-q3',
+        question: 'Что автора больше всего удивило?',
+        options: ['Красота природы', 'Лёгкость общения с людьми', 'Цены на еду', 'Качество дорог'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-17-q4',
+        question: 'Какова, по мнению автора, наибольшая ценность путешествий?',
+        options: ['Познание других стран', 'Познание самого себя', 'Дешёвые покупки', 'Красивые фотографии'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 28: Migrace ---
+  {
+    id: 'b2-18',
+    level: 'B2',
+    title: 'Migrace',
+    titleRussian: 'Миграция',
+    text: `Před deseti lety jsem přijel do Česka se dvěma kufry a základními znalostmi češtiny. Moje rozhodnutí opustit rodnou zemi nebylo snadné — znamenalo to opustit rodinu, přátele a všechno, co mi bylo důvěrné. Dnes, když se ohlížím zpět, vidím, že ta cesta mi dala mnohem více, než mi vzala.
+
+První rok byl tou nejtěžší zkouškou. Nepochopení v běžných situacích — v obchodě, u lékaře, na poště — mě frustrovalo a občas i ponižovalo. Lidé mluvili rychle, používali idiomy, které jsem neznal, a občas se zdálo, že se mi posmívají, když jsem se vyjadřoval nepřirozeně. Postupně jsem ale pochopil, že většina lidí nebyla zlá — jen nevěděla, jak s cizincem komunikovat.
+
+Integrace není jednosměrný proces. Vyžaduje úsilí jak od přistěhovalce, tak od přijímající společnosti. Když jsem se naučil jazyk na úrovni, která mi umožnila pracovat, otevřely se mi dveře. Začal jsem rozumět českému humoru, pocítil jsem příslušnost ke komunitě a postupně jsem si vytvořil nový domov.
+
+Migrace je komplexní jev, který nelze redukovat na jednoduchá hesla. Každý migrant má svůj příběh, své důvody a své boje. Místo abychom se obávali odlišností, měli bychom si uvědomit, že rozmanitost je zdrojem síly. Společnost, která dokáže integrovat lidi z různých kultur, je bohatší a odolnější.`,
+    textRussian: `Десять лет назад я приехал в Чехию с двумя чемоданами и базовыми знаниями чешского языка. Моё решение покинуть родную страну было непростым — оно означало оставить семью, друзей и всё, что было мне близко. Сегодня, оглядываясь назад, я вижу, что этот путь дал мне гораздо больше, чем забрал.
+
+Первый год был тяжелейшим испытанием. Непонимание в повседневных ситуациях — в магазине, у врача, на почте — расстраивало меня, а иногда и унижало. Люди говорили быстро, использовали идиомы, которых я не знал, и иногда казалось, что они надо мной смеются, когда я выражался неестественно. Постепенно я понял, что большинство людей не были злыми — они просто не знали, как общаться с иностранцем.
+
+Интеграция — это не односторонний процесс. Она требует усилий как от иммигранта, так и от принимающего общества. Когда я выучил язык на уровне, позволившем мне работать, передо мной открылись двери. Я начал понимать чешский юмор, почувствовал принадлежность к сообществу и постепенно создал себе новый дом.
+
+Миграция — сложное явление, которое нельзя свести к простым лозунгам. У каждого мигранта своя история, свои причины и свои борения. Вместо того чтобы бояться отличий, мы должны осознать, что разнообразие — источник силы. Общество, способное интегрировать людей из разных культур, богаче и устойчивее.`,
+    vocabulary: [
+      { czech: 'migrace', russian: 'миграция' },
+      { czech: 'frustrovat', russian: 'расстраивать' },
+      { czech: 'ponižovat', russian: 'унижать' },
+      { czech: 'integrace', russian: 'интеграция' },
+      { czech: 'přijímající společnost', russian: 'принимающее общество' },
+      { czech: 'příslušnost', russian: 'принадлежность' },
+      { czech: 'komplexní jev', russian: 'сложное явление' },
+      { czech: 'rozmanitost', russian: 'разнообразие' },
+    ],
+    questions: [
+      {
+        id: 'b2-18-q1',
+        question: 'С чем автор приехал в Чехию?',
+        options: ['С семьёй', 'С двумя чемоданами и базовым чешским', 'С большим количеством денег', 'С рабочим контрактом'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-18-q2',
+        question: 'Что было самым трудным в первый год?',
+        options: ['Погода', 'Непонимание в повседневных ситуациях', 'Дорогая еда', 'Одиночество'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-18-q3',
+        question: 'Что, по мнению автора, требует интеграция?',
+        options: ['Только усилия мигранта', 'Только усилия общества', 'Усилий обеих сторон', 'Ничего особенного'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-18-q4',
+        question: 'Что позволило автору работать и найти своё место?',
+        options: ['Деньги', 'Высокий уровень чешского языка', 'Помощь друзей', 'Удача'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-18-q5',
+        question: 'Что автор считает источником силы общества?',
+        options: ['Единообразие', 'Разнообразие', 'Традиции', 'Технологии'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 29: Kultura a identita ---
+  {
+    id: 'b2-19',
+    level: 'B2',
+    title: 'Kultura a identita',
+    titleRussian: 'Культура и идентичность',
+    text: `Kultura není jen galerie, muzea a divadla. Je to neviditelná síť norem, hodnot a zvyklostí, které formují to, jakým způsobem vnímáme svět a jak se v něm chováme. Když člověk žije v cizí zemi, začne si tuto síť uvědomovat — věci, které doma považoval za samozřejmé, zde najednou neplatí.
+
+V Česku jsem si musel zvyknout na odlišný styl komunikace. Češi jsou na první pohled zdrženliví a neradi projevují emoce na veřejnosti. Když jsem poprvé pozdravil kolegy na chodbě širokým úsměvem a nadšeným „Dobrý den!", reakce byla spíše překvapená než vřelá. Postupně jsem pochopil, že v češtině je zdvořilost spíše věcí tónu a respektu než výrazných gest.
+
+Globalizace přináší culture mixing — kultury se mísí a ovlivňují. Jíme sushi v Praze, sledujeme americké seriály a posloucháme korejskou hudbu. Na jedné straně to obohacuje naše životy, na druhé straně existuje riziko, že lokální tradice a jazyky postupně vymizí. Malé jazyky jsou obzvláště zranitelné — pokud se jimi nebudou mluvit v každodenním životě, začnou zanikat.
+
+Domnívám se, že kulturní identita by neměla být pevnou zdí, ale spíše propustnou membránou. Můžeme obohacovat svou kulturu o vlivy zvenčí, aniž bychom ztratili to, co nás definuje. Právě schopnost kombinovat tradici s otevřeností je znakem skutečně živé a dynamické společnosti.`,
+    textRussian: `Культура — это не только галереи, музеи и театры. Это невидимая сеть норм, ценностей и обычаев, которые формируют то, как мы воспринимаем мир и как себя в нём ведём. Когда человек живёт в чужой стране, он начинает осознавать эту сеть — вещи, которые дома казались само собой разумеющимися, здесь вдруг не действуют.
+
+В Чехии мне пришлось привыкнуть к иному стилю общения. Чехи на первый взгляд сдержанны и не любят проявлять эмоции на публике. Когда я впервые поприветствовал коллег в коридоре широкой улыбкой и восторженным «Добрый день!», реакция была скорее удивлённой, чем тёплой. Постепенно я понял, что в чешском языке вежливость — это скорее вопрос тона и уважения, чем выразительных жестов.
+
+Глобализация приносит смешение культур — культуры смешиваются и влияют друг на друга. Мы едим суши в Праге, смотрим американские сериалы и слушаем корейскую музыку. С одной стороны, это обогащает нашу жизнь, с другой — существует риск, что местные традиции и языки постепенно исчезнут. Малые языки особенно уязвимы — если на них не будут говорить в повседневной жизни, они начнут вымирать.
+
+Я считаю, что культурная идентичность не должна быть крепкой стеной, а скорее проницаемой мембраной. Мы можем обогащать свою культуру внешними влияниями, не теряя при этом того, что нас определяет. Именно способность сочетать традицию с открытостью — признак по-настоящему живого и динамичного общества.`,
+    vocabulary: [
+      { czech: 'kultura', russian: 'культура' },
+      { czech: 'zdrženlivý', russian: 'сдержанный' },
+      { czech: 'zdvořilost', russian: 'вежливость' },
+      { czech: 'globalizace', russian: 'глобализация' },
+      { czech: 'zranitelný', russian: 'уязвимый' },
+      { czech: 'zanikat', russian: 'исчезать, вымирать' },
+      { czech: 'propustná membrána', russian: 'проницаемая мембрана' },
+      { czech: 'dynamický', russian: 'динамичный' },
+    ],
+    questions: [
+      {
+        id: 'b2-19-q1',
+        question: 'Как автор описывает культуру?',
+        options: ['Только музеи и галереи', 'Невидимую сеть норм, ценностей и обычаев', 'Только еду и музыку', 'Только язык'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-19-q2',
+        question: 'Как автор описывает чехов?',
+        options: ['Шумные и эмоциональные', 'Сдержанные и не любящие публичные эмоции', 'Холодные и грубые', 'Очень вежливые и яркие'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-19-q3',
+        question: 'Какой риск несёт глобализация по мнению автора?',
+        options: ['Ничего опасного', 'Исчезновение местных традиций и языков', 'Экономический кризис', 'Политическую нестабильность'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-19-q4',
+        question: 'С чем автор сравнивает культурную идентичность?',
+        options: ['С крепкой стеной', 'С проницаемой мембраной', 'С рекой', 'С книгой'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-19-q5',
+        question: 'Что является признаком живого общества?',
+        options: ['Строгие традиции', 'Способность сочетать традицию с открытостью', 'Изоляция от других культур', 'Отказ от всех традиций'],
+        correctAnswer: 1,
+      },
+    ],
+  },
+
+  // --- Story 30: Budoucnost planety ---
+  {
+    id: 'b2-20',
+    level: 'B2',
+    title: 'Budoucnost planety',
+    titleRussian: 'Будущее планеты',
+    text: `Naše planeta se nachází v bodě zlomu. Vědci varují, že pokud neredukujeme emise skleníkových plynů do roku 2030, důsledky změny klimatu mohou být nevratné. Teplota na Zemi stoupla už o více než jeden stupeň od předindustriální éry, a to vedlo k tání ledovců, vzestupu hladiny oceánů a častějším extrémním výkyvům počasí.
+
+Přesto existují důvody k opatrnému optimismu. Obnovitelné zdroje energie, jako je solární a větrná energie, se stávají levnějšími než fosilní paliva. Elektromobily se prodávají v rekordních počtech a země jako Dánsko už získávají většinu elektřiny z obnovitelných zdrojů. Mladá generace — tzv. Greta generation — dává vládám pod tlak a vyžaduje konkrétní kroky.
+
+Problém je, že změna musí přijít na všech úrovních. Individuální úsilí, jako je třídění odpadu nebo omezení spotřeby masa, je důležité, ale nestačí. Potřebujeme systémové změny — transformaci průmyslu, zemědělství a dopravy. To vyžaduje politickou vůli a mezinárodní spolupráci, které se často nedostává kvůli konkurenčním zájmům států.
+
+Nemůžeme si dovolit čekat, až problém vyřeší někdo jiný. Každý z nás má odpovědnost za budoucnost planety, kterou zdědí naše děti. Místo otázky „Co mohu udělat já?" bychom se měli ptát „Co musíme udělat my?". Společná akce začíná uvědomělým rozhodnutím jednotlivce.`,
+    textRussian: `Наша планета находится в точке перелома. Учёные предупреждают, что если мы не сократим выбросы парниковых газов к 2030 году, последствия изменения климата могут стать необратимыми. Температура на Земле уже поднялась более чем на один градус с доиндустриальной эпохи, а это привело к таянию ледников, повышению уровня океанов и более частым экстремальным погодным аномалиям.
+
+Тем не менее есть основания для осторожного оптимизма. Возобновляемые источники энергии, такие как солнечная и ветровая, становятся дешевле ископаемого топлива. Электромобили продаются рекордными тиражами, а такие страны, как Дания, уже получают большую часть электроэнергии из возобновляемых источников. Молодое поколение — так называемое поколение Греты — оказывает давление на правительства и требует конкретных действий.
+
+Проблема в том, что изменения должны произойти на всех уровнях. Индивидуальные усилия, такие как сортировка мусора или сокращение потребления мяса, важны, но недостаточны. Нам нужны системные изменения — трансформация промышленности, сельского хозяйства и транспорта. Это требует политической воли и международного сотрудничества, которых часто не хватает из-за конкурирующих интересов государств.
+
+Мы не можем позволить себе ждать, пока кто-то другой решит проблему. Каждый из нас несёт ответственность за будущее планеты, которую унаследуют наши дети. Вместо вопроса «Что могу сделать я?» мы должны спрашивать «Что должны сделать мы?». Совместные действия начинаются с осознанного решения каждого человека.`,
+    vocabulary: [
+      { czech: 'bod zlomu', russian: 'точка перелома' },
+      { czech: 'skleníkový plyn', russian: 'парниковый газ' },
+      { czech: 'nevratný', russian: 'необратимый' },
+      { czech: 'obnovitelný zdroj', russian: 'возобновляемый источник' },
+      { czech: 'fosilní palivo', russian: 'ископаемое топливо' },
+      { czech: 'systémová změna', russian: 'системное изменение' },
+      { czech: 'transformace', russian: 'трансформация' },
+      { czech: 'zdědit', russian: 'унаследовать' },
+    ],
+    questions: [
+      {
+        id: 'b2-20-q1',
+        question: 'К какому году необходимо сократить выбросы парниковых газов?',
+        options: ['К 2025 году', 'К 2030 году', 'К 2040 году', 'К 2050 году'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-20-q2',
+        question: 'Что уже стало дешевле ископаемого топлива?',
+        options: ['Ядерная энергия', 'Солнечная и ветровая энергия', 'Уголь', 'Газ'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-20-q3',
+        question: 'Чего, по мнению автора, недостаточно для решения проблемы?',
+        options: ['Политических решений', 'Только индивидуальных усилий', 'Международных соглашений', 'Технологий'],
+        correctAnswer: 1,
+      },
+      {
+        id: 'b2-20-q4',
+        question: 'Чего не хватает для системных изменений?',
+        options: ['Денег', 'Технологий', 'Политической воли и международного сотрудничества', 'Времени'],
+        correctAnswer: 2,
+      },
+      {
+        id: 'b2-20-q5',
+        question: 'С чего начинаются совместные действия по мнению автора?',
+        options: ['С законов', 'С осознанного решения каждого человека', 'С научных исследований', 'С протестов'],
         correctAnswer: 1,
       },
     ],
