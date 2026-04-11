@@ -1,7 +1,7 @@
 'use client';
 
 import { useCzechStore, type TabId } from '@/store/czech-store';
-import { BookOpen, GraduationCap, Home, Languages, ListChecks, Trophy, BarChart3 } from 'lucide-react';
+import { BookOpen, GraduationCap, Home, Languages, ListChecks, Trophy, BarChart3, MessageCircle, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
@@ -12,6 +12,8 @@ const tabs: { id: TabId; label: string; icon: React.ReactNode }[] = [
   { id: 'dashboard', label: 'Главная', icon: <Home className="size-4" /> },
   { id: 'alphabet', label: 'Алфавит', icon: <BookOpen className="size-4" /> },
   { id: 'vocabulary', label: 'Словарь', icon: <Languages className="size-4" /> },
+  { id: 'phrasebook', label: 'Разговорник', icon: <MessageCircle className="size-4" /> },
+  { id: 'reading', label: 'Чтение', icon: <FileText className="size-4" /> },
   { id: 'grammar', label: 'Грамматика', icon: <GraduationCap className="size-4" /> },
   { id: 'exercises', label: 'Упражнения', icon: <ListChecks className="size-4" /> },
   { id: 'progress', label: 'Прогресс', icon: <Trophy className="size-4" /> },

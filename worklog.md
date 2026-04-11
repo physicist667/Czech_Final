@@ -705,3 +705,167 @@ Stage Summary:
 - 52 new exercise items added
 - Build passes without new errors
 
+
+---
+Task ID: phrasebook-ui
+Agent: Super Z (main)
+Task: Создать отдельный UI-раздел "Разговорник" в приложении
+
+Work Log:
+- Обнаружил что /src/data/phrasebook.ts уже существует с 250 фразами в 10 категориях
+- Добавил "phrasebook" в TabId в /src/store/czech-store.ts
+- Добавил вкладку "Разговорник" с иконкой MessageCircle в /src/components/navigation.tsx
+- Создал /src/components/sections/phrasebook-section.tsx с полным UI:
+  * Сетка категорий с иконками, уровнем (A1-A2-B1-B2), прогрессом
+  * Фильтр по уровню (A1, A2, B1, B2)
+  * Поиск по фразам (чешский/русский)
+  * Список фраз с произношением, примерами, отметками изучения
+  * Карточки (флеш-карточки) для изучения
+  * Кнопка копирования фразы
+  * Цветовая кодировка уровней (A1=зелёный, A2=синий, B1=жёлтый, B2=фиолетовый)
+- Добавил импорт и рендеринг PhrasebookSection в /src/app/page.tsx
+- Проверил TypeScript компиляцию — без ошибок в новых файлах
+
+Stage Summary:
+- Раздел "Разговорник" полностью интегрирован в приложение
+- 250 фраз в 10 категориях (A1: Приветствия, Кафе, Транспорт, Покупки, Экстренные ситуации; A2: Жильё, Работа, Социальное общение; B1: Врач, Документооборот)
+- Файлы: phrasebook-section.tsx (новый), navigation.tsx, page.tsx, czech-store.ts
+
+---
+Task ID: 1
+Agent: main
+Task: Create "Чтение" (Reading) section with 20 Czech stories and quizzes
+
+Work Log:
+- Analyzed project structure: store (czech-store.ts), navigation.tsx, page.tsx
+- Launched parallel subagents: one for stories data file, one for UI component
+- Created /src/data/stories.ts: 20 stories (5 per level A1-A2-B1-B2), each with Czech text, Russian translation, 8-15 vocabulary items, and 5 quiz questions (100 questions total)
+- Created /src/components/sections/stories-section.tsx: full-featured component with story list, story reader (text/translation toggle), and quiz mode
+- Updated /src/store/czech-store.ts: added 'reading' to TabId union type
+- Updated /src/components/navigation.tsx: added "Чтение" tab with FileText icon
+- Updated /src/app/page.tsx: added StoriesSection import and case in renderSection switch
+- Verified TypeScript compilation: no new errors (only pre-existing pronounDeclensions.ts errors)
+
+Stage Summary:
+- New section "Чтение" fully integrated into the app
+- 20 stories across 4 CEFR levels with reading comprehension quizzes
+- UI features: level filter, search, text/translation toggle, vocabulary highlighting, quiz with results review, localStorage persistence for completed stories
+
+---
+Task ID: 2
+Agent: main
+Task: Add clickable word translation feature with pronunciation to stories
+
+Work Log:
+- Created /src/data/czechDictionary.ts with 778 Czech word entries, each with Russian translation and pronunciation (Cyrillic letters)
+- Updated /src/components/sections/stories-section.tsx with clickable word functionality:
+  - Added `lookupWord()` function (checks story vocabulary first, then general dictionary)
+  - Added `tokenizeText()` to split text into word/non-word tokens
+  - Added `renderClickableText()` that makes words clickable with hover effects
+  - Vocabulary words: bold green with dotted underline
+  - Dictionary words: subtle dotted underline
+  - Added floating popup card showing: word, pronunciation (with Volume2 icon), translation, "Ключевое слово" badge
+  - Popup dismissed on click outside, scroll, or X button
+- Moved dictionary file to /src/data/czechDictionary.ts for correct import resolution
+
+Stage Summary:
+- 778 Czech words in dictionary covering vocabulary from all 20 stories + common function words, verbs, adjectives, adverbs
+- Click any word in story text to see Russian translation + pronunciation in Russian letters
+- Build passes successfully with no new errors
+
+---
+Task ID: 3
+Agent: general-purpose
+Task: Add more verbs to vocabulary
+
+Work Log:
+- Added 20 new A1 verbs to 'verbs' category (vb46-vb65): Mít rád, Platit, Děkovat, Prosit, Zpívat, Tancovat, Smát se, Plakat, Stříhat, Rybařit, Lovit, Ležet, Hrávat si, Šeptat, Slibovat, Zahřívat, Vzít, Dát, Přinést, Odnést
+- Added 20 new A2 verbs to 'a2-verbs-daily' category (a2-v-d26-a2-v-d45): Shánět, Vybrat, Rozhodnout se, Domluvit se, Naplánovat, Zorganizovat, Najmout, Propustit, Přihlásit se, Odhlásit se, Zapsat se, Překvapit, Potěšit, Rozzlobit, Uklidnit, Vystrašit, Prominout, Omluvit se, Poradit, Podvést
+- Added 20 new B1 verbs to 'b1-verbs-cognitive' category (b1-cog-v26-b1-cog-v45): Komentovat, Hodnotit, Recenzovat, Interpretovat, Reflektovat, Anticipovat, Konstatovat, Debatovat, Argumentovat, Demonstrovat, Ilustrovat, Dokumentovat, Spekulovat, Teoretizovat, Akceptovat, Odmítnout, Kontrolovat, Monitorovat, Identifikovat, Kategorizovat
+- Added 20 new B2 verbs to 'b2-verbs-formal' category (b2-form-v26-b2-form-v45): Akumulovat, Dezinterpretovat, Reinterpretovat, Rekonstruovat, Reevaluovat, Transformovat, Modifikovat, Optimalizovat, Standardizovat, Manipulovat, Fluktuovat, Oscilovat, Deteriorovat, Degenerovat, Generovat, Reprodukovat, Exacerbovat, Kompenzovat, Amortizovat, Kapitalizovat
+- Skipped duplicates: Stát se (vb39), Chtít (vb17) from A1 list; Vysvětlit (b1-cog-v1), Důvěřovat (b1-cog-v13) from A2 list; Zpochybnit (b1-cog-v12) from B1 list; Verifikovat (b2-form-v21) from B2 list
+
+Stage Summary:
+- Total 80 new verbs added across all levels (A1: 20, A2: 20, B1: 20, B2: 20)
+- verbs category: 45 → 65 words
+- a2-verbs-daily category: 25 → 45 words
+- b1-verbs-cognitive category: 25 → 45 words
+- b2-verbs-formal category: 25 → 45 words
+- File modified: /home/z/my-project/src/data/vocabulary.ts
+---
+Task ID: 4
+Agent: general-purpose
+Task: Add more adverbs to vocabulary
+
+Work Log:
+- Added 20 new A1 adverbs to 'adverbs' category (ad21-ad40): Sem, Tamhle, Venku, Dovnitř, Nahoru, Dolů, Daleko, Blízko, Vpředu, Vzadu, Vlevo, Vpravo, Uprostřed, Doma, Hned, Občas, Často, Zřídka, Vždycky, Také
+- Added 20 new A2 adverbs to 'a2-adverbs-advanced' category (a2-adv26-a2-adv45): Asi, Možná, Skutečně, Úplně, Téměř, Hned, Už dávno, Nedávno, Vlastně, Bohužel, Naštěstí, Prý, Zatím, Poprvé, Naposledy, Nakonec, Konečně, Raději, Spíše, Odtud
+- Added 20 new B1 adverbs to 'b1-adverbs-manner' category (b1-adv-m26-b1-adv-m45): Údajně, Patrně, Očividně, Setrvale, Dočasně, Trvale, Postupně, Najednou, Mírně, Značně, Výrazně, Marginálně, Nesmírně, Extrémně, Přiměřeně, Disproporcionálně, Symetricky, Asymetricky, V praxi, V teorii
+- Added 20 new B2 adverbs to 'b2-adverbs-academic' category (b2-adv-a26-b2-adv-a45): A priori, A posteriori, Paradigmaticky, Heuristicky, Empiricky, Teoreticky, Hypoteticky, Speculativně, Deduktivně, Induktivně, Analogicky, Komplementárně, Exkluzivně, Inkluzivně, Subjektivně, Objektivně, Selektivně, Diskriminativně, Proporcionálně, Preventivně
+- Verified: no duplicates within any category; no new TypeScript errors in vocabulary.ts (pre-existing errors in pronounDeclensions.ts unrelated)
+
+Stage Summary:
+- Total 80 new adverbs added across 4 levels (A1: 20, A2: 20, B1: 20, B2: 20)
+- File modified: /home/z/my-project/src/data/vocabulary.ts
+---
+Task ID: 2, 3
+Agent: Main Agent
+Task: Add comprehensive grammar topics (36 lessons + 18 exercise sets)
+
+Work Log:
+- Explored existing grammar system: 24 lessons in grammar.ts, 6 exercise sets in grammarExercises.ts
+- Identified 12 missing grammar topics from user's comprehensive list
+- Stage 1: Added 6 lessons (25-30) + 6 exercise sets (phonetics, pronouns, adverbs, verb types, negation, agreement)
+- Stage 2: Added 6 lessons (31-36) + 6 exercise sets (verb government, word formation, impersonal, modal, particles, sentence types)
+- All content in Russian with Czech examples, each lesson has tables, examples, key takeaways
+- Each exercise set has 10 questions with hints and explanations
+
+Stage Summary:
+- Total lessons: 24 → 36 (added 12 new)
+- Total exercise sets: 6 → 18 (added 12 new) 
+- Total exercise questions: 60 → 180
+- All new topics: Фонетика, Части речи обзор, Наречия, Типы спряжений, Отрицание, Согласование, Управление глаголов, Словообразование, Безличные предложения, Инфинитивные конструкции, Частицы, Междометия
+- No new lint errors introduced
+
+## Work Log — Grammar Data Fix & Sort
+
+### Date: $(date -u '+%Y-%m-%d %H:%M UTC')
+
+### Task: Fix and sort grammar lessons in grammar.ts, sort grammarExercises.ts
+
+### Changes Made:
+
+#### 1. grammar.ts — Interface Fix
+- Fixed broken `headers` type annotation: `headers: string[\n\n];` → `headers: string[];` (lines 9-11 collapsed to line 9)
+- This was valid TypeScript (whitespace-insensitive) but poor formatting
+
+#### 2. grammar.ts — Lesson Sorting & Renumbering
+- Parsed all 36 lessons using Python script with brace-depth matching (handles template literals correctly)
+- Grouped lessons by CEFR level, maintaining original relative order within each level
+- Sorted: A1 first → A2 → B1 → B2
+- Renumbered all lessons 1-36 (updated both `id` and `title` fields)
+- Level distribution after sorting:
+  - A1: 10 lessons (lessons 1-10)
+  - A2: 10 lessons (lessons 11-20)
+  - B1: 6 lessons (lessons 21-26)
+  - B2: 10 lessons (lessons 27-36)
+- Verified: no double commas, all IDs sequential, all levels in correct order
+
+#### 3. grammarExercises.ts — Exercise Sorting
+- Reviewed the file: contains 18 exercise sets, only B1 and B2 difficulty levels
+- The file already has runtime sorting by level at the export (B1 → B2) — confirmed correct
+- No changes needed
+
+#### 4. Verification
+- `npx tsc --noEmit` — no errors in project `src/` files
+- All 36 lesson IDs verified sequential (1-36)
+- All lessons verified sorted A1→A2→B1→B2
+- Interface headers line verified fixed
+- No double commas in file
+
+### Files Modified:
+- `/home/z/my-project/src/data/grammar.ts` — interface fix + lesson sort/renumber
+- `/home/z/my-project/worklog.md` — this work log
+
+### Files Reviewed (no changes needed):
+- `/home/z/my-project/src/data/grammarExercises.ts` — already sorted correctly

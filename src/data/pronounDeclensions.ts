@@ -226,7 +226,7 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Akuzativ (кого? что?)',
         forms: [
-          { czech: 'ji / její', russian: 'её', pron: ['йи / йеййи:] as unknown as string },
+          { czech: 'ji / její', russian: 'её', pron: ['йи / йеййи:'] as unknown as string },
           { czech: 'je / ony', russian: 'их / их (личн.)', pron: ['йе / оны'] as unknown as string },
         ],
       },
@@ -240,7 +240,7 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
-          { czech: 'ní', russian: 'о ней', pron: ['ни:] as unknown as string },
+          { czech: 'ní', russian: 'о ней', pron: ['ни:'] as unknown as string },
           { czech: 'nich', russian: 'о них', pron: ['них'] as unknown as string },
         ],
       },
@@ -511,17 +511,17 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
-          { czech: 'její', russian: 'её (м.р.)', pron: ['йеййи:] as unknown as string },
-          { czech: 'její', russian: 'её (ж.р.)', pron: ['йеййи:] as unknown as string },
-          { czech: 'její', russian: 'её (ср.р.)', pron: ['йеййи:] as unknown as string },
-          { czech: 'její', russian: 'её (мн.ч.)', pron: ['йеййи:] as unknown as string },
+          { czech: 'její', russian: 'её (м.р.)', pron: ['йеййи:'] as unknown as string },
+          { czech: 'její', russian: 'её (ж.р.)', pron: ['йеййи:'] as unknown as string },
+          { czech: 'její', russian: 'её (ср.р.)', pron: ['йеййи:'] as unknown as string },
+          { czech: 'její', russian: 'её (мн.ч.)', pron: ['йеййи:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'jejího', russian: 'её (род. п., м.р./ср.р.)', pron: ['йеййи:гъо'] as unknown as string },
-          { czech: 'její', russian: 'её (род. п., ж.р.)', pron: ['йеййи:] as unknown as string },
+          { czech: 'její', russian: 'её (род. п., ж.р.)', pron: ['йеййи:'] as unknown as string },
           { czech: 'jejích', russian: 'её (род. п., мн.ч.)', pron: ['йеййи:х'] as unknown as string },
         ],
       },
@@ -529,7 +529,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'jejímu', russian: 'её (дат. п., м.р./ср.р.)', pron: ['йеййи:му'] as unknown as string },
-          { czech: 'její', russian: 'её (дат. п., ж.р.)', pron: ['йеййи:] as unknown as string },
+          { czech: 'její', russian: 'её (дат. п., ж.р.)', pron: ['йеййи:'] as unknown as string },
           { czech: 'jejím', russian: 'её (дат. п., мн.ч.)', pron: ['йеййи:м'] as unknown as string },
         ],
       },
@@ -537,8 +537,8 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Akuzativ (кого? что?)',
         forms: [
           { czech: 'jejího / její', russian: 'её (вин. п., м.р.)', pron: ['йеййи:гъо / йеййи:'] as unknown as string },
-          { czech: 'její', russian: 'её (вин. п., ж.р.)', pron: ['йеййи:] as unknown as string },
-          { czech: 'její', russian: 'её (вин. п., ср.р.)', pron: ['йеййи:] as unknown as string },
+          { czech: 'její', russian: 'её (вин. п., ж.р.)', pron: ['йеййи:'] as unknown as string },
+          { czech: 'její', russian: 'её (вин. п., ср.р.)', pron: ['йеййи:'] as unknown as string },
           { czech: 'její / její', russian: 'её (вин. п., мн.ч.)', pron: ['йеййи: / йеййи:'] as unknown as string },
         ],
       },
@@ -586,7 +586,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'našeho', russian: 'нашего', pron: ['на:шэгъо'] as unknown as string },
-          { czech: 'naší', russian: 'нашей', pron: ['на:ши:] as unknown as string },
+          { czech: 'naší', russian: 'нашей', pron: ['на:ши:'] as unknown as string },
           { czech: 'našich', russian: 'наших', pron: ['на:ших'] as unknown as string },
         ],
       },
@@ -594,7 +594,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'našemu', russian: 'нашему', pron: ['на:шэму'] as unknown as string },
-          { czech: 'naší', russian: 'нашей', pron: ['на:ши:] as unknown as string },
+          { czech: 'naší', russian: 'нашей', pron: ['на:ши:'] as unknown as string },
           { czech: 'našim', russian: 'нашим', pron: ['на:шим'] as unknown as string },
         ],
       },
@@ -618,7 +618,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
           { czech: 'našem', russian: 'о нашем', pron: ['на:шэм'] as unknown as string },
-          { czech: 'naší', russian: 'о нашей', pron: ['на:ши:] as unknown as string },
+          { czech: 'naší', russian: 'о нашей', pron: ['на:ши:'] as unknown as string },
           { czech: 'našich', russian: 'о наших', pron: ['на:ших'] as unknown as string },
         ],
       },
@@ -626,7 +626,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Instrumentál (кем? чем?)',
         forms: [
           { czech: 'naším', russian: 'нашим', pron: ['на:ши:м'] as unknown as string },
-          { czech: 'naší', russian: 'нашей', pron: ['на:ши:] as unknown as string },
+          { czech: 'naší', russian: 'нашей', pron: ['на:ши:'] as unknown as string },
           { czech: 'našimi', russian: 'нашими', pron: ['на:шими'] as unknown as string },
         ],
       },
@@ -652,7 +652,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'vašeho', russian: 'вашего', pron: ['ва:шэгъо'] as unknown as string },
-          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:] as unknown as string },
+          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:'] as unknown as string },
           { czech: 'vašich', russian: 'ваших', pron: ['ва:ших'] as unknown as string },
         ],
       },
@@ -660,7 +660,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'vašemu', russian: 'вашему', pron: ['ва:шэму'] as unknown as string },
-          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:] as unknown as string },
+          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:'] as unknown as string },
           { czech: 'vašim', russian: 'вашим', pron: ['ва:шим'] as unknown as string },
         ],
       },
@@ -684,7 +684,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
           { czech: 'vašem', russian: 'о вашем', pron: ['ва:шэм'] as unknown as string },
-          { czech: 'vaší', russian: 'о вашей', pron: ['ва:ши:] as unknown as string },
+          { czech: 'vaší', russian: 'о вашей', pron: ['ва:ши:'] as unknown as string },
           { czech: 'vašich', russian: 'о ваших', pron: ['ва:ших'] as unknown as string },
         ],
       },
@@ -692,7 +692,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Instrumentál (кем? чем?)',
         forms: [
           { czech: 'vaším', russian: 'вашим', pron: ['ва:ши:м'] as unknown as string },
-          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:] as unknown as string },
+          { czech: 'vaší', russian: 'вашей', pron: ['ва:ши:'] as unknown as string },
           { czech: 'vašimi', russian: 'вашими', pron: ['ва:шими'] as unknown as string },
         ],
       },
@@ -1013,16 +1013,16 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
           { czech: 'jaký', russian: 'какой (м.р.)', pron: ['яки:'] as unknown as string },
-          { czech: 'jaká', russian: 'какая (ж.р.)', pron: ['яка:] as unknown as string },
-          { czech: 'jaké', russian: 'какое (ср.р.)', pron: ['яке:] as unknown as string },
-          { czech: 'jaké', russian: 'какие (мн.ч.)', pron: ['яке:] as unknown as string },
+          { czech: 'jaká', russian: 'какая (ж.р.)', pron: ['яка:'] as unknown as string },
+          { czech: 'jaké', russian: 'какое (ср.р.)', pron: ['яке:'] as unknown as string },
+          { czech: 'jaké', russian: 'какие (мн.ч.)', pron: ['яке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'jakého', russian: 'какого', pron: ['якэ:гъо'] as unknown as string },
-          { czech: 'jaké', russian: 'какой', pron: ['яке:] as unknown as string },
+          { czech: 'jaké', russian: 'какой', pron: ['яке:'] as unknown as string },
           { czech: 'jakého', russian: 'какого (ср.р.)', pron: ['якэ:гъо'] as unknown as string },
           { czech: 'jakých', russian: 'каких', pron: ['яки:х'] as unknown as string },
         ],
@@ -1031,7 +1031,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'jakému', russian: 'какому', pron: ['якэ:му'] as unknown as string },
-          { czech: 'jaké', russian: 'какой', pron: ['яке:] as unknown as string },
+          { czech: 'jaké', russian: 'какой', pron: ['яке:'] as unknown as string },
           { czech: 'jakému', russian: 'какому (ср.р.)', pron: ['якэ:му'] as unknown as string },
           { czech: 'jakým', russian: 'каким', pron: ['яки:м'] as unknown as string },
         ],
@@ -1041,24 +1041,24 @@ export const pronounDeclensions: PronounTable[] = [
         forms: [
           { czech: 'jaký / jakého', russian: 'какой / какого', pron: ['яки: / якэ:гъо'] as unknown as string },
           { czech: 'jakou', russian: 'какую', pron: ['якоу'] as unknown as string },
-          { czech: 'jaké', russian: 'какое', pron: ['яке:] as unknown as string },
-          { czech: 'jaké / jaké', russian: 'какие / каких', pron: ['яке:] as unknown as string },
+          { czech: 'jaké', russian: 'какое', pron: ['яке:'] as unknown as string },
+          { czech: 'jaké / jaké', russian: 'какие / каких', pron: ['яке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Vokativ (кто? что! — обращение)',
         forms: [
           { czech: 'jaký', russian: 'какой!', pron: ['яки:'] as unknown as string },
-          { czech: 'jaká', russian: 'какая!', pron: ['яка:] as unknown as string },
-          { czech: 'jaké', russian: 'какое!', pron: ['яке:] as unknown as string },
-          { czech: 'jaké', russian: 'какие!', pron: ['яке:] as unknown as string },
+          { czech: 'jaká', russian: 'какая!', pron: ['яка:'] as unknown as string },
+          { czech: 'jaké', russian: 'какое!', pron: ['яке:'] as unknown as string },
+          { czech: 'jaké', russian: 'какие!', pron: ['яке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
           { czech: 'jakém', russian: 'о каком', pron: ['якэ:м'] as unknown as string },
-          { czech: 'jaké', russian: 'о какой', pron: ['яке:] as unknown as string },
+          { czech: 'jaké', russian: 'о какой', pron: ['яке:'] as unknown as string },
           { czech: 'jakém', russian: 'о каком (ср.р.)', pron: ['якэ:м'] as unknown as string },
           { czech: 'jakých', russian: 'о каких', pron: ['яки:х'] as unknown as string },
         ],
@@ -1085,7 +1085,7 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
-          { czech: 'čí', russian: 'чей (все рода)', pron: ['чи:] as unknown as string },
+          { czech: 'čí', russian: 'чей (все рода)', pron: ['чи:'] as unknown as string },
         ],
       },
       {
@@ -1141,17 +1141,17 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
-          { czech: 'který', russian: 'который (м.р.)', pron: ['ктэри:] as unknown as string },
-          { czech: 'která', russian: 'которая (ж.р.)', pron: ['ктера:] as unknown as string },
-          { czech: 'které', russian: 'которое (ср.р.)', pron: ['ктэре:] as unknown as string },
-          { czech: 'které', russian: 'которые (мн.ч.)', pron: ['ктэре:] as unknown as string },
+          { czech: 'který', russian: 'который (м.р.)', pron: ['ктэри:'] as unknown as string },
+          { czech: 'která', russian: 'которая (ж.р.)', pron: ['ктера:'] as unknown as string },
+          { czech: 'které', russian: 'которое (ср.р.)', pron: ['ктэре:'] as unknown as string },
+          { czech: 'které', russian: 'которые (мн.ч.)', pron: ['ктэре:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'kterého', russian: 'которого', pron: ['ктэрэ:гъо'] as unknown as string },
-          { czech: 'které', russian: 'которой', pron: ['ктэре:] as unknown as string },
+          { czech: 'které', russian: 'которой', pron: ['ктэре:'] as unknown as string },
           { czech: 'kterého', russian: 'которого (ср.р.)', pron: ['ктэрэ:гъо'] as unknown as string },
           { czech: 'kterých', russian: 'которых', pron: ['ктэри:х'] as unknown as string },
         ],
@@ -1160,7 +1160,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'kterému', russian: 'которому', pron: ['ктэрэ:му'] as unknown as string },
-          { czech: 'které', russian: 'которой', pron: ['ктэре:] as unknown as string },
+          { czech: 'které', russian: 'которой', pron: ['ктэре:'] as unknown as string },
           { czech: 'kterému', russian: 'которому (ср.р.)', pron: ['ктэрэ:му'] as unknown as string },
           { czech: 'kterým', russian: 'которым', pron: ['ктэри:м'] as unknown as string },
         ],
@@ -1170,24 +1170,24 @@ export const pronounDeclensions: PronounTable[] = [
         forms: [
           { czech: 'který / kterého', russian: 'который / которого', pron: ['ктэри: / ктэрэ:гъо'] as unknown as string },
           { czech: 'kterou', russian: 'которую', pron: ['ктэроу'] as unknown as string },
-          { czech: 'které', russian: 'которое', pron: ['ктэре:] as unknown as string },
-          { czech: 'které / které', russian: 'которые / которых', pron: ['ктэре:] as unknown as string },
+          { czech: 'které', russian: 'которое', pron: ['ктэре:'] as unknown as string },
+          { czech: 'které / které', russian: 'которые / которых', pron: ['ктэре:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Vokativ (кто? что! — обращение)',
         forms: [
           { czech: 'který', russian: 'который!', pron: ['ктэри:'] as unknown as string },
-          { czech: 'která', russian: 'которая!', pron: ['ктера:] as unknown as string },
-          { czech: 'které', russian: 'которое!', pron: ['ктэре:] as unknown as string },
-          { czech: 'které', russian: 'которые!', pron: ['ктэре:] as unknown as string },
+          { czech: 'která', russian: 'которая!', pron: ['ктера:'] as unknown as string },
+          { czech: 'které', russian: 'которое!', pron: ['ктэре:'] as unknown as string },
+          { czech: 'které', russian: 'которые!', pron: ['ктэре:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
           { czech: 'kterém', russian: 'о котором', pron: ['ктэрэ:м'] as unknown as string },
-          { czech: 'které', russian: 'о которой', pron: ['ктэре:] as unknown as string },
+          { czech: 'které', russian: 'о которой', pron: ['ктэре:'] as unknown as string },
           { czech: 'kterém', russian: 'о котором (ср.р.)', pron: ['ктэрэ:м'] as unknown as string },
           { czech: 'kterých', russian: 'о которых', pron: ['ктэри:х'] as unknown as string },
         ],
@@ -1332,17 +1332,17 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
-          { czech: 'nějaký', russian: 'какой-то (м.р.)', pron: ['нёяки:] as unknown as string },
-          { czech: 'nějaká', russian: 'какая-то (ж.р.)', pron: ['нёяка:] as unknown as string },
-          { czech: 'nějaké', russian: 'какое-то (ср.р.)', pron: ['нёяке:] as unknown as string },
-          { czech: 'nějaké', russian: 'какие-то (мн.ч.)', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaký', russian: 'какой-то (м.р.)', pron: ['нёяки:'] as unknown as string },
+          { czech: 'nějaká', russian: 'какая-то (ж.р.)', pron: ['нёяка:'] as unknown as string },
+          { czech: 'nějaké', russian: 'какое-то (ср.р.)', pron: ['нёяке:'] as unknown as string },
+          { czech: 'nějaké', russian: 'какие-то (мн.ч.)', pron: ['нёяке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Genitiv (кого? чего?)',
         forms: [
           { czech: 'nějakého', russian: 'какого-то', pron: ['нёякэ:гъо'] as unknown as string },
-          { czech: 'nějaké', russian: 'какой-то', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaké', russian: 'какой-то', pron: ['нёяке:'] as unknown as string },
           { czech: 'nějakého', russian: 'какого-то (ср.р.)', pron: ['нёякэ:гъо'] as unknown as string },
           { czech: 'nějakých', russian: 'каких-то', pron: ['нёяки:х'] as unknown as string },
         ],
@@ -1351,7 +1351,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Dativ (кому? чему?)',
         forms: [
           { czech: 'nějakému', russian: 'какому-то', pron: ['нёякэ:му'] as unknown as string },
-          { czech: 'nějaké', russian: 'какой-то', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaké', russian: 'какой-то', pron: ['нёяке:'] as unknown as string },
           { czech: 'nějakému', russian: 'какому-то (ср.р.)', pron: ['нёякэ:му'] as unknown as string },
           { czech: 'nějakým', russian: 'каким-то', pron: ['нёяки:м'] as unknown as string },
         ],
@@ -1361,24 +1361,24 @@ export const pronounDeclensions: PronounTable[] = [
         forms: [
           { czech: 'nějaký / nějakého', russian: 'какой-то / какого-то', pron: ['нёяки: / нёякэ:гъо'] as unknown as string },
           { czech: 'nějakou', russian: 'какую-то', pron: ['нёякоу'] as unknown as string },
-          { czech: 'nějaké', russian: 'какое-то', pron: ['нёяке:] as unknown as string },
-          { czech: 'nějaké / nějaké', russian: 'какие-то / каких-то', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaké', russian: 'какое-то', pron: ['нёяке:'] as unknown as string },
+          { czech: 'nějaké / nějaké', russian: 'какие-то / каких-то', pron: ['нёяке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Vokativ (кто? что! — обращение)',
         forms: [
           { czech: 'nějaký', russian: 'какой-то!', pron: ['нёяки:'] as unknown as string },
-          { czech: 'nějaká', russian: 'какая-то!', pron: ['нёяка:] as unknown as string },
-          { czech: 'nějaké', russian: 'какое-то!', pron: ['нёяке:] as unknown as string },
-          { czech: 'nějaké', russian: 'какие-то!', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaká', russian: 'какая-то!', pron: ['нёяка:'] as unknown as string },
+          { czech: 'nějaké', russian: 'какое-то!', pron: ['нёяке:'] as unknown as string },
+          { czech: 'nějaké', russian: 'какие-то!', pron: ['нёяке:'] as unknown as string },
         ],
       },
       {
         caseLabel: 'Lokál (о ком? о чём?)',
         forms: [
           { czech: 'nějakém', russian: 'о каком-то', pron: ['нёякэ:м'] as unknown as string },
-          { czech: 'nějaké', russian: 'о какой-то', pron: ['нёяке:] as unknown as string },
+          { czech: 'nějaké', russian: 'о какой-то', pron: ['нёяке:'] as unknown as string },
           { czech: 'nějakém', russian: 'о каком-то (ср.р.)', pron: ['нёякэ:м'] as unknown as string },
           { czech: 'nějakých', russian: 'о каких-то', pron: ['нёяки:х'] as unknown as string },
         ],
@@ -1485,8 +1485,8 @@ export const pronounDeclensions: PronounTable[] = [
       {
         caseLabel: 'Nominativ (кто? что?)',
         forms: [
-          { czech: 'žádný', russian: 'никакой (м.р.)', pron: ['жа:дни:] as unknown as string },
-          { czech: 'žádná', russian: 'никакая (ж.р.)', pron: ['жа:дна:] as unknown as string },
+          { czech: 'žádný', russian: 'никакой (м.р.)', pron: ['жа:дни:'] as unknown as string },
+          { czech: 'žádná', russian: 'никакая (ж.р.)', pron: ['жа:дна:'] as unknown as string },
           { czech: 'žádné', russian: 'никакое (ср.р.)', pron: ['жа:днё'] as unknown as string },
           { czech: 'žádné', russian: 'никакие (мн.ч.)', pron: ['жа:днё'] as unknown as string },
         ],
@@ -1522,7 +1522,7 @@ export const pronounDeclensions: PronounTable[] = [
         caseLabel: 'Vokativ (кто? что! — обращение)',
         forms: [
           { czech: 'žádný', russian: 'никакой!', pron: ['жа:дни:'] as unknown as string },
-          { czech: 'žádná', russian: 'никакая!', pron: ['жа:дна:] as unknown as string },
+          { czech: 'žádná', russian: 'никакая!', pron: ['жа:дна:'] as unknown as string },
           { czech: 'žádné', russian: 'никакое!', pron: ['жа:днё'] as unknown as string },
           { czech: 'žádné', russian: 'никакие!', pron: ['жа:днё'] as unknown as string },
         ],

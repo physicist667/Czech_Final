@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { grammarLessons, type GrammarLesson } from '@/data/grammar';
+import { grammarLessonsSorted as grammarLessons, type GrammarLesson } from '@/data/grammar';
 import { useCzechStore } from '@/store/czech-store';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';

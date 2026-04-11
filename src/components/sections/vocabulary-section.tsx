@@ -200,11 +200,27 @@ export function VocabularySection() {
                       <div className="flex items-center justify-between">
                         <CardTitle className="flex items-center gap-2 text-lg">
                           <span className="text-xl">{cat.icon}</span>
-                          {cat.name}
+                          <div>
+                            <span className="text-base font-semibold">{cat.name}</span>
+                            <div className="text-xs text-muted-foreground">{cat.group}</div>
+                          </div>
                         </CardTitle>
-                        <Badge variant="secondary" className="text-xs">
-                          {learned}/{total}
-                        </Badge>
+                        <div className="flex items-center gap-1.5">
+                          {cat.level && (
+                            <Badge className={cn(
+                              'text-[10px] px-1.5 py-0 font-semibold',
+                              cat.level === 'A1' && 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300',
+                              cat.level === 'A2' && 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
+                              cat.level === 'B1' && 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
+                              cat.level === 'B2' && 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
+                            )}>
+                              {cat.level}
+                            </Badge>
+                          )}
+                          <Badge variant="secondary" className="text-xs">
+                            {learned}/{total}
+                          </Badge>
+                        </div>
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-3">
@@ -233,7 +249,23 @@ export function VocabularySection() {
               <div>
                 <h2 className="text-xl font-bold flex items-center gap-2">
                   <span className="text-2xl">{currentCategory?.icon}</span>
-                  {currentCategory?.name}
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">{currentCategory?.name}</span>
+                      {currentCategory?.level && (
+                        <Badge className={cn(
+                          'text-[10px] px-1.5 py-0 font-semibold',
+                          currentCategory.level === 'A1' && 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300',
+                          currentCategory.level === 'A2' && 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
+                          currentCategory.level === 'B1' && 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
+                          currentCategory.level === 'B2' && 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
+                        )}>
+                          {currentCategory.level}
+                        </Badge>
+                      )}
+                    </div>
+                    <span className="text-xs text-muted-foreground">{currentCategory?.group}</span>
+                  </div>
                 </h2>
                 <p className="text-sm text-muted-foreground">
                   {learnedInCategory} из {totalInCategory} слов изучено

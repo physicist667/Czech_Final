@@ -4,6 +4,8 @@ import { Navigation } from '@/components/navigation';
 import { Dashboard } from '@/components/sections/dashboard';
 import { AlphabetSection } from '@/components/sections/alphabet-section';
 import { VocabularySection } from '@/components/sections/vocabulary-section';
+import { PhrasebookSection } from '@/components/sections/phrasebook-section';
+import { StoriesSection } from '@/components/sections/stories-section';
 import { GrammarSection } from '@/components/sections/grammar-section';
 import { ExercisesSection } from '@/components/sections/exercises-section';
 import { ProgressSection } from '@/components/sections/progress-section';
@@ -27,6 +29,10 @@ export default function Home() {
         return <AlphabetSection />;
       case 'vocabulary':
         return <VocabularySection />;
+      case 'phrasebook':
+        return <PhrasebookSection />;
+      case 'reading':
+        return <StoriesSection />;
       case 'grammar':
         return <GrammarSection />;
       case 'exercises':

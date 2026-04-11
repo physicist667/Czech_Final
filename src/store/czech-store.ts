@@ -1,11 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export type TabId = 'dashboard' | 'alphabet' | 'vocabulary' | 'grammar' | 'exercises' | 'progress';
+export type TabId = 'dashboard' | 'alphabet' | 'vocabulary' | 'phrasebook' | 'reading' | 'grammar' | 'exercises' | 'progress';
 
 export interface QuizScore {
   id: string;
-  type: 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building' | 'flashcards' | 'reverse-quiz' | 'true-false' | 'word-scramble' | 'typing-practice';
+  type: 'multiple-choice' | 'fill-blank' | 'matching' | 'sentence-building' | 'flashcards' | 'reverse-quiz' | 'true-false' | 'word-scramble' | 'typing-practice' | 'grammar-exercises';
   score: number;
   total: number;
   date: string;
@@ -54,7 +54,7 @@ interface CzechStore {
 
   // Computed helpers
   getLearnedWordsCount: () => number;
-  getLearnedWordsByCategory: (categoryId: string) => number;
+  getLearnedWordsByCategory: (categoryId: string) => string[];
   getTotalWords: () => number;
   getQuizAccuracy: () => number;
   getAchievements: () => Achievement[];

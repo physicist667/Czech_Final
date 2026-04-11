@@ -241,12 +241,22 @@ function CategorySelector({
                   {category.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-sm truncate">{category.name}</h3>
+                  <div className="flex items-center gap-1.5">
+                    <h3 className="font-semibold text-sm truncate">{category.name}</h3>
+                    {category.level && (
+                      <Badge className={cn(
+                        'text-[10px] px-1.5 py-0 font-semibold shrink-0',
+                        category.level === 'A1' && 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300',
+                        category.level === 'A2' && 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
+                        category.level === 'B1' && 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
+                        category.level === 'B2' && 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
+                      )}>
+                        {category.level}
+                      </Badge>
+                    )}
+                  </div>
                   <p className="text-xs text-muted-foreground">{category.words.length} слов</p>
                 </div>
-                <Badge variant="outline" className="text-xs shrink-0">
-                  {category.words.length}
-                </Badge>
                 <ArrowRight className="size-4 text-muted-foreground shrink-0" />
               </div>
             </Card>
