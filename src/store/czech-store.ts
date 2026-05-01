@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-export type TabId = 'dashboard' | 'alphabet' | 'vocabulary' | 'phrasebook' | 'reading' | 'grammar' | 'exercises' | 'progress';
+export type TabId = 'dashboard' | 'alphabet' | 'vocabulary' | 'phrasebook' | 'reading' | 'grammar' | 'exercises' | 'specialized' | 'progress';
 
 export interface QuizScore {
   id: string;
@@ -51,6 +51,10 @@ interface CzechStore {
   // Alphabet mastery
   masteredLetterIds: number[];
   toggleLetterMastered: (letterId: number) => void;
+
+  // Specialized vocabulary progress
+  specializedLearnedWordIds: string[];
+  toggleSpecializedWordLearned: (id: string) => void;
 
   // Computed helpers
   getLearnedWordsCount: () => number;
@@ -154,6 +158,15 @@ export const useCzechStore = create<CzechStore>()(
           masteredLetterIds: state.masteredLetterIds.includes(letterId)
             ? state.masteredLetterIds.filter((id) => id !== letterId)
             : [...state.masteredLetterIds, letterId],
+        })),
+
+      // Specialized vocabulary
+      specializedLearnedWordIds: [],
+      toggleSpecializedWordLearned: (id) =>
+        set((state) => ({
+          specializedLearnedWordIds: state.specializedLearnedWordIds.includes(id)
+            ? state.specializedLearnedWordIds.filter((wid) => wid !== id)
+            : [...state.specializedLearnedWordIds, id],
         })),
 
       // Computed helpers

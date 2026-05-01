@@ -8,6 +8,7 @@ import { PhrasebookSection } from '@/components/sections/phrasebook-section';
 import { StoriesSection } from '@/components/sections/stories-section';
 import { GrammarSection } from '@/components/sections/grammar-section';
 import { ExercisesSection } from '@/components/sections/exercises-section';
+import { SpecializedSection } from '@/components/sections/specialized-section';
 import { ProgressSection } from '@/components/sections/progress-section';
 import { useCzechStore } from '@/store/czech-store';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -37,6 +38,8 @@ export default function Home() {
         return <GrammarSection />;
       case 'exercises':
         return <ExercisesSection />;
+      case 'specialized':
+        return <SpecializedSection />;
       case 'progress':
         return <ProgressSection />;
       default:
