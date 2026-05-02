@@ -196,6 +196,9 @@ function CategorySelector({
 }) {
   const typeInfo = exerciseTypes.find(t => t.id === exerciseType);
   const [selectedGroup, setSelectedGroup] = useState<string | null>(null);
+  const [expandedCategoryId, setExpandedCategoryId] = useState<string | null>(null);
+
+  const SUBGROUP_SIZE = 7;
 
   // Get unique groups
   const groups = useMemo(() => {
@@ -209,6 +212,26 @@ function CategorySelector({
     return vocabularyData.filter((c) => c.group === selectedGroup);
   }, [selectedGroup]);
 
+  // Compute subgroups for the expanded category
+  const expandedCategory = useMemo(() => {
+    if (!expandedCategoryId) return null;
+    return vocabularyData.find((c) => c.id === expandedCategoryId) || null;
+  }, [expandedCategoryId]);
+
+  const subgroups = useMemo(() => {
+    if (!expandedCategory || expandedCategory.words.length <= SUBGROUP_SIZE) return [];
+    const grps: { name: string; startIndex: number; endIndex: number }[] = [];
+    for (let i = 0; i < expandedCategory.words.length; i += SUBGROUP_SIZE) {
+      const end = Math.min(i + SUBGROUP_SIZE - 1, expandedCategory.words.length - 1);
+      grps.push({
+        name: `${i + 1}\u2013${end + 1}`,
+        startIndex: i,
+        endIndex: end + 1,
+      });
+    }
+    return grps;
+  }, [expandedCategory]);
+
   const handleSelectAll = () => {
     const pool = selectedGroup
       ? vocabularyData.filter(c => c.group === selectedGroup)
@@ -218,7 +241,17 @@ function CategorySelector({
   };
 
   const handleSelectCategory = (category: VocabCategory) => {
-    onSelect(shuffleArray([...category.words]));
+    // If category has <= SUBGROUP_SIZE words, start directly
+    if (category.words.length <= SUBGROUP_SIZE) {
+      onSelect(shuffleArray([...category.words]));
+    } else {
+      // Expand to show subgroups
+      setExpandedCategoryId(expandedCategoryId === category.id ? null : category.id);
+    }
+  };
+
+  const handleSelectSubgroup = (words: VocabWord[]) => {
+    onSelect(shuffleArray([...words]));
   };
 
   return (
@@ -316,40 +349,97 @@ function CategorySelector({
 
         {/* Category grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {filteredCategories.map((category) => (
-            <Card
-              key={category.id}
-              className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.01] p-4"
-              onClick={() => handleSelectCategory(category)}
-            >
-              <div className="flex items-center gap-3">
-                <div className="p-2.5 rounded-lg bg-muted text-2xl">
-                  {category.icon}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    <h3 className="font-semibold text-sm truncate">{category.name}</h3>
-                    {category.level && (
-                      <Badge className={cn(
-                        'text-[10px] px-1.5 py-0 font-semibold shrink-0',
-                        category.level === 'A1' && 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300',
-                        category.level === 'A2' && 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
-                        category.level === 'B1' && 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
-                        category.level === 'B2' && 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
-                      )}>
-                        {category.level}
-                      </Badge>
+          {filteredCategories.map((category) => {
+            const isExpanded = expandedCategoryId === category.id;
+            const needsSubgroups = category.words.length > SUBGROUP_SIZE;
+            return (
+              <div key={category.id}>
+                <Card
+                  className={cn(
+                    'cursor-pointer hover:shadow-md transition-all hover:scale-[1.01] p-4',
+                    isExpanded && 'ring-2 ring-emerald-500 border-emerald-400'
+                  )}
+                  onClick={() => handleSelectCategory(category)}
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="p-2.5 rounded-lg bg-muted text-2xl">
+                      {category.icon}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <h3 className="font-semibold text-sm truncate">{category.name}</h3>
+                        {category.level && (
+                          <Badge className={cn(
+                            'text-[10px] px-1.5 py-0 font-semibold shrink-0',
+                            category.level === 'A1' && 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-300',
+                            category.level === 'A2' && 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300',
+                            category.level === 'B1' && 'bg-amber-100 text-amber-700 dark:bg-amber-900 dark:text-amber-300',
+                            category.level === 'B2' && 'bg-red-100 text-red-700 dark:bg-red-900 dark:text-red-300',
+                          )}>
+                            {category.level}
+                          </Badge>
+                        )}
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        {category.words.length} слов
+                        <span className="ml-1 text-[10px] opacity-60">({category.group})</span>
+                      </p>
+                    </div>
+                    {needsSubgroups ? (
+                      <motion.div
+                        animate={{ rotate: isExpanded ? 90 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronRight className="size-4 text-muted-foreground shrink-0" />
+                      </motion.div>
+                    ) : (
+                      <ArrowRight className="size-4 text-muted-foreground shrink-0" />
                     )}
                   </div>
-                  <p className="text-xs text-muted-foreground">
-                    {category.words.length} слов
-                    <span className="ml-1 text-[10px] opacity-60">({category.group})</span>
-                  </p>
-                </div>
-                <ArrowRight className="size-4 text-muted-foreground shrink-0" />
+                </Card>
+
+                {/* Subgroup expansion */}
+                <AnimatePresence>
+                  {isExpanded && subgroups.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="mt-2 ml-4 space-y-1.5 border-l-2 border-emerald-300 dark:border-emerald-700 pl-3 py-1">
+                        <p className="text-xs text-muted-foreground mb-1.5">Выберите подгруппу:</p>
+                        <button
+                          className="w-full text-left px-3 py-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/30 hover:bg-emerald-100 dark:hover:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-sm transition-colors flex items-center justify-between"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handleSelectSubgroup([...expandedCategory.words]);
+                          }}
+                        >
+                          <span className="font-medium">Все слова</span>
+                          <Badge variant="secondary" className="text-[10px]">{expandedCategory.words.length}</Badge>
+                        </button>
+                        {subgroups.map((sg, idx) => (
+                          <button
+                            key={idx}
+                            className="w-full text-left px-3 py-2 rounded-lg bg-muted hover:bg-muted/80 border border-border text-sm transition-colors flex items-center justify-between"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleSelectSubgroup(expandedCategory.words.slice(sg.startIndex, sg.endIndex));
+                            }}
+                          >
+                            <span>{sg.name}</span>
+                            <Badge variant="secondary" className="text-[10px]">{sg.endIndex - sg.startIndex}</Badge>
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-            </Card>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

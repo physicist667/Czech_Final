@@ -121,6 +121,7 @@ export function VocabularySection() {
   const [showLearned, setShowLearned] = useState(true);
   const [showConjugations, setShowConjugations] = useState(false);
   const [showDeclensions, setShowDeclensions] = useState(false);
+  const [selectedSubgroup, setSelectedSubgroup] = useState<number | null>(null);
 
   const hasDeclensions = selectedCategory ? categoryIdsWithDeclensions.has(selectedCategory) : false;
   const currentDeclensions = selectedCategory ? getDeclensionsForCategory(selectedCategory) : [];
@@ -156,11 +157,33 @@ export function VocabularySection() {
     ? vocabularyData.find((c) => c.id === selectedCategory)
     : null;
 
-  const currentWords = currentCategory
-    ? showLearned
+  // Compute subgroups for the selected category (chunks of 7 words)
+  const SUBGROUP_SIZE = 7;
+  const subgroups = useMemo(() => {
+    if (!currentCategory || currentCategory.words.length <= SUBGROUP_SIZE) return [];
+    const groups: { name: string; startIndex: number; endIndex: number }[] = [];
+    for (let i = 0; i < currentCategory.words.length; i += SUBGROUP_SIZE) {
+      const end = Math.min(i + SUBGROUP_SIZE - 1, currentCategory.words.length - 1);
+      groups.push({
+        name: `${i + 1}–${end + 1}`,
+        startIndex: i,
+        endIndex: end + 1,
+      });
+    }
+    return groups;
+  }, [currentCategory]);
+
+  const currentWords = useMemo(() => {
+    if (!currentCategory) return [];
+    let words = showLearned
       ? currentCategory.words
-      : currentCategory.words.filter((w) => !learnedWordIds.includes(w.id))
-    : [];
+      : currentCategory.words.filter((w) => !learnedWordIds.includes(w.id));
+    if (selectedSubgroup !== null && subgroups[selectedSubgroup]) {
+      const sg = subgroups[selectedSubgroup];
+      words = words.slice(sg.startIndex, sg.endIndex);
+    }
+    return words;
+  }, [currentCategory, showLearned, learnedWordIds, selectedSubgroup, subgroups]);
 
   const learnedInCategory = currentCategory
     ? currentCategory.words.filter((w) => learnedWordIds.includes(w.id)).length
@@ -172,6 +195,7 @@ export function VocabularySection() {
     setSelectedCategory(null);
     setCurrentIndex(0);
     setFlashcardMode(false);
+    setSelectedSubgroup(null);
   };
 
   const container = {
@@ -266,6 +290,7 @@ export function VocabularySection() {
                     onClick={() => {
                       setSelectedCategory(cat.id);
                       setCurrentIndex(0);
+                      setSelectedSubgroup(null);
                     }}
                   >
                     <CardHeader className="pb-3">
@@ -373,6 +398,55 @@ export function VocabularySection() {
               </Button>
             </div>
           </div>
+
+          {/* Subgroup Tabs */}
+          {subgroups.length > 0 && (
+            <div className="space-y-2">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                <Layers className="size-3" />
+                <span>Подгруппы:</span>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                <Button
+                  variant={selectedSubgroup === null ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => { setSelectedSubgroup(null); setCurrentIndex(0); }}
+                  className={cn(
+                    'gap-1 text-xs',
+                    selectedSubgroup === null && 'bg-emerald-600 hover:bg-emerald-700'
+                  )}
+                >
+                  Все слова
+                  <Badge variant="secondary" className="ml-1 text-[10px]">
+                    {totalInCategory}
+                  </Badge>
+                </Button>
+                {subgroups.map((sg, idx) => {
+                  const count = sg.endIndex - sg.startIndex;
+                  const learnedInGroup = currentCategory
+                    ? currentCategory.words.slice(sg.startIndex, sg.endIndex).filter((w) => learnedWordIds.includes(w.id)).length
+                    : 0;
+                  return (
+                    <Button
+                      key={idx}
+                      variant={selectedSubgroup === idx ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => { setSelectedSubgroup(idx); setCurrentIndex(0); }}
+                      className={cn(
+                        'gap-1 text-xs',
+                        selectedSubgroup === idx && 'bg-emerald-600 hover:bg-emerald-700'
+                      )}
+                    >
+                      {sg.name}
+                      <Badge variant="secondary" className="ml-1 text-[10px]">
+                        {learnedInGroup}/{count}
+                      </Badge>
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Progress Bar */}
           <Card>

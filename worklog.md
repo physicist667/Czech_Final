@@ -20,3 +20,24 @@ Stage Summary:
 - Professions dictionary added as first direction (👔 Профессии)
 - Groups use startIndex/endIndex referencing the flat vocabulary array (backward compatible)
 - Total words across all dictionaries: ~2400+
+
+---
+Task ID: 3
+Agent: Main
+Task: Add subgroup subdivision (6-7 items) to vocabulary, exercises, and phrasebook sections
+
+Work Log:
+- Analyzed vocabulary.ts (24+ categories, 500+ words), exercises.ts (5 exercise types), phrasebook.ts (5 categories, 125 phrases)
+- Read vocabulary-section.tsx, exercises-section.tsx, phrasebook-section.tsx UI components
+- Implemented dynamic subgroup computation (chunks of 7) in all 3 components
+- Vocabulary section: Added subgroup tabs after selecting a category ("Все слова" + numbered subgroups like "1–7", "8–14")
+- Exercises section: Category cards now expand to show subgroups before starting exercise (accordion pattern)
+- Phrasebook section: Added subgroup tabs after selecting a phrasebook category
+- All subgroups computed dynamically from data - no data file changes needed
+- Build verified successfully
+
+Stage Summary:
+- Modified: vocabulary-section.tsx (added selectedSubgroup state, subgroup computation, subgroup tab UI)
+- Modified: exercises-section.tsx (added expandedCategoryId state, accordion subgroup expansion in CategorySelector)
+- Modified: phrasebook-section.tsx (added selectedSubgroup state, subgroup computation, subgroup tab UI)
+- Build: ✅ Compiled successfully
