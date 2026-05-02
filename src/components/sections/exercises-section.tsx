@@ -39,6 +39,7 @@ import {
   BookOpen,
   RefreshCw,
   GraduationCap,
+  Filter,
 } from 'lucide-react';
 import { GrammarExercisesSection } from '@/components/sections/grammar-exercises-section';
 
@@ -170,6 +171,19 @@ function ResultsCard({
   );
 }
 
+// Group icons map
+const GROUP_ICONS: Record<string, string> = {
+  'Существительные': '📦',
+  'Глаголы': '⚡',
+  'Прилагательные': '🎨',
+  'Наречия': '💫',
+  'Числительные': '🔢',
+  'Местоимения': '👤',
+  'Предлоги': '🔗',
+  'Союзы': '➕',
+  'Фразы и выражения': '💬',
+};
+
 // ===================== CATEGORY SELECTOR =====================
 function CategorySelector({
   exerciseType,
@@ -181,9 +195,26 @@ function CategorySelector({
   onBack: () => void;
 }) {
   const typeInfo = exerciseTypes.find(t => t.id === exerciseType);
+  const [selectedGroup, setSelectedGroup] = useState<string | null>(null);
+
+  // Get unique groups
+  const groups = useMemo(() => {
+    const groupSet = new Set(vocabularyData.map((c) => c.group));
+    return Array.from(groupSet);
+  }, []);
+
+  // Filter categories by selected group
+  const filteredCategories = useMemo(() => {
+    if (!selectedGroup) return vocabularyData;
+    return vocabularyData.filter((c) => c.group === selectedGroup);
+  }, [selectedGroup]);
 
   const handleSelectAll = () => {
-    onSelect(shuffleArray([...allWords]));
+    const pool = selectedGroup
+      ? vocabularyData.filter(c => c.group === selectedGroup)
+      : vocabularyData;
+    const words = pool.flatMap(c => c.words);
+    onSelect(shuffleArray([...words]));
   };
 
   const handleSelectCategory = (category: VocabCategory) => {
@@ -208,6 +239,52 @@ function CategorySelector({
           Выберите категорию слов
         </h3>
 
+        {/* Group Filter */}
+        <div className="mb-4 space-y-2">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Filter className="size-3" />
+            <span>Группы:</span>
+          </div>
+          <div className="flex gap-2 flex-wrap">
+            <Button
+              variant={selectedGroup === null ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => setSelectedGroup(null)}
+              className={cn(
+                'gap-1 text-xs',
+                selectedGroup === null && 'bg-emerald-600 hover:bg-emerald-700'
+              )}
+            >
+              Все
+              <Badge variant="secondary" className="ml-1 text-[10px]">
+                {vocabularyData.length}
+              </Badge>
+            </Button>
+            {groups.map((g) => {
+              const count = vocabularyData.filter((c) => c.group === g).length;
+              return (
+                <Button
+                  key={g}
+                  variant={selectedGroup === g ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => setSelectedGroup(g)}
+                  className={cn(
+                    'gap-1 text-xs',
+                    selectedGroup === g && 'bg-emerald-600 hover:bg-emerald-700'
+                  )}
+                >
+                  <span>{GROUP_ICONS[g] || '📋'}</span>
+                  <span className="hidden sm:inline">{g}</span>
+                  <span className="sm:hidden">{g.length > 6 ? g.slice(0, 6) + '..' : g}</span>
+                  <Badge variant="secondary" className="ml-1 text-[10px]">
+                    {count}
+                  </Badge>
+                </Button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* All words card */}
         <Card
           className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.01] p-5 mb-4 border-emerald-300 dark:border-emerald-700 bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30"
@@ -218,11 +295,20 @@ function CategorySelector({
               📚
             </div>
             <div className="flex-1">
-              <h3 className="font-bold text-lg">Все слова</h3>
-              <p className="text-sm text-muted-foreground">Все {allWords.length} слов из всех категорий</p>
+              <h3 className="font-bold text-lg">
+                Все слова
+                {selectedGroup && (
+                  <span className="text-sm font-normal text-muted-foreground ml-2">
+                    ({selectedGroup})
+                  </span>
+                )}
+              </h3>
+              <p className="text-sm text-muted-foreground">
+                {filteredCategories.reduce((s, c) => s + c.words.length, 0)} слов из {filteredCategories.length} категорий
+              </p>
             </div>
             <Badge variant="secondary" className="text-base font-semibold px-3 py-1">
-              {allWords.length}
+              {filteredCategories.reduce((s, c) => s + c.words.length, 0)}
             </Badge>
             <ArrowRight className="size-5 text-muted-foreground shrink-0" />
           </div>
@@ -230,7 +316,7 @@ function CategorySelector({
 
         {/* Category grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {vocabularyData.map((category) => (
+          {filteredCategories.map((category) => (
             <Card
               key={category.id}
               className="cursor-pointer hover:shadow-md transition-all hover:scale-[1.01] p-4"
@@ -255,7 +341,10 @@ function CategorySelector({
                       </Badge>
                     )}
                   </div>
-                  <p className="text-xs text-muted-foreground">{category.words.length} слов</p>
+                  <p className="text-xs text-muted-foreground">
+                    {category.words.length} слов
+                    <span className="ml-1 text-[10px] opacity-60">({category.group})</span>
+                  </p>
                 </div>
                 <ArrowRight className="size-4 text-muted-foreground shrink-0" />
               </div>

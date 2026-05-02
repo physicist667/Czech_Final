@@ -27,6 +27,7 @@ import {
   Table,
   ChevronDown,
   GraduationCap,
+  Layers,
 } from 'lucide-react';
 
 function FlashCard({ word, onLearned, isLearned }: { word: VocabWord; onLearned: () => void; isLearned: boolean }) {
@@ -98,8 +99,22 @@ function FlashCard({ word, onLearned, isLearned }: { word: VocabWord; onLearned:
   );
 }
 
+// Group icons map
+const GROUP_ICONS: Record<string, string> = {
+  'Существительные': '📦',
+  'Глаголы': '⚡',
+  'Прилагательные': '🎨',
+  'Наречия': '💫',
+  'Числительные': '🔢',
+  'Местоимения': '👤',
+  'Предлоги': '🔗',
+  'Союзы': '➕',
+  'Фразы и выражения': '💬',
+};
+
 export function VocabularySection() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedGroup, setSelectedGroup] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [flashcardMode, setFlashcardMode] = useState(false);
@@ -111,19 +126,31 @@ export function VocabularySection() {
   const currentDeclensions = selectedCategory ? getDeclensionsForCategory(selectedCategory) : [];
   const { learnedWordIds, toggleWordLearned } = useCzechStore();
 
+  // Get unique groups
+  const groups = useMemo(() => {
+    const groupSet = new Set(vocabularyData.map((c) => c.group));
+    return Array.from(groupSet);
+  }, []);
+
   const filteredCategories = useMemo(() => {
-    if (!searchQuery) return vocabularyData;
-    return vocabularyData
-      .map((cat) => ({
-        ...cat,
-        words: cat.words.filter(
-          (w) =>
-            w.czech.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            w.russian.toLowerCase().includes(searchQuery.toLowerCase())
-        ),
-      }))
-      .filter((cat) => cat.words.length > 0);
-  }, [searchQuery]);
+    let cats = vocabularyData;
+    if (selectedGroup) {
+      cats = cats.filter((c) => c.group === selectedGroup);
+    }
+    if (searchQuery) {
+      cats = cats
+        .map((cat) => ({
+          ...cat,
+          words: cat.words.filter(
+            (w) =>
+              w.czech.toLowerCase().includes(searchQuery.toLowerCase()) ||
+              w.russian.toLowerCase().includes(searchQuery.toLowerCase())
+          ),
+        }))
+        .filter((cat) => cat.words.length > 0);
+    }
+    return cats;
+  }, [searchQuery, selectedGroup]);
 
   const currentCategory = selectedCategory
     ? vocabularyData.find((c) => c.id === selectedCategory)
@@ -168,6 +195,51 @@ export function VocabularySection() {
               Выучено {learnedWordIds.length} из{' '}
               {vocabularyData.reduce((s, c) => s + c.words.length, 0)} слов
             </p>
+          </div>
+
+          {/* Group Tabs */}
+          <div className="space-y-3">
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Layers className="size-4" />
+              <span>Группы:</span>
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              <Button
+                variant={selectedGroup === null ? 'default' : 'outline'}
+                size="sm"
+                onClick={() => setSelectedGroup(null)}
+                className={cn(
+                  'gap-1.5',
+                  selectedGroup === null && 'bg-emerald-600 hover:bg-emerald-700'
+                )}
+              >
+                Все
+                <Badge variant="secondary" className="ml-1 text-[10px]">
+                  {vocabularyData.length}
+                </Badge>
+              </Button>
+              {groups.map((g) => {
+                const count = vocabularyData.filter((c) => c.group === g).length;
+                return (
+                  <Button
+                    key={g}
+                    variant={selectedGroup === g ? 'default' : 'outline'}
+                    size="sm"
+                    onClick={() => setSelectedGroup(g)}
+                    className={cn(
+                      'gap-1.5',
+                      selectedGroup === g && 'bg-emerald-600 hover:bg-emerald-700'
+                    )}
+                  >
+                    <span>{GROUP_ICONS[g] || '📋'}</span>
+                    <span>{g}</span>
+                    <Badge variant="secondary" className="ml-1 text-[10px]">
+                      {count}
+                    </Badge>
+                  </Button>
+                );
+              })}
+            </div>
           </div>
 
           {/* Search */}
